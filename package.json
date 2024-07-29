@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "dev": "pnpm nitro dev ./playground",
+    "dev": "pnpm --filter=playground dev",
     "dev:prepare": "pnpm build --stub && pnpm nitropack prepare && pnpm nitro prepare ./playground",
     "lint": "eslint .",
     "lint:fix": "automd && eslint . --fix && biome check --apply .",

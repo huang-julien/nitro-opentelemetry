@@ -1,3 +1,9 @@
+
+
+function getRandomNumber(min: number, max: number) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
 export default eventHandler((event) => {
-  return "Start by editing <code>server/routes/index.ts</code>.";
+  return getRandomNumber(1, 6).toString();
 });

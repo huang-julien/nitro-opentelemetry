@@ -1,5 +1,6 @@
 {
   "private": true,
+  "name": "playground",
   "scripts": {
     "build": "nitro build",
     "dev": "nitro dev",
