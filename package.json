@@ -1,5 +1,5 @@
 {
-  "name": "my-nitro-module",
+  "name": "nitro-opentelemetry",
   "version": "0.0.0",
   "description": "",
   "license": "MIT",
@@ -30,6 +30,7 @@
     "test:types": "tsc --noEmit --skipLibCheck"
   },
   "devDependencies": {
+    "@azure/monitor-opentelemetry-exporter": "1.0.0-beta.24",
     "@types/node": "^20.12.7",
     "@vitest/coverage-v8": "^1.5.3",
     "automd": "^0.3.7",
@@ -45,7 +46,6 @@
   "packageManager": "pnpm@9.0.6",
   "dependencies": {
     "@azure/monitor-opentelemetry": "^1.6.0",
-    "@azure/monitor-opentelemetry-exporter": "1.0.0-beta.24",
     "@opentelemetry/api": "^1.9.0",
     "@opentelemetry/auto-instrumentations-node": "^0.48.0",
     "@opentelemetry/resources": "^1.25.1",
