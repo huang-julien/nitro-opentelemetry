@@ -11,9 +11,6 @@ importers:
       '@azure/monitor-opentelemetry':
         specifier: ^1.6.0
         version: 1.6.0
-      '@azure/monitor-opentelemetry-exporter':
-        specifier: 1.0.0-beta.24
-        version: 1.0.0-beta.24
       '@opentelemetry/api':
         specifier: ^1.9.0
         version: 1.9.0
@@ -21,9 +18,6 @@ importers:
         specifier: ^0.48.0
         version: 0.48.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources':
-        specifier: ^1.25.1
-        version: 1.25.1(@opentelemetry/api@1.9.0)
-      '@opentelemetry/sdk-metrics':
         specifier: ^1.25.1
         version: 1.25.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-node':
@@ -36,6 +30,18 @@ importers:
         specifier: ^1.25.1
         version: 1.25.1
     devDependencies:
+      '@azure/monitor-opentelemetry-exporter':
+        specifier: 1.0.0-beta.24
+        version: 1.0.0-beta.24
+      '@opentelemetry/api-logs':
+        specifier: ^0.52.1
+        version: 0.52.1
+      '@opentelemetry/sdk-logs':
+        specifier: ^0.52.1
+        version: 0.52.1(@opentelemetry/api@1.9.0)
+      '@opentelemetry/sdk-metrics':
+        specifier: ^1.25.1
+        version: 1.25.1(@opentelemetry/api@1.9.0)
       '@types/node':
         specifier: ^20.12.7
         version: 20.14.11
