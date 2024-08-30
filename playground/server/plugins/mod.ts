@@ -38,6 +38,9 @@ export default defineNitroPlugin((nitro) => {
   sdk.start();
   const tracer = trace.getTracer('nitro-opentelemetry');
 
+  // what the plugin should do 
+
+  
   nitro.hooks.hook('request', (event) => {
     event.context.spanId = randomUUID() 
     event.context.span = tracer.startSpan('request-' + randomUUID())
