@@ -31,16 +31,10 @@ export default defineNitroPlugin((nitro) => {
     }), 
 
   });
-
-  
-  
   
   sdk.start();
-  const tracer = trace.getTracer('nitro-opentelemetry');
-
   // what the plugin should do 
-
-  
+  const tracer = trace.getTracer('nitro-opentelemetry');
   nitro.hooks.hook('request', (event) => {
     event.context.spanId = randomUUID() 
     event.context.span = tracer.startSpan('request-' + randomUUID())
@@ -64,11 +58,4 @@ export default defineNitroPlugin((nitro) => {
        span.end()
     }
   })
-
-  process.on('exit', () => {
-    sdk.shutdown()
-      .then(() => console.log('Tracing terminated'))
-      .catch((error) => console.log('Error terminating tracing', error))
-      .finally(() => process.exit(0));
-  });
 })
