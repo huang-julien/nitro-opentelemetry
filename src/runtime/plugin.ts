@@ -14,9 +14,9 @@ import {
   SEMRESATTRS_SERVICE_VERSION,
 } from '@opentelemetry/semantic-conventions';
 import { Resource } from '@opentelemetry/resources';
+import type { NitroAppPlugin } from 'nitropack'
 
-
-export default defineNitroPlugin((nitro) => {
+export default <NitroAppPlugin>((nitro) => {
  
   // For troubleshooting, set the log level to DiagLogLevel.DEBUG
   diag.setLogger(new DiagConsoleLogger(), DiagLogLevel.DEBUG);
