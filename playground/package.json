@@ -8,6 +8,7 @@
     "preview": "node .output/server/index.mjs"
   },
   "devDependencies": {
-    "nitropack": "latest"
+    "nitropack": "latest",
+    "nitro-opentelemetry": "link:../"
   }
 }

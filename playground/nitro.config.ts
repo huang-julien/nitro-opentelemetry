@@ -1,4 +1,10 @@
 //https://nitro.unjs.io/config
 export default defineNitroConfig({
-  srcDir: "server"
+  srcDir: "server",
+  modules: [
+    '../src/module.ts'
+  ],
+  experimental: {
+    asyncContext: true
+  }
 });

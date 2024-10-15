@@ -30,6 +30,7 @@
   "scripts": {
     "build": "unbuild",
     "dev": "pnpm --filter=playground dev",
+    "dev:build": "pnpm --filter=playground build",
     "dev:prepare": "pnpm build --stub && pnpm nitropack prepare && pnpm nitro prepare ./playground",
     "lint": "eslint .",
     "lint:fix": "automd && eslint . --fix && biome check --apply .",
@@ -57,10 +58,15 @@
     "@azure/monitor-opentelemetry": "^1.7.1",
     "@opentelemetry/api": "^1.9.0",
     "@opentelemetry/auto-instrumentations-node": "^0.48.0",
+    "@opentelemetry/instrumentation": "^0.53.0",
+    "@opentelemetry/instrumentation-http": "^0.53.0",
+    "@opentelemetry/instrumentation-undici": "^0.6.0",
     "@opentelemetry/resources": "^1.26.0",
     "@opentelemetry/sdk-metrics": "^1.26.0",
     "@opentelemetry/sdk-node": "^0.52.1",
     "@opentelemetry/sdk-trace-node": "^1.26.0",
-    "@opentelemetry/semantic-conventions": "^1.27.0"
+    "@opentelemetry/semantic-conventions": "^1.27.0",
+    "nitropack": "^2.9.7",
+    "rollup": "^4.24.0"
   }
 }
