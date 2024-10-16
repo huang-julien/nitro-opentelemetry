@@ -12,7 +12,7 @@ export default <NitroModule>{
 }
 
 
-const INIT_IMPORT = `import 'nitro-opentelemetry/runtime/init';`
+const INIT_IMPORT = `import '../../../dist/runtime/init.mjs';`
 
 function injectInitPlugin(): Plugin {
     return {

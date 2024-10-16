@@ -9,7 +9,10 @@ function getRandomNumber(min: number, max: number) {
 
 export default defineEventHandlerWithTracing((event) => {
  
-  console.log('event', trace.getActiveSpan())
+  console.log("active span", trace.getActiveSpan());
+  console.log("ctrx", context.active());
+  const currentSpan = trace.getSpan(context.active());
+  console.log("current span", currentSpan);
 
   return fetch('https://jsonplaceholder.typicode.com/todos/1').then(response => response.json());
 });

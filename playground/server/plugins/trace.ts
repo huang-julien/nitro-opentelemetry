@@ -3,9 +3,7 @@ const context = api.context, trace = api.trace
 import { NitroApp } from "nitropack";
 import { H3Event } from "h3";
 import { ATTR_URL_PATH, ATTR_URL_FULL } from "@opentelemetry/semantic-conventions"
-import { contextManager } from "~/utils/context";
-contextManager.enable(); 
-context.setGlobalContextManager(contextManager)
+ 
 const tracer = trace.getTracer('nitro-opentelemetry')
 
 export default defineNitroPlugin((nitro) => {
@@ -14,18 +12,17 @@ export default defineNitroPlugin((nitro) => {
             attributes: {
                 [ATTR_URL_PATH]: event.context.matchedRoute?.path || event.path,
                 [ATTR_URL_FULL]: event.path
-            }
+            },
+            kind: api.SpanKind.SERVER
         }, context.active())
-        
 
+        trace.setSpan(context.active(), span)
         event.context.span = span
     })
-
-    nitro.hooks.hook('beforeResponse', (event) => {
-        event.context.span.end()
-    })
-
+ 
     nitro.hooks.hook('afterResponse', (event) => {
+        console.log('end span')
+        event.context.span.end()
         delete event.context.otelCtx
         delete event.context.span
     })
