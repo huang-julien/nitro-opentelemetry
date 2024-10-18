@@ -30,10 +30,10 @@ function injectInitPlugin(): Plugin {
              if (moduleInfo?.isEntry) {
                 const s = new MagicString(code)
                 s.prepend(`import '#nitro-opentelemetry/init';`)
+                s.prepend(`console.log('wtf');`)
                   return {
                     code: s.toString(),
-                    map: s.generateMap({ hires: true }),
-                    moduleSideEffects: 'no-treeshake'
+                    map: s.generateMap({ hires: true }), 
                 }
             } 
         },
