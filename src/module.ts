@@ -1,29 +1,32 @@
 import type { NitroModule } from 'nitropack'
- import { Plugin, rollup } from "rollup"
+import type { Plugin } from "rollup"
+import { presets } from './imports'
+import { resolvePath } from 'mlly'
 
 export default <NitroModule>{
-    async setup(nitro){
+    async setup(nitro) {
         nitro.hooks.hook('rollup:before', (nitro, rollupConfig) => {
-            if(!rollupConfig.plugins) rollupConfig.plugins = []
+            if (!rollupConfig.plugins) rollupConfig.plugins = []
             // @ts-ignore
             rollupConfig.plugins.push(injectInitPlugin())
         })
+
+        if (nitro.options.imports) {
+            nitro.options.imports.presets.push(presets)
+        }
     }
 }
-
-
-const INIT_IMPORT = `import '../../../dist/runtime/init.mjs';`
 
 function injectInitPlugin(): Plugin {
     return {
         name: 'inject-init-plugin',
-        renderChunk(code, chunk) {
-            const isEntry = chunk.isEntry;
-            if (!isEntry) return;
-           
-            return {
-              code: INIT_IMPORT + code
-            };
-          },
+        async transform(code, id) {
+            const moduleInfo = this.getModuleInfo(id)
+            if (moduleInfo?.isEntry) {
+                return {
+                    code: [`import '${await resolvePath('nitro-opentelemetry/runtime/init', { extensions: ['.js', '.mjs', '.cjs'] })}'`, code].join('\n')
+                }
+            }
+        },
     }
 }

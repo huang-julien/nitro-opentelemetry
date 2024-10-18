@@ -8,12 +8,7 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
-    },
-    "./runtime": {
-      "types": "./dist/runtime/index.d.ts",
-      "import": "./dist/runtime/index.mjs"
+      "import": "./dist/index.mjs"
     },
     "./runtime/*": {
       "types": "./dist/runtime/*",
@@ -21,7 +16,7 @@
       "require": "./dist/runtime/*"
     }
   },
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
@@ -47,8 +42,10 @@
     "changelogen": "^0.5.7",
     "eslint": "^9.11.0",
     "eslint-config-unjs": "^0.3.2",
+    "h3": "^1.13.0",
     "jiti": "^1.21.6",
     "nitro-test-utils": "^0.6.0",
+    "nitropack": "^2.9.7",
     "typescript": "^5.6.2",
     "unbuild": "^2.0.0",
     "vitest": "^1.6.0"
@@ -66,7 +63,7 @@
     "@opentelemetry/sdk-node": "^0.52.1",
     "@opentelemetry/sdk-trace-node": "^1.26.0",
     "@opentelemetry/semantic-conventions": "^1.27.0",
-    "nitropack": "^2.9.7",
+    "mlly": "^1.7.2",
     "rollup": "^4.24.0"
   }
 }

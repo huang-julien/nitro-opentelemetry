@@ -1,7 +1,5 @@
 import * as api from "@opentelemetry/api" 
 const context = api.context, trace = api.trace
-import { defineEventHandlerWithTracing } from "~/utils/handler-with-tracing";
-
 
 function getRandomNumber(min: number, max: number) {
   return Math.floor(Math.random() * (max - min) + min);

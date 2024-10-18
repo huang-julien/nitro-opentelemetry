@@ -14,8 +14,5 @@ export default defineBuildConfig({
     },
   ],
   declaration: true,
-  rollup: {
-    emitCJS: true,
-  },
-  externals: ['#imports'],
+  externals: ['#imports', 'h3', 'nitropack'],
 })

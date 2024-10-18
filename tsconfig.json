@@ -1,11 +1,11 @@
-{
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "esModuleInterop": true,
-    "strict": true
-  },
+{ 
   "include": ["./src/*", "./src/**/*"],
+  "compilerOptions": {
+    "strict": true,
+      "module": "ESNext",
+    "target": "ESNext",
+    "lib": ["ESNext"],  
+    "moduleResolution": "node"
+  },
   "extends": "./.nitro/types/tsconfig.json"
 }
