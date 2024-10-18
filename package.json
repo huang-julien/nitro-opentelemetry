@@ -63,7 +63,9 @@
     "@opentelemetry/sdk-node": "^0.52.1",
     "@opentelemetry/sdk-trace-node": "^1.26.0",
     "@opentelemetry/semantic-conventions": "^1.27.0",
+    "magic-string": "^0.30.12",
     "mlly": "^1.7.2",
+    "pathe": "^1.1.2",
     "rollup": "^4.24.0"
   }
 }
