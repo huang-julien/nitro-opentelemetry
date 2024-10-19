@@ -9,9 +9,9 @@ export default <NitroModule>{
         nitro.hooks.hook('rollup:before', (nitro, rollupConfig) => {
             if (!rollupConfig.plugins) rollupConfig.plugins = []
             // @ts-ignore
-            rollupConfig.plugins.push(injectInitPlugin()) 
+            rollupConfig.plugins.push(injectInitPlugin())
         })
-        
+
         nitro.options.alias['#nitro-opentelemetry/init'] = await resolvePath('nitro-opentelemetry/runtime/init', {
             extensions: ['.mjs', '.ts']
         })
@@ -26,15 +26,19 @@ function injectInitPlugin(): Plugin {
     return {
         name: 'inject-init-plugin',
         async transform(code, id) {
-            const moduleInfo = this.getModuleInfo(id)
-             if (moduleInfo?.isEntry) {
+            if (id.includes(String.raw`runtime\entries`)) {
                 const s = new MagicString(code)
-                s.prepend(` await import('#nitro-opentelemetry/init') ;`) 
-                  return {
+                s.prepend(`import '#nitro-opentelemetry/init';`)
+                return {
                     code: s.toString(),
-                    map: s.generateMap({ hires: true }), 
+                    map: s.generateMap({ hires: true }),
+                    moduleSideEffects: true
                 }
-            } 
+            }
+
+            if (id.includes(String.raw`runtime\init`)) {
+                return { code, moduleSideEffects: true }
+            }
         },
     }
 }
