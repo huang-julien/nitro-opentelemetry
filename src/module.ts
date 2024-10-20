@@ -19,6 +19,11 @@ export default <NitroModule>{
         if (nitro.options.imports) {
             nitro.options.imports.presets.push(presets)
         }
+
+        nitro.options.plugins.push(await resolvePath('nitro-opentelemetry/runtime/plugin', {
+            extensions: ['.mjs', '.ts']
+        })
+)
     }
 }
 
