@@ -3,6 +3,7 @@ import type { Plugin } from "rollup"
 import { presets } from './imports'
 import { resolvePath } from 'mlly'
 import MagicString from 'magic-string'
+import { getPresetFile } from './presets'
 
 export default <NitroModule>{
     async setup(nitro) {
@@ -12,8 +13,9 @@ export default <NitroModule>{
             rollupConfig.plugins.push(injectInitPlugin())
         })
 
-        nitro.options.alias['#nitro-opentelemetry/init'] = await resolvePath('nitro-opentelemetry/runtime/init', {
-            extensions: ['.mjs', '.ts']
+        nitro.options.alias['#nitro-opentelemetry/init'] =  await resolvePath(await getPresetFile(nitro) , {
+            extensions: ['.mjs', '.ts'],
+            url: process.cwd()
         })
 
         if (nitro.options.imports) {
@@ -22,8 +24,7 @@ export default <NitroModule>{
 
         nitro.options.plugins.push(await resolvePath('nitro-opentelemetry/runtime/plugin', {
             extensions: ['.mjs', '.ts']
-        })
-)
+        }))
     }
 }
 
