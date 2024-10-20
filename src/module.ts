@@ -13,10 +13,7 @@ export default <NitroModule>{
             rollupConfig.plugins.push(injectInitPlugin())
         })
 
-        nitro.options.alias['#nitro-opentelemetry/init'] =  await resolvePath(await getPresetFile(nitro) , {
-            extensions: ['.mjs', '.ts'],
-            url: process.cwd()
-        })
+        nitro.options.alias['#nitro-opentelemetry/init'] = await getPresetFile(nitro)
 
         if (nitro.options.imports) {
             nitro.options.imports.presets.push(presets)
@@ -42,9 +39,6 @@ function injectInitPlugin(): Plugin {
                 }
             }
 
-            if (id.includes(String.raw`runtime\init`)) {
-                return { code, moduleSideEffects: true }
-            }
         },
     }
 }

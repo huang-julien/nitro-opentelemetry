@@ -15,8 +15,9 @@ export async function getPresetFile(nitro: Nitro) {
     switch (nitroPreset) {
         case 'node':
         case 'node-cluster':
+        case 'nitro-dev':
         case 'node-server': {
-            return await resolvePath('nitro-opentelemetry/presets/node', {
+            return await resolvePath('nitro-opentelemetry/runtime/presets/node', {
                 extensions: ['.mjs', '.ts']
             })
         }
