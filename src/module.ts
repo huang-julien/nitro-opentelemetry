@@ -15,8 +15,9 @@ export default <NitroModule>{
             (rollupConfig.plugins as Plugin[]).push({
                 name: 'inject-init-plugin',
                 async transform(code, id) {
+                    const normalizedId = normalize(id)  
                     // transform nitro entry file but there's probably a better way
-                    if (id.includes(String.raw`runtime\entries`)) {
+                    if (normalizedId.includes('runtime/entries')) {
                         const s = new MagicString(code)
                         s.prepend(`import '#nitro-opentelemetry/init';`)
                         return {
@@ -25,8 +26,8 @@ export default <NitroModule>{
                             moduleSideEffects: true
                         }
                     } 
-                    //  @todo find another way :/
-                    if (normalize(id) === nitro.options.alias['#nitro-opentelemetry/init']) {
+                    //  @todo find another way to mark it as side effect :/
+                    if (normalizedId === nitro.options.alias['#nitro-opentelemetry/init']) {
                         const s = new MagicString(code)
                         return {
                             moduleSideEffects: true, 
