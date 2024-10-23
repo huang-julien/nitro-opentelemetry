@@ -1,6 +1,5 @@
 import { registerInstrumentations } from '@opentelemetry/instrumentation'
 import { ConsoleSpanExporter, NodeTracerProvider, SimpleSpanProcessor } from '@opentelemetry/sdk-trace-node'
-import { HttpInstrumentation } from '@opentelemetry/instrumentation-http'
 import { UndiciInstrumentation } from '@opentelemetry/instrumentation-undici';
 import { AsyncLocalStorageContextManager } from '@opentelemetry/context-async-hooks';
 
