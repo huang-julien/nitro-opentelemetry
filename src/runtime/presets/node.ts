@@ -19,11 +19,6 @@ provider.register({
 // but instrumentations needs to be added
 registerInstrumentations({
   instrumentations: [
-    new UndiciInstrumentation({
-      requestHook: (span, request) => {
-        console.log('undici instrumentation', request)
-        span.setAttribute("custom request hook attribute", "request");
-      },
-    })
+    new UndiciInstrumentation()
   ],
 });
