@@ -1,16 +1,21 @@
 import { resolvePath } from "mlly";
 import type { Nitro } from "nitropack";
 import { logger } from "./logger";
+import { isAbsolute } from "path";
 
 export async function getPresetFile(nitro: Nitro) {
-    if(nitro.options.openTelemetry?.configFilePath) {
-        return await resolvePath(nitro.options.openTelemetry.configFilePath, {
+    if(nitro.options.openTelemetry?.configFile && isAbsolute(nitro.options.openTelemetry?.configFile) ) {
+        return await resolvePath(nitro.options.openTelemetry.configFile, {
             extensions: ['.mjs', '.ts'],
             url: process.cwd()
         })
     }
 
-    const nitroPreset = nitro.options.preset
+    if(nitro.options.openTelemetry?.configFile === false) {
+        return ''
+    }
+
+    const nitroPreset =nitro.options.openTelemetry?.configFile || nitro.options.preset
 
     switch (nitroPreset) {
         case 'node':
@@ -18,7 +23,12 @@ export async function getPresetFile(nitro: Nitro) {
         case 'nitro-dev':
         case 'node-server': {
             return await resolvePath('nitro-opentelemetry/runtime/presets/node', {
-                extensions: ['.mjs', '.ts']
+                extensions: ['.mjs', '.ts'] 
+            })
+        }
+        case 'azure-monitor': {
+            return await resolvePath('nitro-opentelemetry/runtime/presets/azure-monitor', {
+                extensions: ['.mjs', '.ts'] 
             })
         }
     }

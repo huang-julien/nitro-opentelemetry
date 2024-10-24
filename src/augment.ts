@@ -7,6 +7,8 @@ declare module 'h3' {
     }
 }
 
+type presets = 'node' | 'node-cluster' | 'nitro-dev' | 'node-server' | 'azure-monitor'
+
 declare module 'nitropack' {
     interface NitroRuntimeHooks {
         'nitro-opentelemetry:span-name': (context: { event: H3Event, name: undefined|string}) => void
@@ -17,8 +19,10 @@ declare module 'nitropack' {
             /**
              * The path to the initializer file.
              * This file will be imported in the entry file and need to initialize the OpenTelemetry SDK or one of its providers.
+             * Fallback to the default initializer file for the selected preset.
+             * If set to `false`, no initializer file will be imported.
              */
-            configFilePath: string
+            configFile: presets | string | false
         }>
     }
 }
