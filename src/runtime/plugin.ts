@@ -27,6 +27,10 @@ export default <NitroAppPlugin>((nitro) => {
         // @ts-ignore
         event.context.span = undefined
     })
+
+    nitro.hooks.hook('error', (error, { event }) =>  {
+        event?.context.span.recordException(error, new Date())
+    })
 })
 
 async function getSpanName(nitro: NitroApp, event: H3Event) {
