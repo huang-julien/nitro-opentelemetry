@@ -11,7 +11,7 @@ type presets = 'node' | 'node-cluster' | 'nitro-dev' | 'node-server' | 'azure-mo
 
 declare module 'nitropack' {
     interface NitroRuntimeHooks {
-        'nitro-opentelemetry:span-name': (context: { event: H3Event, name: undefined|string}) => void
+        'otel:span:name': (context: { event: H3Event, name: undefined|string}) => void
     }
 
     interface NitroOptions {

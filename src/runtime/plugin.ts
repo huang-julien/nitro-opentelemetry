@@ -34,7 +34,7 @@ export default <NitroAppPlugin>((nitro) => {
 })
 
 async function getSpanName(nitro: NitroApp, event: H3Event) {
-    const ctx: Parameters<NitroRuntimeHooks['nitro-opentelemetry:span-name']>[0] = { event, name: undefined }
-    await nitro.hooks.callHook('nitro-opentelemetry:span-name', ctx)
+    const ctx: Parameters<NitroRuntimeHooks['otel:span:name']>[0] = { event, name: undefined }
+    await nitro.hooks.callHook('otel:span:name', ctx)
     return ctx.name || event.context.matchedRoute?.path || event.path
 }
