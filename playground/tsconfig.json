@@ -1,4 +1,9 @@
 // https://nitro.unjs.io/guide/typescript
 {
-  "extends": "./.nitro/types/tsconfig.json"
+  "extends": "./.nitro/types/tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "nitro-opentelemetry"
+    ]
+  }
 }
