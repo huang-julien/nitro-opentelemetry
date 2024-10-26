@@ -20,7 +20,7 @@ export default <NitroAppPlugin>((nitro) => {
     })
 
     nitro.hooks.hook('beforeResponse', (event) => {
-        event.context.span.end(new Date())
+        event.context.span.end()
     })
 
     nitro.hooks.hook('afterResponse', (event) => {
@@ -28,8 +28,8 @@ export default <NitroAppPlugin>((nitro) => {
         event.context.span = undefined
     })
 
-    nitro.hooks.hook('error', (error, { event }) =>  {
-        event?.context.span.recordException(error, new Date())
+    nitro.hooks.hook('error', (error, { event }) => {
+        event?.context.span.recordException(error)
     })
 })
 
