@@ -49,6 +49,26 @@ export default defineNitroConfig({
 
 <!-- /automd -->
 
+## Config
+
+You can configure the module with the `openTelemetry` property in your `nitro.config.ts`
+
+- **configFile**
+    - This module provides some presets by default: node and azure. You can set your own file to configure and setup OTEL. Your file will be imported first before anything.
+
+## Hooks
+
+Here are the available hooks.
+
+```ts
+interface NitroRuntimeHooks {
+    'otel:span:name': (context: { event: H3Event, name: undefined|string }) => void
+}
+```
+
+- **otel:span:name**
+    - Ran when a span is created.
+
 ## Development
 
 <details>
