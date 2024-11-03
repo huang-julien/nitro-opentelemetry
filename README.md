@@ -1,7 +1,5 @@
 # nitro-opentelemetry
 
-Opentelemetry integration for nitro. Without patching nitro.
-
 <!-- automd:badges color=yellow -->
 
 [![npm version](https://img.shields.io/npm/v/nitro-opentelemetry?color=yellow)](https://npmjs.com/package/nitro-opentelemetry)
@@ -9,7 +7,9 @@ Opentelemetry integration for nitro. Without patching nitro.
 
 <!-- /automd -->
 
-This is my package description.
+Opentelemetry integration for nitro. Without patching nitro.
+
+This nitro module automatically create spans for request and error happening in your nitro server.
 
 ## Usage
 
