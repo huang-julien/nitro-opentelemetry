@@ -1,9 +1,11 @@
-# packageName
+# nitro-opentelemetry
+
+Opentelemetry integration for nitro. Without patching nitro.
 
 <!-- automd:badges color=yellow -->
 
-[![npm version](https://img.shields.io/npm/v/packageName?color=yellow)](https://npmjs.com/package/packageName)
-[![npm downloads](https://img.shields.io/npm/dm/packageName?color=yellow)](https://npmjs.com/package/packageName)
+[![npm version](https://img.shields.io/npm/v/nitro-opentelemetry?color=yellow)](https://npmjs.com/package/nitro-opentelemetry)
+[![npm downloads](https://img.shields.io/npm/dm/nitro-opentelemetry?color=yellow)](https://npmjs.com/package/nitro-opentelemetry)
 
 <!-- /automd -->
 
@@ -17,43 +19,32 @@ Install package:
 
 ```sh
 # ✨ Auto-detect
-npx nypm install packageName
+npx nypm install nitro-opentelemetry
 
 # npm
-npm install packageName
+npm install nitro-opentelemetry
 
 # yarn
-yarn add packageName
+yarn add nitro-opentelemetry
 
 # pnpm
-pnpm install packageName
+pnpm install nitro-opentelemetry
 
 # bun
-bun install packageName
+bun install nitro-opentelemetry
 ```
 
 <!-- /automd -->
 
-Import:
+Add the module:
 
-<!-- automd:jsimport cjs cdn name="pkg" -->
-
-**ESM** (Node.js, Bun)
-
-```js
-import {} from "pkg";
-```
-
-**CommonJS** (Legacy Node.js)
-
-```js
-const {} = require("pkg");
-```
-
-**CDN** (Deno, Bun and Browsers)
-
-```js
-import {} from "https://esm.sh/pkg";
+```ts
+//https://nitro.unjs.io/config
+export default defineNitroConfig({
+  modules: [
+    'nitro-opentelemetry'
+  ]
+});
 ```
 
 <!-- /automd -->
@@ -76,11 +67,11 @@ import {} from "https://esm.sh/pkg";
 
 <!-- automd:contributors license=MIT -->
 
-Published under the [MIT](https://github.com/unjs/packageName/blob/main/LICENSE) license.
-Made by [community](https://github.com/unjs/packageName/graphs/contributors) 💛
+Published under the [MIT](https://github.com/unjs/nitro-opentelemetry/blob/main/LICENSE) license.
+Made by [community](https://github.com/unjs/nitro-opentelemetry/graphs/contributors) 💛
 <br><br>
-<a href="https://github.com/unjs/packageName/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=unjs/packageName" />
+<a href="https://github.com/unjs/nitro-opentelemetry/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=unjs/nitro-opentelemetry" />
 </a>
 
 <!-- /automd -->
