@@ -20,17 +20,21 @@ export default <NitroAppPlugin>((nitro) => {
     })
 
     nitro.hooks.hook('beforeResponse', (event) => {
-        event.context.span.end(new Date())
+        event.context.span.end()
     })
 
     nitro.hooks.hook('afterResponse', (event) => {
         // @ts-ignore
         event.context.span = undefined
     })
+
+    nitro.hooks.hook('error', (error, { event }) => {
+        event?.context.span.recordException(error)
+    })
 })
 
 async function getSpanName(nitro: NitroApp, event: H3Event) {
-    const ctx: Parameters<NitroRuntimeHooks['nitro-opentelemetry:span-name']>[0] = { event, name: undefined }
-    await nitro.hooks.callHook('nitro-opentelemetry:span-name', ctx)
+    const ctx: Parameters<NitroRuntimeHooks['otel:span:name']>[0] = { event, name: undefined }
+    await nitro.hooks.callHook('otel:span:name', ctx)
     return ctx.name || event.context.matchedRoute?.path || event.path
 }
