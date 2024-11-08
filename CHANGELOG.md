@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.1.1
+
+[compare changes](https://github.com/huang-julien/nitro-opentelemetry/compare/v0.1.0...v0.1.1)
+
+### 🩹 Fixes
+
+- **azure-monitor:** Remove default instrumentation key ([8a02633](https://github.com/huang-julien/nitro-opentelemetry/commit/8a02633))
+
+### ❤️ Contributors
+
+- Julien Huang <julien.huang@leetchi.com>
+
 ## v0.1.0
 
 
