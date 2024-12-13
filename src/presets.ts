@@ -31,6 +31,11 @@ export async function getPresetFile(nitro: Nitro) {
                 extensions: ['.mjs', '.ts'] 
             })
         }
+        case 'baselime-node': {
+            return await resolvePath('nitro-opentelemetry/runtime/presets/baselime-node', {
+                extensions: ['.mjs', '.ts']
+            })
+        }
     }
 
     logger.warn(`Initializer file for preset ${nitroPreset} not found. Please provide your own or open an issue on the repository.`)
