@@ -1,7 +1,7 @@
 import { resolvePath } from "mlly";
 import type { Nitro } from "nitropack";
 import { logger } from "./logger";
-import { isAbsolute } from "path";
+import { isAbsolute } from "pathe";
 
 export async function getPresetFile(nitro: Nitro) {
     if(nitro.options.openTelemetry?.configFile && isAbsolute(nitro.options.openTelemetry?.configFile) ) {
