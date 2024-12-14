@@ -15,7 +15,7 @@ declare module 'nitropack' {
     }
 
     interface NitroOptions {
-        openTelemetry?: Partial<{
+        OTEL?: Partial<{
             /**
              * The path to the initializer file.
              * This file will be imported in the entry file and need to initialize the OpenTelemetry SDK or one of its providers.
