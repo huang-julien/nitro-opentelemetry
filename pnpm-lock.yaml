@@ -63,6 +63,9 @@ importers:
       '@baselime/node-opentelemetry':
         specifier: ^0.5.8
         version: 0.5.8(@trpc/server@10.45.2)
+      '@microlabs/otel-cf-workers':
+        specifier: 1.0.0-rc.49
+        version: 1.0.0-rc.49(@opentelemetry/api@1.9.0)
       '@types/node':
         specifier: ^20.16.5
         version: 20.16.5
@@ -983,6 +986,11 @@ packages:
   '@mapbox/node-pre-gyp@1.0.11':
     resolution: {integrity: sha512-Yhlar6v9WQgUp/He7BdgzOz8lqMQ8sU+jkCq7Wx8Myc5YFJLbEe7lgui/V7G1qB1DJykHSGwreceSaD60Y0PUQ==}
     hasBin: true
+
+  '@microlabs/otel-cf-workers@1.0.0-rc.49':
+    resolution: {integrity: sha512-wPfaHxFAOOHlLxvWVGhdsMf+lcSsjtysfHOwk7hnTdUdim1f3trTVxaa0fl7xF/AdZ1LgGbLI9xbCEz14qSzNw==}
+    peerDependencies:
+      '@opentelemetry/api': ~1.9.0
 
   '@microsoft/applicationinsights-web-snippet@1.2.1':
     resolution: {integrity: sha512-+Cy9zFqdQgdAbMK1dpm7B+3DUnrByai0Tq6XG9v737HJpW6G1EiNNbTuFeXdPWyGaq6FIx9jxm/SUcxA6/Rxxg==}
@@ -5661,6 +5669,17 @@ snapshots:
     transitivePeerDependencies:
       - encoding
       - supports-color
+
+  '@microlabs/otel-cf-workers@1.0.0-rc.49(@opentelemetry/api@1.9.0)':
+    dependencies:
+      '@opentelemetry/api': 1.9.0
+      '@opentelemetry/core': 1.26.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/exporter-trace-otlp-http': 0.53.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/otlp-exporter-base': 0.53.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/otlp-transformer': 0.53.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/resources': 1.26.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/sdk-trace-base': 1.26.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/semantic-conventions': 1.27.0
 
   '@microsoft/applicationinsights-web-snippet@1.2.1': {}
 

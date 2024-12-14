@@ -3,23 +3,40 @@ import type { Plugin } from "rollup"
 import { presets } from './imports'
 import { resolvePath } from 'mlly'
 import MagicString from 'magic-string'
-import { getPresetFile } from './presets'
+import { getPresetFile, isPresetEntry } from './presets'
 import { normalize } from "pathe"
 
 export default <NitroModule>{
     async setup(nitro) {
         nitro.options.alias['#nitro-opentelemetry/init'] = await getPresetFile(nitro)
 
+        if(isPresetEntry(nitro)) {
+            nitro.options.alias['#nitro-entry-file'] = nitro.options.entry
+            nitro.options.entry = await getPresetFile(nitro)
+        }
+
         nitro.hooks.hook('rollup:before', (nitro, rollupConfig) => {
             if (!rollupConfig.plugins) rollupConfig.plugins = [];
-            (rollupConfig.plugins as Plugin[]).push({
+            const plugins = rollupConfig.plugins
+            if(Array.isArray(plugins)) {
+                rollupConfig.plugins = plugins.filter((plugin) => {
+                    if( plugin && 'name' in plugin) {
+                        // workaround for while waiting for configurable impound settings in nuxt
+                        return plugin.name!== 'impound'
+                    }
+                    return true
+                });
+            }
+
+             (rollupConfig.plugins as Plugin[]).push({
                 name: 'inject-init-plugin',
                 async transform(code, id) {
                     const normalizedId = normalize(id)  
-                    // transform nitro entry file but there's probably a better way
-                    if (normalizedId.includes('runtime/entries')) {
+                     // transform nitro entry file but there's probably a better way
+                    if (normalizedId.includes('runtime/entries')) { 
                         const s = new MagicString(code)
                         s.prepend(`import '#nitro-opentelemetry/init';`)
+                     
                         return {
                             code: s.toString(),
                             map: s.generateMap({ hires: true }),
