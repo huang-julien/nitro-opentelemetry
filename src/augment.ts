@@ -7,7 +7,7 @@ declare module 'h3' {
     }
 }
 
-type presets = 'node' | 'node-cluster' | 'nitro-dev' | 'node-server' | 'azure-monitor'
+type presets = 'node' | 'node-cluster' | 'nitro-dev' | 'node-server' | 'azure-monitor' | 'baselime-node' | 'baselime-cf-worker'
 
 declare module 'nitropack' {
     interface NitroRuntimeHooks {
