@@ -4,18 +4,18 @@ import { logger } from "./logger";
 import { isAbsolute } from "pathe";
 
 export async function getPresetFile(nitro: Nitro) {
-    if(nitro.options.OTEL?.configFile && isAbsolute(nitro.options.OTEL?.configFile) ) {
-        return await resolvePath(nitro.options.OTEL.configFile, {
+    if(nitro.options.otel?.configFile && isAbsolute(nitro.options.otel?.configFile) ) {
+        return await resolvePath(nitro.options.otel.configFile, {
             extensions: ['.mjs', '.ts'],
             url: process.cwd()
         })
     }
 
-    if(nitro.options.OTEL?.configFile === false) {
+    if(nitro.options.otel?.configFile === false) {
         return ''
     }
 
-    const nitroPreset = nitro.options.OTEL?.configFile || nitro.options.preset
+    const nitroPreset = nitro.options.otel?.configFile || nitro.options.preset
 
     switch (nitroPreset) {
         case 'node':
@@ -52,6 +52,6 @@ export async function getPresetFile(nitro: Nitro) {
  * for example: baselime-cf-worker is re-exporting the entry file because it wraps the entry file with @microlabs/otel-cf-workers
  */
 export function isPresetEntry(nitro: Nitro) {
-    const preset = nitro.options.OTEL?.configFile || nitro.options.preset
+    const preset = nitro.options.otel?.configFile || nitro.options.preset
     return ['baselime-cf-worker'].includes(preset)
 }
