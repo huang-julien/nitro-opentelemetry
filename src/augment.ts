@@ -7,7 +7,28 @@ declare module 'h3' {
     }
 }
 
-type presets = 'node' | 'node-cluster' | 'nitro-dev' | 'node-server' | 'azure-monitor' | 'baselime-node' | 'baselime-cf-worker'
+interface CustomPreset {
+    name: 'custom'
+    filePath: string
+}
+
+interface NodePreset {
+    name: 'node'
+}
+
+interface AzureMonitorPreset {
+    name: 'azure-monitor'
+}
+
+interface BaselimeNodePreset {
+    name: 'baselime-node'
+}
+ 
+interface BaselimeCfWorkerPreset {
+    name: 'baselime-cf-worker'
+}
+
+type Presets = NodePreset | AzureMonitorPreset | BaselimeNodePreset | BaselimeCfWorkerPreset | CustomPreset
 
 declare module 'nitropack' {
     interface NitroRuntimeHooks {
@@ -22,7 +43,7 @@ declare module 'nitropack' {
              * Fallback to the default initializer file for the selected preset.
              * If set to `false`, no initializer file will be imported.
              */
-            configFile: presets | string | false
+            preset: Presets | false
         }>
     }
 }

@@ -1,21 +1,20 @@
 import { resolvePath } from "mlly";
 import type { Nitro } from "nitropack";
 import { logger } from "./logger";
-import { isAbsolute } from "pathe";
 
 export async function getPresetFile(nitro: Nitro) {
-    if(nitro.options.otel?.configFile && isAbsolute(nitro.options.otel?.configFile) ) {
-        return await resolvePath(nitro.options.otel.configFile, {
+    if (nitro.options.otel?.preset === false) {
+        return ''
+    }
+
+    if (nitro.options.otel?.preset?.name === 'custom') {
+        return await resolvePath(nitro.options.otel.preset.filePath, {
             extensions: ['.mjs', '.ts'],
             url: process.cwd()
         })
     }
 
-    if(nitro.options.otel?.configFile === false) {
-        return ''
-    }
-
-    const nitroPreset = nitro.options.otel?.configFile || nitro.options.preset
+    const nitroPreset = nitro.options.otel?.preset?.name || nitro.options.preset
 
     switch (nitroPreset) {
         case 'node':
@@ -23,12 +22,12 @@ export async function getPresetFile(nitro: Nitro) {
         case 'nitro-dev':
         case 'node-server': {
             return await resolvePath('nitro-opentelemetry/runtime/presets/node', {
-                extensions: ['.mjs', '.ts'] 
+                extensions: ['.mjs', '.ts']
             })
         }
         case 'azure-monitor': {
             return await resolvePath('nitro-opentelemetry/runtime/presets/azure-monitor', {
-                extensions: ['.mjs', '.ts'] 
+                extensions: ['.mjs', '.ts']
             })
         }
         case 'baselime-node': {
@@ -52,6 +51,6 @@ export async function getPresetFile(nitro: Nitro) {
  * for example: baselime-cf-worker is re-exporting the entry file because it wraps the entry file with @microlabs/otel-cf-workers
  */
 export function isPresetEntry(nitro: Nitro) {
-    const preset = nitro.options.otel?.configFile || nitro.options.preset
+    const preset = (nitro.options.otel?.preset ? nitro.options.otel?.preset.name : undefined) || nitro.options.preset
     return ['baselime-cf-worker'].includes(preset)
 }
