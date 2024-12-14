@@ -1,4 +1,5 @@
 import { instrument, ResolveConfigFn } from '@microlabs/otel-cf-workers'
+// @ts-ignore - nitro entry alias
 import handler from "#nitro-entry-file"
 
 export interface Env {
