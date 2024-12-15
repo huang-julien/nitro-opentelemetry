@@ -56,6 +56,7 @@ export default <NitroModule>{
             })
         })
 
+        nitro.options.virtual['#nitro-otel-options'] = nitro.options.otel?.preset && typeof nitro.options.otel.preset === 'object' && 'options' in nitro.options.otel.preset ? `export default ${JSON.stringify(nitro.options.otel.preset.options || {})}` : `export default {}`;
 
         if (nitro.options.imports) {
             nitro.options.imports.presets.push(presets)

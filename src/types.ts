@@ -1,3 +1,5 @@
+import type { TraceConfig } from "@microlabs/otel-cf-workers"
+
 export interface CustomPreset {
     name: 'custom'
     filePath: string
@@ -17,6 +19,10 @@ export interface BaselimeNodePreset {
  
 export interface BaselimeCfWorkerPreset {
     name: 'baselime-cf-worker'
+    /**
+     * This only accept serializable objects
+     */
+    options: TraceConfig
 }
 
 export type Presets = NodePreset | AzureMonitorPreset | BaselimeNodePreset | BaselimeCfWorkerPreset | CustomPreset
