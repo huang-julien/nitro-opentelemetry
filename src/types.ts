@@ -1,4 +1,4 @@
-interface CustomPreset {
+export interface CustomPreset {
     name: 'custom'
     filePath: string
 }
