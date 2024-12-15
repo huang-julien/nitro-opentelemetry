@@ -1,34 +1,12 @@
 import type { Span } from "@opentelemetry/api";
 import type { H3Event } from "h3"
+import { Presets } from "./types";
 
 declare module 'h3' {
     interface H3EventContext {
         span: Span
     }
 }
-
-interface CustomPreset {
-    name: 'custom'
-    filePath: string
-}
-
-interface NodePreset {
-    name: 'node'
-}
-
-interface AzureMonitorPreset {
-    name: 'azure-monitor'
-}
-
-interface BaselimeNodePreset {
-    name: 'baselime-node'
-}
- 
-interface BaselimeCfWorkerPreset {
-    name: 'baselime-cf-worker'
-}
-
-type Presets = NodePreset | AzureMonitorPreset | BaselimeNodePreset | BaselimeCfWorkerPreset | CustomPreset
 
 declare module 'nitropack' {
     interface NitroRuntimeHooks {
