@@ -51,10 +51,10 @@ export default defineNitroConfig({
 
 ## Config
 
-You can configure the module with the `openTelemetry` property in your `nitro.config.ts`
+You can configure the module with the `otel` property in your `nitro.config.ts`
 
-- **configFile**
-    - This module provides some presets by default: node and azure. You can set your own file to configure and setup OTEL. Your file will be imported first before anything.
+- **preset**:
+  - Option to configure the preset that will be used with OTEL
 
 ## Hooks
 
