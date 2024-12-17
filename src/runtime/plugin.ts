@@ -1,8 +1,10 @@
 import * as api from "@opentelemetry/api"
 import { NitroApp } from "nitropack";
 import type { H3Event } from "h3";
-import { ATTR_URL_PATH, ATTR_URL_FULL, ATTR_HTTP_REQUEST_METHOD } from "@opentelemetry/semantic-conventions"
+import { ATTR_URL_PATH, ATTR_URL_FULL, ATTR_HTTP_REQUEST_METHOD, ATTR_HTTP_RESPONSE_STATUS_CODE, ATTR_URL_SCHEME } from "@opentelemetry/semantic-conventions"
 import type { NitroAppPlugin, NitroRuntimeHooks } from "nitropack";
+import { getResponseStatus, getRequestProtocol } from "h3"
+
 const context = api.context, trace = api.trace
 const tracer = trace.getTracer('nitro-opentelemetry')
 
@@ -12,7 +14,8 @@ export default <NitroAppPlugin>((nitro) => {
             attributes: {
                 [ATTR_URL_PATH]: event.context.matchedRoute?.path || event.path,
                 [ATTR_URL_FULL]: event.path,
-                [ATTR_HTTP_REQUEST_METHOD]: event.method
+                [ATTR_HTTP_REQUEST_METHOD]: event.method,
+                [ATTR_URL_SCHEME]: getRequestProtocol(event)
             },
             kind: api.SpanKind.SERVER
         }, context.active())
@@ -21,6 +24,7 @@ export default <NitroAppPlugin>((nitro) => {
     })
 
     nitro.hooks.hook('beforeResponse', (event) => {
+        event.context.span.setAttribute(ATTR_HTTP_RESPONSE_STATUS_CODE, getResponseStatus(event))
         event.context.span.end()
     })
 
