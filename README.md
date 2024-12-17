@@ -69,6 +69,11 @@ interface NitroRuntimeHooks {
 - **otel:span:name**
     - Ran when a span is created.
 
+## Utils
+
+`defineTracedEventHandler`
+- Wrap your event handler with the span affected to your event
+
 ## Development
 
 <details>
