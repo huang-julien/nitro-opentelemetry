@@ -1,3 +1,4 @@
+import type { AzureMonitorOpenTelemetryOptions } from "@azure/monitor-opentelemetry"
 import type { TraceConfig } from "@microlabs/otel-cf-workers"
 
 export interface CustomPreset {
@@ -15,6 +16,7 @@ export interface NodePreset {
 
 export interface AzureMonitorPreset {
     name: 'azure-monitor'
+    options: AzureMonitorOpenTelemetryOptions
 }
 
 export interface BaselimeNodePreset {
