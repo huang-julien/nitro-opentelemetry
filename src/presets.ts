@@ -40,6 +40,11 @@ export async function getPresetFile(nitro: Nitro) {
                 extensions: ['.mjs', '.ts']
             })
         }
+        case 'cf-worker': {
+            return await resolvePath('nitro-opentelemetry/runtime/presets/cf-worker', {
+                extensions: ['.mjs', '.ts']
+            })
+        }
     }
 
     logger.warn(`Initializer file for preset ${nitroPreset} not found. Please provide your own or open an issue on the repository.`)

@@ -36,4 +36,17 @@ export interface BaselimeCfWorkerPreset {
     options: TraceConfig
 }
 
-export type Presets = NodePreset | AzureMonitorPreset | BaselimeNodePreset | BaselimeCfWorkerPreset | CustomPreset
+/**
+ * Cloudflare Worker preset
+ * uses @microlabs/otel-cf-workers under the hood and re-export the entry file
+ */
+export interface CfWorkerPreset {
+    name: 'cf-worker'
+    /**
+     * The options to pass to the @microlabs/otel-cf-workers
+     * This only accept serializable objects
+     */
+    options: TraceConfig
+}
+
+export type Presets = NodePreset | AzureMonitorPreset | BaselimeNodePreset | BaselimeCfWorkerPreset | CustomPreset | CfWorkerPreset
