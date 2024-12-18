@@ -47,7 +47,7 @@ export async function getPresetFile(nitro: Nitro) {
 }
 
 /**
- * return true if the preset is a preset entry
+ * return true if the preset file is an entry file
  * for example: baselime-cf-worker is re-exporting the entry file because it wraps the entry file with @microlabs/otel-cf-workers
  */
 export function isPresetEntry(nitro: Nitro) {
