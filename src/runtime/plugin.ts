@@ -28,11 +28,6 @@ export default <NitroAppPlugin>((nitro) => {
         event.context.span.end()
     })
 
-    nitro.hooks.hook('afterResponse', (event) => {
-        // @ts-ignore
-        event.context.span = undefined
-    })
-
     nitro.hooks.hook('error', (error, { event }) => {
         event?.context.span.recordException(error)
     })
