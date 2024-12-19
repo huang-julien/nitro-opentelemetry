@@ -29,7 +29,11 @@ export default <NitroAppPlugin>((nitro) => {
     })
 
     nitro.hooks.hook('error', (error, { event }) => {
-        event?.context.span.recordException(error)
+        if (event) {
+            event.context.span.recordException(error)
+        } else {
+            trace.getSpan(api.ROOT_CONTEXT)?.recordException(error)
+        }
     })
 })
 
