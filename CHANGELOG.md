@@ -1,6 +1,57 @@
 # Changelog
 
 
+## v0.3.0
+
+[compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.1.1...v0.3.0)
+
+### 🚀 Enhancements
+
+- **presets:** Add baselime-node ([71576e5](https://github.com/huang-julien/open-telemetry-nitro/commit/71576e5))
+- **preset:** Add baselime cf worker ([1f3cedf](https://github.com/huang-julien/open-telemetry-nitro/commit/1f3cedf))
+- Export all types ([0ccac1b](https://github.com/huang-julien/open-telemetry-nitro/commit/0ccac1b))
+- **baselime-cf-worker:** Add options ([eb7bc58](https://github.com/huang-julien/open-telemetry-nitro/commit/eb7bc58))
+- **azure:** Add options for azure preset ([30cbda4](https://github.com/huang-julien/open-telemetry-nitro/commit/30cbda4))
+- **cf-worker:** Add cf-worker preset ([149dfe0](https://github.com/huang-julien/open-telemetry-nitro/commit/149dfe0))
+
+### 🩹 Fixes
+
+- Add http method ([#1](https://github.com/huang-julien/open-telemetry-nitro/pull/1))
+- **playground:** Fix util ([c94a1da](https://github.com/huang-julien/open-telemetry-nitro/commit/c94a1da))
+- **baselime-cf-worker:** Cleanup baselime-cf-worker ([5d41ca4](https://github.com/huang-julien/open-telemetry-nitro/commit/5d41ca4))
+- Add missing preset string ([43c497b](https://github.com/huang-julien/open-telemetry-nitro/commit/43c497b))
+- **plugin:** Add URL SCHEME and status code ([0b121e4](https://github.com/huang-julien/open-telemetry-nitro/commit/0b121e4))
+- **plugin:** Don't set context span to undefined ([0180c89](https://github.com/huang-julien/open-telemetry-nitro/commit/0180c89))
+- **plugin:** Get span in ROOT_CONTEXT if no event ([08b5a7e](https://github.com/huang-julien/open-telemetry-nitro/commit/08b5a7e))
+
+### 💅 Refactors
+
+- Use pathe instead of path ([3a79087](https://github.com/huang-julien/open-telemetry-nitro/commit/3a79087))
+- ⚠️  Rename config keyto OTEL ([41afbf7](https://github.com/huang-julien/open-telemetry-nitro/commit/41afbf7))
+- Prefer otel instead of OTEL ([6d33fd5](https://github.com/huang-julien/open-telemetry-nitro/commit/6d33fd5))
+- ⚠️  Change configFile to preset with interface to allow configurable presets ([55b0e13](https://github.com/huang-julien/open-telemetry-nitro/commit/55b0e13))
+- Move types in types.ts ([779771a](https://github.com/huang-julien/open-telemetry-nitro/commit/779771a))
+
+### 🏡 Chore
+
+- Rename traced event handler ([0346b85](https://github.com/huang-julien/open-telemetry-nitro/commit/0346b85))
+- Add ts-ignore ([236a3ca](https://github.com/huang-julien/open-telemetry-nitro/commit/236a3ca))
+- Update README ([971bbcc](https://github.com/huang-julien/open-telemetry-nitro/commit/971bbcc))
+- Update comments ([bd22ffb](https://github.com/huang-julien/open-telemetry-nitro/commit/bd22ffb))
+- 0.2.0 ([f4e0ada](https://github.com/huang-julien/open-telemetry-nitro/commit/f4e0ada))
+- Update packages ([6c088dd](https://github.com/huang-julien/open-telemetry-nitro/commit/6c088dd))
+- **README:** Add defineTracedEventHandler doc ([556b19c](https://github.com/huang-julien/open-telemetry-nitro/commit/556b19c))
+- Correct comments ([84dcea0](https://github.com/huang-julien/open-telemetry-nitro/commit/84dcea0))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Rename config keyto OTEL ([41afbf7](https://github.com/huang-julien/open-telemetry-nitro/commit/41afbf7))
+- ⚠️  Change configFile to preset with interface to allow configurable presets ([55b0e13](https://github.com/huang-julien/open-telemetry-nitro/commit/55b0e13))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](http://github.com/huang-julien))
+
 ## v0.2.0
 
 [compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.1.1...v0.2.0)
