@@ -47,6 +47,16 @@ export default defineNitroConfig({
 });
 ```
 
+This module is also compatible with Nuxt
+
+```ts
+export default defineNuxtConfig({
+  modules: [
+    'nitro-opentelemetry'
+  ]
+})
+```
+
 <!-- /automd -->
 
 ## Config
