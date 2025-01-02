@@ -35,6 +35,9 @@ importers:
       '@opentelemetry/sdk-node':
         specifier: 0.56.0
         version: 0.56.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/sdk-trace-node':
+        specifier: ^1.26.0
+        version: 1.26.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/semantic-conventions':
         specifier: ^1.28.0
         version: 1.28.0
@@ -69,9 +72,6 @@ importers:
       '@nuxt/schema':
         specifier: ^3.14.1592
         version: 3.14.1592(magicast@0.3.5)(rollup@4.24.0)
-      '@opentelemetry/sdk-trace-node':
-        specifier: ^1.26.0
-        version: 1.26.0(@opentelemetry/api@1.9.0)
       '@types/node':
         specifier: ^20.16.5
         version: 20.16.5
