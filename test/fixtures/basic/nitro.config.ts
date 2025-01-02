@@ -1,3 +1,7 @@
 import { defineNitroConfig } from 'nitropack/config'
 
-export default defineNitroConfig({})
+export default defineNitroConfig({
+    modules: [
+        '../../../src'
+    ]
+})

@@ -1,7 +1,7 @@
 import { defineEventHandler } from "h3";
 
-export default defineEventHandler(() => {
+export default defineEventHandler((e) => {
     return {
-        hello: 'world!'
+        traceId: e.context.span.spanContext().traceId,
     }
 })
