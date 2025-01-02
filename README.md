@@ -7,6 +7,8 @@
 
 <!-- /automd -->
 
+❗Status: API is unstable and may be subject to change until 1.0
+
 Opentelemetry integration for nitro. Without patching nitro.
 
 This nitro module automatically create spans for request and error happening in your nitro server.
