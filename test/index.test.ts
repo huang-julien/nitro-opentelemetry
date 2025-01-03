@@ -10,7 +10,6 @@ describe('traces', async () => {
     it('should trace requests', async () => {
         const { data } = await $fetchRaw('')
 
-        console.log(data)
         expect(data.traceId).toBeDefined()
     })
 
