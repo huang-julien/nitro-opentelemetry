@@ -6,9 +6,9 @@ import type { NitroAppPlugin, NitroRuntimeHooks } from "nitropack";
 import { getResponseStatus, getRequestProtocol, getRequestURL, getHeaders } from "h3"
 
 const context = api.context, trace = api.trace
-const tracer = trace.getTracer('nitro-opentelemetry')
 
 export default <NitroAppPlugin>((nitro) => {
+    const tracer = trace.getTracer('nitro-opentelemetry')
     nitro.hooks.hook('request', async (event) => {
         const requestURL = getRequestURL(event)
         const remoteCtx = api.propagation.extract(api.ROOT_CONTEXT, getHeaders(event))
