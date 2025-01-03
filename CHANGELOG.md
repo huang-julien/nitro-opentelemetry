@@ -1,6 +1,40 @@
 # Changelog
 
 
+## v0.4.0
+
+[compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.3.0...v0.4.0)
+
+### 🚀 Enhancements
+
+- Nuxt module compatibility ([2bb1f6a](https://github.com/huang-julien/open-telemetry-nitro/commit/2bb1f6a))
+- Extract context from headers ([a66ff2f](https://github.com/huang-julien/open-telemetry-nitro/commit/a66ff2f))
+
+### 🩹 Fixes
+
+- **plugin:** Add missing server adress and port ([1d8910d](https://github.com/huang-julien/open-telemetry-nitro/commit/1d8910d))
+- Add missing dependency ([fd8fa5c](https://github.com/huang-julien/open-telemetry-nitro/commit/fd8fa5c))
+
+### 💅 Refactors
+
+- **plugin:** Get tracer inside plugin ([200c1d3](https://github.com/huang-julien/open-telemetry-nitro/commit/200c1d3))
+
+### 📖 Documentation
+
+- Warn about unstable status in readme ([9da97c3](https://github.com/huang-julien/open-telemetry-nitro/commit/9da97c3))
+
+### 🏡 Chore
+
+- Update lockfile ([c470fb9](https://github.com/huang-julien/open-telemetry-nitro/commit/c470fb9))
+
+### ✅ Tests
+
+- Add basic tests ([dd42275](https://github.com/huang-julien/open-telemetry-nitro/commit/dd42275))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](http://github.com/huang-julien))
+
 ## v0.3.0
 
 [compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.1.1...v0.3.0)
