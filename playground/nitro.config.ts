@@ -7,4 +7,5 @@ export default defineNitroConfig({
   experimental: {
     asyncContext: true
   },
+  compatibilityDate: '2025-01-03'
 });
