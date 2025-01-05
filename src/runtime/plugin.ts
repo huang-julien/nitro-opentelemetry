@@ -11,7 +11,12 @@ export default <NitroAppPlugin>((nitro) => {
     const tracer = trace.getTracer('nitro-opentelemetry')
     nitro.hooks.hook('request', async (event) => {
         const requestURL = getRequestURL(event)
-        const remoteCtx = api.propagation.extract(api.ROOT_CONTEXT, getHeaders(event))
+        const currentContext = context.active()
+
+        // Extract the parent context from the headers if it exists
+        // If the current context is not ROOT_CONTEXT, it means that the request is an internal call with $fetch.
+        const parentCtx = currentContext === api.ROOT_CONTEXT ? api.propagation.extract(api.ROOT_CONTEXT, getHeaders(event)) : currentContext;
+        
         const span = tracer.startSpan(await getSpanName(nitro, event), {
             attributes: {
                 [ATTR_URL_PATH]: event.context.matchedRoute?.path || event.path,
@@ -22,7 +27,7 @@ export default <NitroAppPlugin>((nitro) => {
                 [ATTR_SERVER_PORT]: requestURL.port
             },
             kind: api.SpanKind.SERVER
-        }, remoteCtx)
+        }, parentCtx)
         trace.setSpan(context.active(), span)
         event.context.span = span
     })
