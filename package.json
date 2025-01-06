@@ -43,6 +43,7 @@
     "@vitest/coverage-v8": "^1.6.0",
     "@vitest/ui": "^2.1.8",
     "automd": "^0.3.8",
+    "biome": "^0.3.3",
     "changelogen": "^0.5.7",
     "eslint": "^9.11.0",
     "eslint-config-unjs": "^0.3.2",
