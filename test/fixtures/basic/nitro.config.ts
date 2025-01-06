@@ -2,6 +2,11 @@ import { defineNitroConfig } from 'nitropack/config'
 
 export default defineNitroConfig({
     modules: [
-        '../../../src'
-    ]
+        'nitro-opentelemetry'
+    ],
+    otel: {
+        preset: {
+            name: 'node'
+        }
+    }
 })
