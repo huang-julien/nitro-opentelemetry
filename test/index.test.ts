@@ -1,10 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { $fetchRaw } from 'nitro-test-utils/e2e'
-import { context, propagation, SpanKind, trace } from '@opentelemetry/api'
-import { NodeTracerProvider } from '@opentelemetry/sdk-trace-node'
-const provider = new NodeTracerProvider();
+ const dummyTrace = '00-0af7651916cd43dd8448eb211c80319c-b7ad6b7169203331-01'
 
-provider.register();
 
 describe('traces', async () => {
     it('should trace requests', async () => {
@@ -14,18 +11,18 @@ describe('traces', async () => {
     })
 
     it('should keep trace context', async () => {
-        await trace.getTracer('test').startActiveSpan('test', {
-            kind: SpanKind.CLIENT
-        }, context.active(), async (span) => {
-            const output = {};
-            propagation.inject(context.active(), output);
-
+        
             const { data } = await $fetchRaw('', {
                 headers: {
-                    ...output
+                    traceparent:dummyTrace
                 }
-            })
-            expect(data.traceId).toBe(span.spanContext().traceId)
-        })
+            }) 
+            // assert that the traceId is the same
+            expect(data.traceId).toBe(dummyTrace.split('-')[1])
+
+            // assert that localFetch is correctly traced
+            expect(data.anotherEndpoint.traceId).toBe(data.traceId)
+            expect(data.anotherEndpoint.parentSpanId).toBe(data.spanId)
+       
     })
 })
