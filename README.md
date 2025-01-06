@@ -102,13 +102,13 @@ interface NitroRuntimeHooks {
 
 ## License
 
-<!-- automd:contributors license=MIT -->
+<!-- automd:contributors license=MIT github=nitro-opentelemetry author=huang-julien -->
 
-Published under the [MIT](https://github.com/unjs/nitro-opentelemetry/blob/main/LICENSE) license.
-Made by [community](https://github.com/unjs/nitro-opentelemetry/graphs/contributors) 💛
+Published under the [MIT](https://github.com/nitro-opentelemetry/blob/main/LICENSE) license.
+Made by [@huang-julien](https://github.com/huang-julien) and [community](https://github.com/nitro-opentelemetry/graphs/contributors) 💛
 <br><br>
-<a href="https://github.com/unjs/nitro-opentelemetry/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=unjs/nitro-opentelemetry" />
+<a href="https://github.com/nitro-opentelemetry/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=nitro-opentelemetry" />
 </a>
 
 <!-- /automd -->
