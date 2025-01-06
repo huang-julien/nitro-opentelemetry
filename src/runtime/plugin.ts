@@ -9,13 +9,13 @@ const context = api.context, trace = api.trace
 
 export default <NitroAppPlugin>((nitro) => {
     const tracer = trace.getTracer('nitro-opentelemetry')
+
     nitro.hooks.hook('request', async (event) => {
         const requestURL = getRequestURL(event)
         const currentContext = context.active()
 
         // Extract the parent context from the headers if it exists
-        // If the current context is not ROOT_CONTEXT, it means that the request is an internal call with $fetch.
-        const parentCtx = currentContext === api.ROOT_CONTEXT ? api.propagation.extract(api.ROOT_CONTEXT, getHeaders(event)) : currentContext;
+        const parentCtx = api.propagation.extract(currentContext, getHeaders(event));
         
         const span = tracer.startSpan(await getSpanName(nitro, event), {
             attributes: {
