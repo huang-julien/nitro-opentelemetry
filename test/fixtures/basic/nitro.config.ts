@@ -1,7 +1,13 @@
 import { defineNitroConfig } from 'nitropack/config'
+import '../../../src/augment'
 
 export default defineNitroConfig({
     modules: [
-        '../../../src'
-    ]
+        'nitro-opentelemetry'
+    ],
+    otel: {
+        preset: {
+            name: 'node'
+        }
+    }
 })

@@ -16,12 +16,12 @@ jobs:
       - run: corepack enable
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: "pnpm"
       - run: pnpm install
       - run: pnpm dev:prepare
       - run: pnpm lint
       - run: pnpm test:types
       - run: pnpm build
-      - run: pnpm vitest --coverage
+      - run: pnpm vitest
       - uses: codecov/codecov-action@v4
