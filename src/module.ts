@@ -33,7 +33,8 @@ async function module(nitro: Nitro) {
             async transform(code, id) {
                 const normalizedId = normalize(id)  
                  // transform nitro entry file but there's probably a better way
-                if (normalizedId.includes('runtime/entries')) { 
+                if (normalizedId.includes('runtime/entries') || this.getModuleInfo(id)?.isEntry ) { 
+                    console.log('transforming entry file', normalizedId)
                     const s = new MagicString(code)
                     s.prepend(`import '#nitro-opentelemetry/init';`)
                  
