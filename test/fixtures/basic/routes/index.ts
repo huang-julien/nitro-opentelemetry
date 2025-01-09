@@ -1,5 +1,3 @@
-import { defineEventHandler } from "h3";
-
 export default defineTracedEventHandler(async (e) => {
     const { traceId, parentSpanId } = await $fetch('/another-endpoint')
     return {

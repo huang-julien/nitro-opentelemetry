@@ -1,6 +1,5 @@
 import { defineNitroConfig } from 'nitropack/config'
 import '../../../src/augment'
-import { resolve } from 'pathe'
 
 export default defineNitroConfig({
   modules: [
