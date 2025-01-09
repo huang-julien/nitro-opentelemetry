@@ -10,7 +10,7 @@ export async function getPresetFile(nitro: Nitro) {
     if (nitro.options.otel?.preset?.name === 'custom') {
         return await resolvePath(nitro.options.otel.preset.filePath, {
             extensions: ['.mjs', '.ts'],
-            url: process.cwd()
+            url: nitro.options.rootDir
         })
     }
 
