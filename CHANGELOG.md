@@ -1,6 +1,55 @@
 # Changelog
 
 
+## v0.5.0
+
+[compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.3.0...v0.5.0)
+
+### 🚀 Enhancements
+
+- Nuxt module compatibility ([2bb1f6a](https://github.com/huang-julien/open-telemetry-nitro/commit/2bb1f6a))
+- Extract context from headers ([a66ff2f](https://github.com/huang-julien/open-telemetry-nitro/commit/a66ff2f))
+- Trace internal requests ([#3](https://github.com/huang-julien/open-telemetry-nitro/pull/3))
+
+### 🩹 Fixes
+
+- **plugin:** Add missing server adress and port ([1d8910d](https://github.com/huang-julien/open-telemetry-nitro/commit/1d8910d))
+- Add missing dependency ([fd8fa5c](https://github.com/huang-julien/open-telemetry-nitro/commit/fd8fa5c))
+- Properly inject init file in entry file ([b4ccca8](https://github.com/huang-julien/open-telemetry-nitro/commit/b4ccca8))
+
+### 💅 Refactors
+
+- **plugin:** Get tracer inside plugin ([200c1d3](https://github.com/huang-julien/open-telemetry-nitro/commit/200c1d3))
+
+### 📖 Documentation
+
+- Warn about unstable status in readme ([9da97c3](https://github.com/huang-julien/open-telemetry-nitro/commit/9da97c3))
+
+### 🏡 Chore
+
+- Update lockfile ([c470fb9](https://github.com/huang-julien/open-telemetry-nitro/commit/c470fb9))
+- 0.4.0 ([a2292cf](https://github.com/huang-julien/open-telemetry-nitro/commit/a2292cf))
+- Remove console.log in test ([58276b5](https://github.com/huang-julien/open-telemetry-nitro/commit/58276b5))
+- **playground:** Add compatibility date ([c9fa5e1](https://github.com/huang-julien/open-telemetry-nitro/commit/c9fa5e1))
+- Remove prepare scripts from fixtures and playground ([1cf9131](https://github.com/huang-julien/open-telemetry-nitro/commit/1cf9131))
+- Update README ([98ef316](https://github.com/huang-julien/open-telemetry-nitro/commit/98ef316))
+- Add biome ([ff7d659](https://github.com/huang-julien/open-telemetry-nitro/commit/ff7d659))
+- Lint ([66b3ef5](https://github.com/huang-julien/open-telemetry-nitro/commit/66b3ef5))
+- Remove console.log ([12092d9](https://github.com/huang-julien/open-telemetry-nitro/commit/12092d9))
+
+### ✅ Tests
+
+- Add basic tests ([dd42275](https://github.com/huang-julien/open-telemetry-nitro/commit/dd42275))
+- Fix ci ([#5](https://github.com/huang-julien/open-telemetry-nitro/pull/5))
+
+### 🤖 CI
+
+- Run dev:prepare after install ([23c8e5e](https://github.com/huang-julien/open-telemetry-nitro/commit/23c8e5e))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](http://github.com/huang-julien))
+
 ## v0.4.0
 
 [compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.3.0...v0.4.0)
