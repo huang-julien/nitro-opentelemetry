@@ -25,4 +25,13 @@ describe('traces', async () => {
             expect(data.anotherEndpoint.parentSpanId).toBe(data.spanId)
        
     })
+
+})
+
+describe('names', () => {
+    it('should name span with dynamic path', async () => {
+        const { data } = await $fetchRaw('/dynamic/test')
+
+        expect(data).toBe('/dynamic/:slug')
+    })
 })
