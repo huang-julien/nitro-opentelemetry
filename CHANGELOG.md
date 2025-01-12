@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.5.1
+
+[compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.5.0...v0.5.1)
+
+### 🩹 Fixes
+
+- Correctly get route path for span name ([#7](https://github.com/huang-julien/open-telemetry-nitro/pull/7))
+
+### 🏡 Chore
+
+- **release:** V0.5.0 ([0a545d2](https://github.com/huang-julien/open-telemetry-nitro/commit/0a545d2))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](http://github.com/huang-julien))
+
 ## v0.5.0
 
 [compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.3.0...v0.5.0)
