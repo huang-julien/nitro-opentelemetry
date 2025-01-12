@@ -16,7 +16,7 @@ export default <NitroAppPlugin>((nitro) => {
         // Extract the parent context from the headers if it exists
         const parentCtx = api.propagation.extract(currentContext, getHeaders(event));
         
-        const span = tracer.startSpan(await getSpanName(nitro, event), {
+        const span = tracer.startSpan(await getSpanName(event), {
             attributes: {
                 [ATTR_URL_PATH]: event.context.matchedRoute?.path || event.path,
                 [ATTR_URL_FULL]: event.path,
@@ -43,10 +43,12 @@ export default <NitroAppPlugin>((nitro) => {
             trace.getSpan(api.ROOT_CONTEXT)?.recordException(error)
         }
     })
+
+    async function getSpanName(event: H3Event) {
+        const ctx: Parameters<NitroRuntimeHooks['otel:span:name']>[0] = { event, name: undefined }
+        await nitro.hooks.callHook('otel:span:name', ctx)
+
+        return ctx.name || (await nitro.h3App.resolve(event.path))?.route || event.path
+    }
 })
 
-async function getSpanName(nitro: Parameters<NitroAppPlugin>[0], event: H3Event) {
-    const ctx: Parameters<NitroRuntimeHooks['otel:span:name']>[0] = { event, name: undefined }
-    await nitro.hooks.callHook('otel:span:name', ctx)
-    return ctx.name || event.context.matchedRoute?.path || event.path
-}
