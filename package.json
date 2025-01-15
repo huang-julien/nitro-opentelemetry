@@ -1,10 +1,16 @@
 {
   "name": "nitro-opentelemetry",
   "version": "0.5.1",
-  "description": "",
+  "description": "Opentelemetry module for the server framework nitro. Compatible with Nuxt.",
   "license": "MIT",
   "sideEffects": false,
   "type": "module",
+  "keywords": [
+    "nitro",
+    "opentelemetry",
+    "nuxt",
+    "nuxt-module"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
