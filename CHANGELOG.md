@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v0.6.0
+
+[compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.5.1...v0.6.0)
+
+### 🚀 Enhancements
+
+- **plugin:** `otel:span:end` hook ([#8](https://github.com/huang-julien/open-telemetry-nitro/pull/8))
+
+### 🏡 Chore
+
+- Update package info ([7aa9862](https://github.com/huang-julien/open-telemetry-nitro/commit/7aa9862))
+- Add nitro module kw ([fee52b1](https://github.com/huang-julien/open-telemetry-nitro/commit/fee52b1))
+
+### ❤️ Contributors
+
+- Julien Huang <julien.h.dev@gmail.com>
+
 ## v0.5.1
 
 [compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.5.0...v0.5.1)
