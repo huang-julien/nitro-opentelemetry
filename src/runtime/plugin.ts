@@ -29,12 +29,17 @@ export default <NitroAppPlugin>((nitro) => {
         }, parentCtx)
         trace.setSpan(context.active(), span)
         event.context.span = span
+        event.context.__otel = {}
     })
 
-    nitro.hooks.hook('beforeResponse', async (event) => {
+    nitro.hooks.hook('beforeResponse', (event) => {
+        event.context.__otel.endTime = Date.now()
+    })
+
+    nitro.hooks.hook('afterResponse', async (event) => {
         event.context.span.setAttribute(ATTR_HTTP_RESPONSE_STATUS_CODE, getResponseStatus(event))
         await nitro.hooks.callHook('otel:span:end', { event, span: event.context.span })
-        event.context.span.end()
+        event.context.span.end(event.context.__otel.endTime) 
     })
 
     nitro.hooks.hook('error', (error, { event }) => {
