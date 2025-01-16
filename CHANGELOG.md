@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.6.1
+
+[compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.6.0...v0.6.1)
+
+### 🩹 Fixes
+
+- **plugin:** GetTracer in request hook ([#9](https://github.com/huang-julien/open-telemetry-nitro/pull/9))
+- **plugin:** End span in afterReponse hook ([#10](https://github.com/huang-julien/open-telemetry-nitro/pull/10))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](http://github.com/huang-julien))
+
 ## v0.6.0
 
 [compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.5.1...v0.6.0)
