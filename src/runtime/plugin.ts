@@ -31,8 +31,9 @@ export default <NitroAppPlugin>((nitro) => {
         event.context.span = span
     })
 
-    nitro.hooks.hook('beforeResponse', (event) => {
+    nitro.hooks.hook('beforeResponse', async (event) => {
         event.context.span.setAttribute(ATTR_HTTP_RESPONSE_STATUS_CODE, getResponseStatus(event))
+        await nitro.hooks.callHook('otel:span:end', { event, span: event.context.span })
         event.context.span.end()
     })
 

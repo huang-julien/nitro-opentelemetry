@@ -11,6 +11,7 @@ declare module 'h3' {
 declare module 'nitropack' {
     interface NitroRuntimeHooks {
         'otel:span:name': (context: { event: H3Event, name: undefined|string}) => void
+        'otel:span:end': (context: { event: H3Event, span: Span }) => void
     }
 
     interface NitroOptions {
