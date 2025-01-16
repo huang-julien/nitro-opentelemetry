@@ -9,7 +9,8 @@
     "nitro",
     "opentelemetry",
     "nuxt",
-    "nuxt-module"
+    "nuxt-module",
+    "nitro module"
   ],
   "exports": {
     ".": {
