@@ -42,11 +42,16 @@ export default <NitroAppPlugin>((nitro) => {
         event.context.span.end(event.context.__otel.endTime) 
     })
 
-    nitro.hooks.hook('error', (error, { event }) => {
+    nitro.hooks.hook('error', async (error, { event }) => {
         if (event) {
             event.context.span.recordException(error)
+            event.context.span.setAttribute(ATTR_HTTP_RESPONSE_STATUS_CODE, getResponseStatus(event))
+            await nitro.hooks.callHook('otel:span:end', { event, span: event.context.span })
+            event.context.span.end()
         } else {
-            trace.getSpan(api.ROOT_CONTEXT)?.recordException(error)
+            const span = trace.getSpan(api.ROOT_CONTEXT)
+            span?.recordException(error)
+            span?.end()
         }
     })
 
