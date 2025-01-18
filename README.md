@@ -75,11 +75,15 @@ Here are the available hooks.
 ```ts
 interface NitroRuntimeHooks {
     'otel:span:name': (context: { event: H3Event, name: undefined|string }) => void
+    'otel:span:end': (context: { event: H3Event, span: Span }) => void
 }
 ```
 
 - **otel:span:name**
-    - Ran when a span is created.
+    - Called when a span is created.
+
+- **otel:span:end**
+    - Called before ending a `Span`. This can happen in the `afterResponse` hook or in the `error` hook.
 
 ## Utils
 
