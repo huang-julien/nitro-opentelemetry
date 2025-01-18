@@ -4,19 +4,17 @@ import { ATTR_URL_PATH, ATTR_URL_FULL, ATTR_HTTP_REQUEST_METHOD, ATTR_HTTP_RESPO
 import type { NitroAppPlugin, NitroRuntimeHooks } from "nitropack";
 import { getResponseStatus, getRequestProtocol, getRequestURL, getHeaders } from "h3"
 
-const context = api.context, trace = api.trace
-
+const context = api.context, trace = api.trace 
 export default <NitroAppPlugin>((nitro) => {
-
     nitro.hooks.hook('request', async (event) => {
         const tracer = trace.getTracer('nitro-opentelemetry')
         const requestURL = getRequestURL(event)
-        const currentContext = context.active()
+        const currentContext = context.active() 
 
         // Extract the parent context from the headers if it exists
-        const parentCtx = api.propagation.extract(currentContext, getHeaders(event));
-        
-        const span = tracer.startSpan(await getSpanName(event), {
+        // If a span is already set in the context, use it as the parent
+        const parentCtx = trace.getSpan(currentContext) ? currentContext : api.propagation.extract(currentContext, getHeaders(event));
+         const span = tracer.startSpan(await getSpanName(event), {
             attributes: {
                 [ATTR_URL_PATH]: event.context.matchedRoute?.path || event.path,
                 [ATTR_URL_FULL]: event.path,
@@ -27,27 +25,30 @@ export default <NitroAppPlugin>((nitro) => {
             },
             kind: api.SpanKind.SERVER
         }, parentCtx)
-        trace.setSpan(context.active(), span)
-        event.context.span = span
-        event.context.__otel = {}
+        const ctx =  trace.setSpan(context.active(), span) 
+        event.otel = {
+            span,
+            __endTime: undefined
+            ,ctx
+        } 
     })
 
     nitro.hooks.hook('beforeResponse', (event) => {
-        event.context.__otel.endTime = Date.now()
+        event.otel.__endTime = Date.now()
     })
 
     nitro.hooks.hook('afterResponse', async (event) => {
-        event.context.span.setAttribute(ATTR_HTTP_RESPONSE_STATUS_CODE, getResponseStatus(event))
-        await nitro.hooks.callHook('otel:span:end', { event, span: event.context.span })
-        event.context.span.end(event.context.__otel.endTime) 
+        event.otel.span.setAttribute(ATTR_HTTP_RESPONSE_STATUS_CODE, getResponseStatus(event))
+        await nitro.hooks.callHook('otel:span:end', { event, span: event.otel.span })
+        event.otel.span.end(event.otel.__endTime) 
     })
 
     nitro.hooks.hook('error', async (error, { event }) => {
         if (event) {
-            event.context.span.recordException(error)
-            event.context.span.setAttribute(ATTR_HTTP_RESPONSE_STATUS_CODE, getResponseStatus(event))
-            await nitro.hooks.callHook('otel:span:end', { event, span: event.context.span })
-            event.context.span.end()
+            event.otel.span.recordException(error)
+            event.otel.span.setAttribute(ATTR_HTTP_RESPONSE_STATUS_CODE, getResponseStatus(event))
+            await nitro.hooks.callHook('otel:span:end', { event, span: event.otel.span })
+            event.otel.span.end()
         } else {
             const span = trace.getSpan(api.ROOT_CONTEXT)
             span?.recordException(error)

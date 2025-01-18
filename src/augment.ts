@@ -1,10 +1,17 @@
-import type { Span } from "@opentelemetry/api";
+import type { Context, Span } from "@opentelemetry/api";
 import type { H3Event } from "h3"
 import { Presets } from "./types";
 
 declare module 'h3' {
-    interface H3EventContext {
-        span: Span
+    interface H3Event {
+        otel: {
+            span: Span
+            /**
+             * @internal
+             */
+            __endTime: number|undefined
+            ctx: Context
+        }
     }
 }
 

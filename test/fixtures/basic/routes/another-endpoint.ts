@@ -1,7 +1,8 @@
 export default defineTracedEventHandler((e) => {
     // @ts-expect-error internal API
-    const parentSpanId = e.context.span.parentSpanId
+    const parentSpanId = e.otel.span.parentSpanId
     return {
-        traceId: e.context.span.spanContext().traceId,parentSpanId,
+        traceId: e.otel.span.spanContext().traceId,
+        parentSpanId,
     }
 })
