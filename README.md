@@ -61,14 +61,33 @@ export default defineNuxtConfig({
 
 <!-- /automd -->
 
-## Config
+## Build-time
+
+### Config
 
 You can configure the module with the `otel` property in your `nitro.config.ts`
 
 - **preset**:
   - Option to configure the preset that will be used with OTEL
 
-## Hooks
+## Runtime
+
+### Span
+
+A span is created for each event. 
+
+It is attached to the `event.context` object with the `span` property:
+
+````ts
+interface H3EventContext {
+    span: Span
+}
+````
+
+You can manipulate this span until it ends. The span will be ended in `afterResponse` (nitro hook) with the endTime set in `beforeReponse` (nitro hook).
+In case of an error, if there is an event associated to the error, the span will record the exception and end. If not, nitro-opentelemetry will create a span from the ROOT_CONTEXT and end it.
+
+### Hooks
 
 Here are the available hooks.
 
@@ -85,10 +104,10 @@ interface NitroRuntimeHooks {
 - **otel:span:end**
     - Called before ending a `Span`. This can happen in the `afterResponse` hook or in the `error` hook.
 
-## Utils
+### Utils
 
 `defineTracedEventHandler`
-- Wrap your event handler with the span affected to your event
+- Wrap your event handler with the span assigned to your event. This avoid loosing the context for opentelemetry.
 
 ## Development
 
