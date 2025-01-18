@@ -6,12 +6,6 @@ import { getResponseStatus, getRequestProtocol, getRequestURL, getHeaders } from
 
 const context = api.context, trace = api.trace 
 export default <NitroAppPlugin>((nitro) => {
-    const handler = nitro.h3App.handler
-
-    nitro.h3App.handler = (event) => {
-        return context.with(context.active(), handler, undefined, event  )
-    }
-
     nitro.hooks.hook('request', async (event) => {
         const tracer = trace.getTracer('nitro-opentelemetry')
         const requestURL = getRequestURL(event)

@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { $fetchRaw } from 'nitro-test-utils/e2e'
 const dummyTrace = '00-0af7651916cd43dd8448eb211c80319c-b7ad6b7169203331-01'
+const dummyTrace2 = '00-0af7651916cd43dd8448eb211c80319c-b7ad6b7169203331-01'
 
 
 describe('traces', async () => {
@@ -39,6 +40,33 @@ describe('traces', async () => {
         expect(data.anotherEndpoint.parentSpanId).toBe(data.spanId)
     })
 
+    it('expect no XRSP', async () => {
+      const [{data}, {data: data2}] =   await Promise.all([
+            $fetchRaw('/wait-ms?ms=350', {
+                headers: {
+                    traceparent: dummyTrace
+                }
+            }),
+            $fetchRaw('/wait-ms?ms=100', {
+                headers: {
+                    traceparent: dummyTrace2
+                }
+            })
+        ])
+
+        
+        // assert that the traceId is the same
+        expect(data.traceId).toBe(dummyTrace.split('-')[1])
+
+        // assert that localFetch is correctly traced
+        expect(data.anotherEndpoint.traceId).toBe(data.traceId)
+        expect(data.anotherEndpoint.parentSpanId).toBe(data.spanId)
+
+        // assert that localFetch is correctly traced
+        expect(data2.traceId).toBe(dummyTrace2.split('-')[1])
+        expect(data2.anotherEndpoint.traceId).toBe(data2.traceId)
+        expect(data2.anotherEndpoint.parentSpanId).toBe(data2.spanId)
+    })
 })
 
 describe('names', () => {
