@@ -18,7 +18,7 @@ export default <NitroAppPlugin>((nitro) => {
         
         const span = tracer.startSpan(await getSpanName(event), {
             attributes: {
-                [ATTR_URL_PATH]: event.context.matchedRoute?.path || event.path,
+                [ATTR_URL_PATH]: (await nitro.h3App.resolve(event.path))?.route || event.path,
                 [ATTR_URL_FULL]: event.path,
                 [ATTR_HTTP_REQUEST_METHOD]: event.method,
                 [ATTR_URL_SCHEME]: getRequestProtocol(event),
