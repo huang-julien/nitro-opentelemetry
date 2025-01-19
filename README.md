@@ -76,11 +76,14 @@ You can configure the module with the `otel` property in your `nitro.config.ts`
 
 A span is created for each event. 
 
-It is attached to the `event.context` object with the `span` property:
+It is attached to the `event` object with the `span` property. The context associated to the span is also available within `H3Event`
 
 ````ts
-interface H3EventContext {
-    span: Span
+interface H3Event {
+    otel: {
+      span: Span
+      ctx: Context
+    }
 }
 ````
 
