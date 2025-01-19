@@ -1,10 +1,8 @@
-import * as api from "@opentelemetry/api" 
 import { defineEventHandler } from "h3";
 
-const context = api.context
-
+/**
+ * @deprecated since 0.7.1. Use `defineEventHandler` instead.
+ */
 export function defineTracedEventHandler(handler: ReturnType<typeof defineEventHandler>) { 
-    return defineEventHandler((event) => { 
-       return  context.with(event.otel.ctx, handler, undefined,  event) 
-    })
+    return defineEventHandler(handler)
 }
