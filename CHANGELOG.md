@@ -1,6 +1,33 @@
 # Changelog
 
 
+## v0.7.0
+
+[compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.6.2...v0.7.0)
+
+### 🩹 Fixes
+
+- ⚠️  Move span out of H3EventContext ([#13](https://github.com/huang-julien/open-telemetry-nitro/pull/13))
+- Resolve h3 route when setting "url.path" ([#12](https://github.com/huang-julien/open-telemetry-nitro/pull/12))
+
+### 📖 Documentation
+
+- Update hooks ([4dd6e44](https://github.com/huang-julien/open-telemetry-nitro/commit/4dd6e44))
+- Update Span documentation ([5a50c5a](https://github.com/huang-julien/open-telemetry-nitro/commit/5a50c5a))
+- Update README ([2cd2f39](https://github.com/huang-julien/open-telemetry-nitro/commit/2cd2f39))
+
+### 🏡 Chore
+
+- **release:** V0.6.2 ([c1680bd](https://github.com/huang-julien/open-telemetry-nitro/commit/c1680bd))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Move span out of H3EventContext ([#13](https://github.com/huang-julien/open-telemetry-nitro/pull/13))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](http://github.com/huang-julien))
+
 ## v0.6.2
 
 [compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.6.1...v0.6.2)
