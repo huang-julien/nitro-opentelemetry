@@ -6,6 +6,7 @@ import MagicString from 'magic-string'
 import { getPresetFile, isPresetEntry } from './presets'
 import { normalize } from "pathe"
 import type { Nuxt } from "@nuxt/schema"
+import { fileURLToPath } from 'node:url'
 
 async function module(nitro: Nitro) {
     nitro.options.alias['#nitro-opentelemetry/init'] = await getPresetFile(nitro)
@@ -64,16 +65,12 @@ async function module(nitro: Nitro) {
 
     if (nitro.options.renderer) {
         nitro.options.alias['#nitro-renderer'] = nitro.options.renderer
-        nitro.options.renderer = await resolvePath('nitro-opentelemetry/runtime/renderer/renderer', {
-            extensions: ['.mjs', '.ts']
-        })
+        nitro.options.renderer = fileURLToPath(new URL('runtime/renderer/renderer', import.meta.url))
     }
 
     if (nitro.options.errorHandler) {
         nitro.options.alias['#nitro-error-handler'] = nitro.options.errorHandler
-        nitro.options.errorHandler = await resolvePath('nitro-opentelemetry/runtime/renderer/error', {
-            extensions: ['.mjs', '.ts']
-        })
+        nitro.options.errorHandler = fileURLToPath(new URL('runtime/renderer/error', import.meta.url))
     } 
 
     nitro.options.plugins.push(await resolvePath('nitro-opentelemetry/runtime/plugin', {
