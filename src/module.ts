@@ -66,11 +66,15 @@ async function module(nitro: Nitro) {
     if (nitro.options.renderer) {
         nitro.options.alias['#nitro-renderer'] = nitro.options.renderer
         nitro.options.renderer = fileURLToPath(new URL('runtime/renderer/renderer', import.meta.url))
+        nitro.options.externals.inline ||= []
+        nitro.options.externals.inline.push(nitro.options.renderer)
     }
 
     if (nitro.options.errorHandler) {
         nitro.options.alias['#nitro-error-handler'] = nitro.options.errorHandler
         nitro.options.errorHandler = fileURLToPath(new URL('runtime/renderer/error', import.meta.url))
+        nitro.options.externals.inline ||= []
+        nitro.options.externals.inline.push(nitro.options.errorHandler)
     } 
 
     nitro.options.plugins.push(await resolvePath('nitro-opentelemetry/runtime/plugin', {
