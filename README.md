@@ -111,6 +111,7 @@ interface NitroRuntimeHooks {
 
 `defineTracedEventHandler`
 - Wrap your event handler with the span assigned to your event. This avoid loosing the context for opentelemetry.
+  The main renderer and error renderer doesn't need to be wrapped with `defineTracedEventHandler`
 
 ## Development
 
