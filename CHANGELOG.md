@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v0.7.1
+
+[compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.7.0...v0.7.1)
+
+### 🩹 Fixes
+
+- Keep context within main renderer and error renderer ([#16](https://github.com/huang-julien/open-telemetry-nitro/pull/16))
+
+### 📖 Documentation
+
+- Update README ([2cd2f39](https://github.com/huang-julien/open-telemetry-nitro/commit/2cd2f39))
+- Mention nitro future otel integration ([91d3d13](https://github.com/huang-julien/open-telemetry-nitro/commit/91d3d13))
+
+### 🏡 Chore
+
+- **release:** V0.7.0 ([8dc0e9b](https://github.com/huang-julien/open-telemetry-nitro/commit/8dc0e9b))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](http://github.com/huang-julien))
+
 ## v0.7.0
 
 [compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.6.2...v0.7.0)
