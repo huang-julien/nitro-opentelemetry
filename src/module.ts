@@ -62,6 +62,20 @@ async function module(nitro: Nitro) {
         nitro.options.imports.presets.push(presets)
     }
 
+    if (nitro.options.renderer) {
+        nitro.options.alias['#nitro-renderer'] = nitro.options.renderer
+        nitro.options.renderer = await resolvePath('nitro-opentelemetry/runtime/renderer/renderer', {
+            extensions: ['.mjs', '.ts']
+        })
+    }
+
+    if (nitro.options.errorHandler) {
+        nitro.options.alias['#nitro-error-handler'] = nitro.options.errorHandler
+        nitro.options.errorHandler = await resolvePath('nitro-opentelemetry/runtime/renderer/error', {
+            extensions: ['.mjs', '.ts']
+        })
+    } 
+
     nitro.options.plugins.push(await resolvePath('nitro-opentelemetry/runtime/plugin', {
         extensions: ['.mjs', '.ts']
     }))
