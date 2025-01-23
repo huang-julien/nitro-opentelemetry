@@ -7,7 +7,7 @@
 
 <!-- /automd -->
 
-❗Status: API is unstable and may be subject to change until 1.0
+ℹ️ Opentelemetry integration is going to be built-in in a future version of nitro. This module does not reflect the future API of the official integration of nitro OTEL.
 
 Opentelemetry integration for nitro. Without patching nitro.
 
