@@ -17,46 +17,49 @@ async function module(nitro: Nitro) {
         nitro.options.entry = await getPresetFile(nitro)
     }
 
-    nitro.hooks.hook('rollup:before', (nitro, rollupConfig) => {
-        if (!rollupConfig.plugins) rollupConfig.plugins = [];
-        const plugins = rollupConfig.plugins
-        if (Array.isArray(plugins)) {
-            rollupConfig.plugins = plugins.filter((plugin) => {
-                if (plugin && 'name' in plugin) {
-                    // workaround for while waiting for configurable impound settings in nuxt
-                    return plugin.name !== 'impound'
-                }
-                return true
-            });
-        }
-
-        (rollupConfig.plugins as Plugin[]).push({
-            name: 'inject-init-plugin',
-            async transform(code, id) {
-                const normalizedId = normalize(id)
-                // transform nitro entry file but there's probably a better way
-                if (normalizedId.includes('runtime/entries') || this.getModuleInfo(id)?.isEntry) {
-                    const s = new MagicString(code)
-                    s.prepend(`import '#nitro-opentelemetry/init';`)
-
-                    return {
-                        code: s.toString(),
-                        map: s.generateMap({ hires: true }),
-                        moduleSideEffects: true
+    if(nitro.options.otel?.preset !== false) {
+        nitro.hooks.hook('rollup:before', (nitro, rollupConfig) => {
+            if (!rollupConfig.plugins) rollupConfig.plugins = [];
+            const plugins = rollupConfig.plugins
+            if (Array.isArray(plugins)) {
+                rollupConfig.plugins = plugins.filter((plugin) => {
+                    if (plugin && 'name' in plugin) {
+                        // workaround for while waiting for configurable impound settings in nuxt
+                        return plugin.name !== 'impound'
                     }
-                }
-                //  @todo find another way to mark it as side effect :/
-                if (normalizedId === nitro.options.alias['#nitro-opentelemetry/init']) {
-                    const s = new MagicString(code)
-                    return {
-                        moduleSideEffects: true,
-                        code: s.toString(),
-                        map: s.generateMap({ hires: true }),
+                    return true
+                });
+            }
+    
+            (rollupConfig.plugins as Plugin[]).push({
+                name: 'inject-init-plugin',
+                async transform(code, id) {
+                    const normalizedId = normalize(id)
+                    // transform nitro entry file but there's probably a better way
+                    if (normalizedId.includes('runtime/entries') || this.getModuleInfo(id)?.isEntry) {
+                        const s = new MagicString(code)
+                        s.prepend(`import '#nitro-opentelemetry/init';`)
+    
+                        return {
+                            code: s.toString(),
+                            map: s.generateMap({ hires: true }),
+                            moduleSideEffects: true
+                        }
                     }
-                }
-            },
+                    //  @todo find another way to mark it as side effect :/
+                    if (normalizedId === nitro.options.alias['#nitro-opentelemetry/init']) {
+                        const s = new MagicString(code)
+                        return {
+                            moduleSideEffects: true,
+                            code: s.toString(),
+                            map: s.generateMap({ hires: true }),
+                        }
+                    }
+                },
+            })
         })
-    })
+    }
+
 
     nitro.options.virtual['#nitro-otel-options'] = nitro.options.otel?.preset && typeof nitro.options.otel.preset === 'object' && 'options' in nitro.options.otel.preset ? `export default ${JSON.stringify(nitro.options.otel.preset.options || {})}` : `export default {}`;
 
