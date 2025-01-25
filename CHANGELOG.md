@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v0.7.2
+
+[compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.7.1...v0.7.2)
+
+### 🩹 Fixes
+
+- Don't inline anything if no preset ([ec687b2](https://github.com/huang-julien/open-telemetry-nitro/commit/ec687b2))
+- Don't inject options if preset is false ([#17](https://github.com/huang-julien/open-telemetry-nitro/pull/17))
+
+### 🏡 Chore
+
+- **release:** V0.7.1 ([08becfb](https://github.com/huang-julien/open-telemetry-nitro/commit/08becfb))
+- **gh:** Add issue templates ([8e63348](https://github.com/huang-julien/open-telemetry-nitro/commit/8e63348))
+- **gh:** Move issue templates to yaml ([40cc7a9](https://github.com/huang-julien/open-telemetry-nitro/commit/40cc7a9))
+- Create CODE_OF_CONDUCT.md ([6320d23](https://github.com/huang-julien/open-telemetry-nitro/commit/6320d23))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](http://github.com/huang-julien))
+
 ## v0.7.1
 
 [compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.7.0...v0.7.1)
