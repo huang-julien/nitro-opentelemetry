@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.7.3
+
+[compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.7.2...v0.7.3)
+
+### 🩹 Fixes
+
+- Use mlly.resolvePath to resolve renderer handlers ([#18](https://github.com/huang-julien/open-telemetry-nitro/pull/18))
+
+### 🏡 Chore
+
+- **release:** V0.7.2 ([d9ffb72](https://github.com/huang-julien/open-telemetry-nitro/commit/d9ffb72))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](http://github.com/huang-julien))
+
 ## v0.7.2
 
 [compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.7.1...v0.7.2)
