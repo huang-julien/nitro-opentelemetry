@@ -70,6 +70,20 @@ You can configure the module with the `otel` property in your `nitro.config.ts`
 - **preset**:
   - Option to configure the preset that will be used with OTEL
 
+### Presets
+
+`nitro-opentelemetry` provides a list of presets. Theses presets are files that initialize the SDK for OTEL (for example the NodeSDK).
+You can provide your own by setting:
+
+```ts
+{
+  name: 'custom',
+  filePath: 'path_to_your_file'
+}
+```
+
+on the preset option in the otel config.
+
 ## Runtime
 
 ### Span
