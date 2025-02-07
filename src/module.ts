@@ -17,7 +17,7 @@ async function module(nitro: Nitro) {
         nitro.options.entry = await getPresetFile(nitro)
     }
 
-    if(nitro.options.otel?.preset !== false) {
+    if (nitro.options.otel?.preset !== false) {
         nitro.hooks.hook('rollup:before', (nitro, rollupConfig) => {
             if (!rollupConfig.plugins) rollupConfig.plugins = [];
             const plugins = rollupConfig.plugins
@@ -30,7 +30,7 @@ async function module(nitro: Nitro) {
                     return true
                 });
             }
-    
+
             (rollupConfig.plugins as Plugin[]).push({
                 name: 'inject-init-plugin',
                 async transform(code, id) {
@@ -39,7 +39,7 @@ async function module(nitro: Nitro) {
                     if (normalizedId.includes('runtime/entries') || this.getModuleInfo(id)?.isEntry) {
                         const s = new MagicString(code)
                         s.prepend(`import '#nitro-opentelemetry/init';`)
-    
+
                         return {
                             code: s.toString(),
                             map: s.generateMap({ hires: true }),
@@ -85,7 +85,11 @@ async function module(nitro: Nitro) {
             inline: [nitro.options.errorHandler]
         })
     }
-
+    nitro.options.typescript.tsConfig = defu(nitro.options.typescript.tsConfig, {
+        compilerOptions: {
+            types: ['nitro-opentelemetry']
+        }
+    })
     nitro.options.plugins.push(await resolvePath('nitro-opentelemetry/runtime/plugin', {
         extensions: ['.mjs', '.ts']
     }))
