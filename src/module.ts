@@ -6,7 +6,6 @@ import MagicString from 'magic-string'
 import { getPresetFile, isPresetEntry } from './presets'
 import { normalize } from "pathe"
 import type { Nuxt } from "@nuxt/schema"
-import { fileURLToPath } from 'node:url'
 import defu from 'defu'
 
 async function module(nitro: Nitro) {
