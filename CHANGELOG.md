@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v0.7.4
+
+[compare changes](https://github.com/huang-julien/nitro-opentelemetry/compare/v0.7.3...v0.7.4)
+
+### 🩹 Fixes
+
+- Automatically add types in generated tsconfig ([#19](https://github.com/huang-julien/nitro-opentelemetry/pull/19))
+
+### 📖 Documentation
+
+- Add preset info ([4dddd0b](https://github.com/huang-julien/nitro-opentelemetry/commit/4dddd0b))
+
+### 🤖 CI
+
+- Remove corepack ([4b7b548](https://github.com/huang-julien/nitro-opentelemetry/commit/4b7b548))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](http://github.com/huang-julien))
+
 ## v0.7.3
 
 [compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.7.2...v0.7.3)
