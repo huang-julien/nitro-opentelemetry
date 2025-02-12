@@ -95,13 +95,13 @@ async function module(nitro: Nitro) {
 }
 
 // Dual compatibility with Nuxt and Nitro Modules
-export default function moduleWithCompat(arg1: unknown, arg2: unknown) {
+export default async function moduleWithCompat(arg1: unknown, arg2: unknown) {
     if ((arg2 as Nuxt)?.options?.nitro) {
         (arg2 as Nuxt).hooks.hookOnce("nitro:config", (nitroConfig) => {
             nitroConfig.modules = nitroConfig.modules || [];
             nitroConfig.modules.push(module);
         });
     } else {
-        module(arg1 as Nitro);
+        await module(arg1 as Nitro);
     }
 }
