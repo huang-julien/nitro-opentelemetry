@@ -92,6 +92,17 @@ async function module(nitro: Nitro) {
     nitro.options.plugins.push(await resolvePath('nitro-opentelemetry/runtime/plugin', {
         extensions: ['.mjs', '.ts']
     }))
+
+    nitro.hooks.hook('rollup:before', (_, rollupConfig) => {
+        const ogModuleCtx = rollupConfig.moduleContext
+        rollupConfig.moduleContext = (_id) => {
+            const id = normalize(_id)
+            if(id.includes('node_modules/@opentelemetry/api')) {
+                return '(undefined)'
+            }
+            return typeof ogModuleCtx === 'object' ? ogModuleCtx[id] : ogModuleCtx?.(id)
+        }
+    })
 }
 
 // Dual compatibility with Nuxt and Nitro Modules
