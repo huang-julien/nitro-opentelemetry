@@ -93,6 +93,7 @@ async function module(nitro: Nitro) {
         extensions: ['.mjs', '.ts']
     }))
 
+    // explicitly mark this as undefined for rollup to stop logging warnings about it
     nitro.hooks.hook('rollup:before', (_, rollupConfig) => {
         const ogModuleCtx = rollupConfig.moduleContext
         rollupConfig.moduleContext = (_id) => {
