@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.7.5
+
+[compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.7.4...v0.7.5)
+
+### 🩹 Fixes
+
+- Await module ([#20](https://github.com/huang-julien/open-telemetry-nitro/pull/20))
+- Add d.ts to types exports ([#22](https://github.com/huang-julien/open-telemetry-nitro/pull/22))
+- Make defineTracedEventHandler generic ([#21](https://github.com/huang-julien/open-telemetry-nitro/pull/21))
+- Supress 'this' in otel files ([#23](https://github.com/huang-julien/open-telemetry-nitro/pull/23))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](http://github.com/huang-julien))
+- Julien Blatecky <julien.blatecky@hey.com>
+
 ## v0.7.4
 
 [compare changes](https://github.com/huang-julien/nitro-opentelemetry/compare/v0.7.3...v0.7.4)
