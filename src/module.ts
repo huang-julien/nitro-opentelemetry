@@ -82,9 +82,6 @@ async function module(nitro: Nitro) {
             nitro.options.errorHandler = await resolvePath('nitro-opentelemetry/runtime/renderer/error', {
                 extensions: ['.mjs', '.ts']
             })
-            nitro.options.externals = defu(nitro.options.externals, {
-                inline: [nitro.options.errorHandler]
-            })
         } else if(Array.isArray(nitro.options.errorHandler)) {
             // nitro >= 2.10
             nitro.options.alias['#nitro-error-handler'] = '#nitro-internal-virtual/error-handler'
@@ -92,6 +89,10 @@ async function module(nitro: Nitro) {
                 extensions: ['.mjs', '.ts']
             })
         }
+        
+        nitro.options.externals = defu(nitro.options.externals, {
+            inline: [nitro.options.errorHandler]
+        })
     }
     nitro.options.typescript.tsConfig = defu(nitro.options.typescript.tsConfig, {
         compilerOptions: {
