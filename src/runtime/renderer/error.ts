@@ -4,5 +4,5 @@ import { NitroErrorHandler } from "nitropack";
 import errorRenderer from "#nitro-error-handler";
 
 export default <NitroErrorHandler>((error, event) => {
-    return context.with(event.otel.ctx, (errorRenderer as NitroErrorHandler), undefined, error, event)
+    return context.with(event.otel.ctx, errorRenderer, undefined, error, event)
 })

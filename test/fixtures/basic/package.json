@@ -6,7 +6,7 @@
     "preview": "node .output/server/index.mjs"
   },
   "dependencies": {
-    "nitropack": "^2.9.7",
+    "nitropack": "latest",
     "nitro-opentelemetry": "workspace:*"
   }
 }
