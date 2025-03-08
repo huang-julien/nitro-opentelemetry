@@ -1,6 +1,50 @@
 # Changelog
 
 
+## v0.7.7
+
+[compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.7.5...v0.7.7)
+
+### 🩹 Fixes
+
+- Compatibility with nitro 2.10 ([#25](https://github.com/huang-julien/open-telemetry-nitro/pull/25))
+
+### 📖 Documentation
+
+- Create SECURITY.md ([0d2c2fd](https://github.com/huang-julien/open-telemetry-nitro/commit/0d2c2fd))
+
+### 🏡 Chore
+
+- **release:** V0.7.5 ([5c41cc3](https://github.com/huang-julien/open-telemetry-nitro/commit/5c41cc3))
+- **deps-dev:** Bump vitest ([#26](https://github.com/huang-julien/open-telemetry-nitro/pull/26))
+- Remove biome ([#27](https://github.com/huang-julien/open-telemetry-nitro/pull/27))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](http://github.com/huang-julien))
+
+## v0.7.6
+
+[compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.7.5...v0.7.6)
+
+### 🩹 Fixes
+
+- Compatibility with nitro 2.10 ([#25](https://github.com/huang-julien/open-telemetry-nitro/pull/25))
+
+### 📖 Documentation
+
+- Create SECURITY.md ([0d2c2fd](https://github.com/huang-julien/open-telemetry-nitro/commit/0d2c2fd))
+
+### 🏡 Chore
+
+- **release:** V0.7.5 ([5c41cc3](https://github.com/huang-julien/open-telemetry-nitro/commit/5c41cc3))
+- **deps-dev:** Bump vitest ([#26](https://github.com/huang-julien/open-telemetry-nitro/pull/26))
+- Remove biome ([#27](https://github.com/huang-julien/open-telemetry-nitro/pull/27))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](http://github.com/huang-julien))
+
 ## v0.7.5
 
 [compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.7.4...v0.7.5)
