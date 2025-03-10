@@ -7,6 +7,11 @@ import { getPresetFile, isPresetEntry } from './presets'
 import { normalize } from "pathe"
 import type { Nuxt } from "@nuxt/schema"
 import defu from 'defu'
+import type { Node } from "estree-walker"
+import { resolveNitroPath } from 'nitropack/kit'
+import { resolveModulePath} from "exsolve"
+
+type WithLocation<T = Node> = T & { start: number, end: number }
 
 async function module(nitro: Nitro) {
     nitro.options.alias['#nitro-opentelemetry/init'] = await getPresetFile(nitro)
@@ -77,22 +82,54 @@ async function module(nitro: Nitro) {
 
     if (nitro.options.errorHandler) {
         // nitro < 2.10
-        if(typeof nitro.options.errorHandler === 'string') {
+        if (typeof nitro.options.errorHandler === 'string') {
             nitro.options.alias['#nitro-error-handler'] = nitro.options.errorHandler
             nitro.options.errorHandler = await resolvePath('nitro-opentelemetry/runtime/renderer/error', {
                 extensions: ['.mjs', '.ts']
             })
-        } else if(Array.isArray(nitro.options.errorHandler)) {
+
+            nitro.options.externals = defu(nitro.options.externals, {
+                inline: [nitro.options.errorHandler]
+            })
+        } else if (Array.isArray(nitro.options.errorHandler)) {
             // nitro >= 2.10
-            nitro.options.alias['#nitro-error-handler'] = '#nitro-internal-virtual/error-handler'
-            nitro.options.errorHandler = await resolvePath('nitro-opentelemetry/runtime/renderer/error', {
-                extensions: ['.mjs', '.ts']
+            nitro.hooks.hook('rollup:before',async  (nitro, rollupConfig) => {
+                const errorHandlers = await Promise.all((nitro.options.errorHandler as string[]).map((path) => {
+                     return resolveModulePath(resolveNitroPath(path, nitro.options), {
+                        from: [
+                            import.meta.url,
+                            ...nitro.options.nodeModulesDirs,
+                            nitro.options.rootDir
+                        ],
+                        extensions: ['.mjs', '.ts', '.js', '.cjs']
+                     })
+                }))
+                ;(rollupConfig.plugins as Plugin[]).push({
+                    name: 'nitro-otel:inject-error-handlers',
+                    async transform(code, id) {
+                        if(id.includes('prod')) {
+                            console.log(id, errorHandlers.includes(normalize(id)), errorHandlers)
+
+                        }
+                        if (errorHandlers.includes(normalize(id))) {
+                            const s = new MagicString(code)
+                            s.prepend(`import { context } from "@opentelemetry/api";\n`)
+                            const defaultExport = this.parse(code).body.find(node => node.type === 'ExportDefaultDeclaration')
+
+                            if (defaultExport) {
+                                s.overwrite((defaultExport.declaration as WithLocation).start as number, (defaultExport.declaration as WithLocation).end,
+                                    `(...args) => context.with(args?.[1]?.otel?.ctx, ${code.slice((defaultExport.declaration as WithLocation).start, (defaultExport.declaration as WithLocation).end)}, undefined, ...args)`)
+
+                                return {
+                                    code: s.toString(),
+                                    map: s.generateMap({ hires: true }),
+                                }
+                            }
+                        }
+                    }
+                })
             })
         }
-        
-        nitro.options.externals = defu(nitro.options.externals, {
-            inline: [nitro.options.errorHandler]
-        })
     }
     nitro.options.typescript.tsConfig = defu(nitro.options.typescript.tsConfig, {
         compilerOptions: {
@@ -108,7 +145,7 @@ async function module(nitro: Nitro) {
         const ogModuleCtx = rollupConfig.moduleContext
         rollupConfig.moduleContext = (_id) => {
             const id = normalize(_id)
-            if(id.includes('node_modules/@opentelemetry/api')) {
+            if (id.includes('node_modules/@opentelemetry/api')) {
                 return '(undefined)'
             }
             return typeof ogModuleCtx === 'object' ? ogModuleCtx[id] : ogModuleCtx?.(id)
