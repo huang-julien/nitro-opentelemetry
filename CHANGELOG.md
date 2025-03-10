@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v0.7.8
+
+[compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.7.7...v0.7.8)
+
+### 🩹 Fixes
+
+- Use AST to modify error handlers in nitro >= 2.10 ([#28](https://github.com/huang-julien/open-telemetry-nitro/pull/28))
+
+### 🏡 Chore
+
+- **release:** V0.7.7 ([bf9872d](https://github.com/huang-julien/open-telemetry-nitro/commit/bf9872d))
+- Fix license ([460e522](https://github.com/huang-julien/open-telemetry-nitro/commit/460e522))
+
+### 🤖 CI
+
+- Setup scorecard ([a8a1d62](https://github.com/huang-julien/open-telemetry-nitro/commit/a8a1d62))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](http://github.com/huang-julien))
+
 ## v0.7.7
 
 [compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.7.5...v0.7.7)
