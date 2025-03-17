@@ -54,7 +54,6 @@ describe('traces', async () => {
             })
         ])
 
-        
         // assert that the traceId is the same
         expect(data.traceId).toBe(dummyTrace.split('-')[1])
 
@@ -66,6 +65,20 @@ describe('traces', async () => {
         expect(data2.traceId).toBe(dummyTrace2.split('-')[1])
         expect(data2.anotherEndpoint.traceId).toBe(data2.traceId)
         expect(data2.anotherEndpoint.parentSpanId).toBe(data2.spanId)
+    })
+
+    it('should trace object handler', async () => {
+        const { data } = await $fetchRaw('event-object', {
+            headers: {
+                traceparent: dummyTrace
+            }
+        })
+        // assert that the traceId is the same
+        expect(data.traceId).toBe(dummyTrace.split('-')[1])
+
+        // assert that localFetch is correctly traced
+        expect(data.anotherEndpoint.traceId).toBe(data.traceId)
+        expect(data.anotherEndpoint.parentSpanId).toBe(data.spanId)
     })
 })
 
