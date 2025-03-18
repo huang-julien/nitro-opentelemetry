@@ -1,6 +1,29 @@
 # Changelog
 
 
+## v0.8.0
+
+[compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.7.8...v0.8.0)
+
+### 🚀 Enhancements
+
+- Add support for `EventHandlerObject` handlers ([#30](https://github.com/huang-julien/open-telemetry-nitro/pull/30))
+
+### 🏡 Chore
+
+- **release:** V0.7.8 ([1a4cf67](https://github.com/huang-julien/open-telemetry-nitro/commit/1a4cf67))
+
+### 🤖 CI
+
+- Permissions ([#29](https://github.com/huang-julien/open-telemetry-nitro/pull/29))
+- Create dependabot.yml ([92a9655](https://github.com/huang-julien/open-telemetry-nitro/commit/92a9655))
+- Update scorecard ([#31](https://github.com/huang-julien/open-telemetry-nitro/pull/31))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](http://github.com/huang-julien))
+- Christian A. Jacobsen ([@ChristianJacobsen](http://github.com/ChristianJacobsen))
+
 ## v0.7.8
 
 [compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.7.7...v0.7.8)
