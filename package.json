@@ -54,7 +54,7 @@
     "eslint": "^9.11.0",
     "eslint-config-unjs": "^0.3.2",
     "h3": "^1.15.1",
-    "jiti": "^1.21.6",
+    "jiti": "^2.4.2",
     "nitro-opentelemetry": "link:./",
     "nitro-test-utils": "^0.9.0",
     "nitropack": "^2.11.1",
