@@ -7,6 +7,6 @@
   },
   "dependencies": {
     "nitropack": "latest",
-    "nitro-opentelemetry": "workspace:*"
+    "nitro-opentelemetry": "link:../../.."
   }
 }
