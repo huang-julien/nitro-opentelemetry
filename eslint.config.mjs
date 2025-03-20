@@ -6,6 +6,7 @@ export default unjs({
      'dist/',
     '**/.nitro/**',
     '.nitro/**',
+    '**/.output/**'
   ],
   rules: {
     // rule overrides

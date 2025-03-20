@@ -7,7 +7,6 @@ export default defineTracedEventHandler(async (e) => {
             traceId,
             parentSpanId
         },
-        // @ts-expect-error internal API
-        parentSpanId: e.otel.span.parentSpanId
+        parentSpanId: e.otel.span.parentSpanContext.spanId
     }
 })

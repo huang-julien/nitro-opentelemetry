@@ -6,9 +6,11 @@ import { AsyncLocalStorageContextManager } from '@opentelemetry/context-async-ho
 const contextManager = new AsyncLocalStorageContextManager();
 
 // Create and configure NodeTracerProvider
-const provider = new NodeTracerProvider();
-
-provider.addSpanProcessor(new SimpleSpanProcessor(new ConsoleSpanExporter()));
+const provider = new NodeTracerProvider({
+  spanProcessors: [
+    new SimpleSpanProcessor(new ConsoleSpanExporter())
+  ]
+});
 
 // Initialize the provider
 provider.register({
