@@ -3,7 +3,7 @@
 <!-- automd:badges color=yellow -->
 
 [![npm version](https://img.shields.io/npm/v/nitro-opentelemetry?color=yellow)](https://npmjs.com/package/nitro-opentelemetry)
-[![npm downloads](https://img.shields.io/npm/dm/nitro-opentelemetry?color=yellow)](https://npmjs.com/package/nitro-opentelemetry)
+[![npm downloads](https://img.shields.io/npm/dm/nitro-opentelemetry?color=yellow)](https://npm.chart.dev/nitro-opentelemetry)
 
 <!-- /automd -->
 
@@ -34,6 +34,9 @@ pnpm install nitro-opentelemetry
 
 # bun
 bun install nitro-opentelemetry
+
+# deno
+deno install nitro-opentelemetry
 ```
 
 <!-- /automd -->
