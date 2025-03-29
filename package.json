@@ -46,7 +46,7 @@
     "@baselime/node-opentelemetry": "^0.5.8",
     "@microlabs/otel-cf-workers": "1.0.0-rc.49",
     "@nuxt/schema": "^3.16.1",
-    "@types/node": "^22.13.11",
+    "@types/node": "^22.13.14",
     "@vitest/coverage-v8": "^3.0.9",
     "@vitest/ui": "^3.0.9",
     "automd": "^0.4.0",
@@ -57,12 +57,12 @@
     "jiti": "^2.4.2",
     "nitro-opentelemetry": "link:./",
     "nitro-test-utils": "^0.9.1",
-    "nitropack": "^2.11.7",
+    "nitropack": "^2.11.8",
     "typescript": "^5.8.2",
     "unbuild": "^3.5.0",
     "vitest": "^3.0.9"
   },
-  "packageManager": "pnpm@10.6.5",
+  "packageManager": "pnpm@10.7.0",
   "dependencies": {
     "@azure/monitor-opentelemetry": "1.9.0",
     "@opentelemetry/api": "^1.9.0",
@@ -82,7 +82,7 @@
     "magic-string": "^0.30.17",
     "mlly": "^1.7.4",
     "pathe": "^2.0.3",
-    "rollup": "^4.36.0"
+    "rollup": "^4.38.0"
   },
   "peerDependencies": {
     "@baselime/node-opentelemetry": "^0.5.8",
