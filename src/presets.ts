@@ -30,16 +30,6 @@ export async function getPresetFile(nitro: Nitro) {
                 extensions: ['.mjs', '.ts']
             })
         }
-        case 'baselime-node': {
-            return await resolvePath('nitro-opentelemetry/runtime/presets/baselime-node', {
-                extensions: ['.mjs', '.ts']
-            })
-        }
-        case 'baselime-cf-worker': {
-            return await resolvePath('nitro-opentelemetry/runtime/presets/baselime-cf-worker', {
-                extensions: ['.mjs', '.ts']
-            })
-        }
         case 'cf-worker': {
             return await resolvePath('nitro-opentelemetry/runtime/presets/cf-worker', {
                 extensions: ['.mjs', '.ts']
@@ -53,9 +43,9 @@ export async function getPresetFile(nitro: Nitro) {
 
 /**
  * return true if the preset file is an entry file
- * for example: baselime-cf-worker is re-exporting the entry file because it wraps the entry file with @microlabs/otel-cf-workers
+ * for example: cf-worker is re-exporting the entry file because it wraps the entry file with @microlabs/otel-cf-workers
  */
 export function isPresetEntry(nitro: Nitro) {
     const preset = (nitro.options.otel?.preset ? nitro.options.otel?.preset.name : undefined) || nitro.options.preset
-    return ['baselime-cf-worker'].includes(preset)
+    return ['cf-worker'].includes(preset)
 }

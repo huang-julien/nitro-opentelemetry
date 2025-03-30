@@ -43,7 +43,6 @@
   },
   "devDependencies": {
     "@azure/monitor-opentelemetry-exporter": "1.0.0-beta.29",
-    "@baselime/node-opentelemetry": "^0.5.8",
     "@microlabs/otel-cf-workers": "1.0.0-rc.49",
     "@nuxt/schema": "^3.16.1",
     "@types/node": "^22.13.14",
@@ -85,7 +84,6 @@
     "rollup": "^4.38.0"
   },
   "peerDependencies": {
-    "@baselime/node-opentelemetry": "^0.5.8",
     "@microlabs/otel-cf-workers": "1.0.0-rc.49"
   }
 }
