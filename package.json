@@ -44,24 +44,24 @@
   "devDependencies": {
     "@azure/monitor-opentelemetry-exporter": "1.0.0-beta.31",
     "@microlabs/otel-cf-workers": "1.0.0-rc.49",
-    "@nuxt/schema": "^3.16.2",
-    "@types/node": "^22.14.1",
+    "@nuxt/schema": "^3.17.1",
+    "@types/node": "^22.15.3",
     "@vitest/coverage-v8": "^3.1.2",
     "@vitest/ui": "^3.1.2",
     "automd": "^0.4.0",
     "changelogen": "^0.6.1",
     "eslint": "^9.25.1",
     "eslint-config-unjs": "^0.4.2",
-    "h3": "^1.15.1",
+    "h3": "^1.15.3",
     "jiti": "^2.4.2",
     "nitro-opentelemetry": "link:./",
     "nitro-test-utils": "^0.9.2",
-    "nitropack": "^2.11.9",
+    "nitropack": "^2.11.11",
     "typescript": "^5.8.3",
     "unbuild": "^3.5.0",
     "vitest": "^3.1.2"
   },
-  "packageManager": "pnpm@10.9.0",
+  "packageManager": "pnpm@10.10.0",
   "dependencies": {
     "@azure/monitor-opentelemetry": "1.11.0",
     "@opentelemetry/api": "^1.9.0",
@@ -81,7 +81,7 @@
     "magic-string": "^0.30.17",
     "mlly": "^1.7.4",
     "pathe": "^2.0.3",
-    "rollup": "^4.40.0"
+    "rollup": "^4.40.1"
   },
   "peerDependencies": {
     "@microlabs/otel-cf-workers": "1.0.0-rc.49"
