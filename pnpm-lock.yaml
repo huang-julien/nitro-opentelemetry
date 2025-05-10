@@ -39,8 +39,8 @@ importers:
         specifier: ^1.30.1
         version: 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/semantic-conventions':
-        specifier: ^1.32.0
-        version: 1.32.0
+        specifier: ^1.33.0
+        version: 1.33.0
       consola:
         specifier: ^3.4.2
         version: 3.4.2
@@ -63,8 +63,8 @@ importers:
         specifier: ^2.0.3
         version: 2.0.3
       rollup:
-        specifier: ^4.40.1
-        version: 4.40.1
+        specifier: ^4.40.2
+        version: 4.40.2
     devDependencies:
       '@azure/monitor-opentelemetry-exporter':
         specifier: 1.0.0-beta.31
@@ -76,8 +76,8 @@ importers:
         specifier: ^3.17.2
         version: 3.17.2
       '@types/node':
-        specifier: ^22.15.12
-        version: 22.15.12
+        specifier: ^22.15.17
+        version: 22.15.17
       '@vitest/coverage-v8':
         specifier: ^3.1.3
         version: 3.1.3(vitest@3.1.3)
@@ -119,7 +119,7 @@ importers:
         version: 3.5.0(typescript@5.8.3)
       vitest:
         specifier: ^3.1.3
-        version: 3.1.3(@types/node@22.15.12)(@vitest/ui@3.1.3)(terser@5.31.3)
+        version: 3.1.3(@types/node@22.15.17)(@vitest/ui@3.1.3)(terser@5.31.3)
 
   playground:
     devDependencies:
@@ -1876,8 +1876,8 @@ packages:
     resolution: {integrity: sha512-lp4qAiMTD4sNWW4DbKLBkfiMZ4jbAboJIGOQr5DvciMRI494OapieI9qiODpOt0XBr1LjIDy1xAGAnVs5supTA==}
     engines: {node: '>=14'}
 
-  '@opentelemetry/semantic-conventions@1.32.0':
-    resolution: {integrity: sha512-s0OpmpQFSfMrmedAn9Lhg4KWJELHCU6uU9dtIJ28N8UGhf9Y55im5X8fEzwhwDwiSqN+ZPSNrDJF7ivf/AuRPQ==}
+  '@opentelemetry/semantic-conventions@1.33.0':
+    resolution: {integrity: sha512-TIpZvE8fiEILFfTlfPnltpBaD3d9/+uQHVCyC3vfdh6WfCXKhNFzoP5RyDDIndfvZC5GrA4pyEDNyjPloJud+w==}
     engines: {node: '>=14'}
 
   '@opentelemetry/sql-common@0.40.1':
@@ -2194,8 +2194,8 @@ packages:
     cpu: [arm]
     os: [android]
 
-  '@rollup/rollup-android-arm-eabi@4.40.1':
-    resolution: {integrity: sha512-kxz0YeeCrRUHz3zyqvd7n+TVRlNyTifBsmnmNPtk3hQURUyG9eAB+usz6DAwagMusjx/zb3AjvDUvhFGDAexGw==}
+  '@rollup/rollup-android-arm-eabi@4.40.2':
+    resolution: {integrity: sha512-JkdNEq+DFxZfUwxvB58tHMHBHVgX23ew41g1OQinthJ+ryhdRk67O31S7sYw8u2lTjHUPFxwar07BBt1KHp/hg==}
     cpu: [arm]
     os: [android]
 
@@ -2204,8 +2204,8 @@ packages:
     cpu: [arm64]
     os: [android]
 
-  '@rollup/rollup-android-arm64@4.40.1':
-    resolution: {integrity: sha512-PPkxTOisoNC6TpnDKatjKkjRMsdaWIhyuMkA4UsBXT9WEZY4uHezBTjs6Vl4PbqQQeu6oION1w2voYZv9yquCw==}
+  '@rollup/rollup-android-arm64@4.40.2':
+    resolution: {integrity: sha512-13unNoZ8NzUmnndhPTkWPWbX3vtHodYmy+I9kuLxN+F+l+x3LdVF7UCu8TWVMt1POHLh6oDHhnOA04n8oJZhBw==}
     cpu: [arm64]
     os: [android]
 
@@ -2214,8 +2214,8 @@ packages:
     cpu: [arm64]
     os: [darwin]
 
-  '@rollup/rollup-darwin-arm64@4.40.1':
-    resolution: {integrity: sha512-VWXGISWFY18v/0JyNUy4A46KCFCb9NVsH+1100XP31lud+TzlezBbz24CYzbnA4x6w4hx+NYCXDfnvDVO6lcAA==}
+  '@rollup/rollup-darwin-arm64@4.40.2':
+    resolution: {integrity: sha512-Gzf1Hn2Aoe8VZzevHostPX23U7N5+4D36WJNHK88NZHCJr7aVMG4fadqkIf72eqVPGjGc0HJHNuUaUcxiR+N/w==}
     cpu: [arm64]
     os: [darwin]
 
@@ -2224,8 +2224,8 @@ packages:
     cpu: [x64]
     os: [darwin]
 
-  '@rollup/rollup-darwin-x64@4.40.1':
-    resolution: {integrity: sha512-nIwkXafAI1/QCS7pxSpv/ZtFW6TXcNUEHAIA9EIyw5OzxJZQ1YDrX+CL6JAIQgZ33CInl1R6mHet9Y/UZTg2Bw==}
+  '@rollup/rollup-darwin-x64@4.40.2':
+    resolution: {integrity: sha512-47N4hxa01a4x6XnJoskMKTS8XZ0CZMd8YTbINbi+w03A2w4j1RTlnGHOz/P0+Bg1LaVL6ufZyNprSg+fW5nYQQ==}
     cpu: [x64]
     os: [darwin]
 
@@ -2234,8 +2234,8 @@ packages:
     cpu: [arm64]
     os: [freebsd]
 
-  '@rollup/rollup-freebsd-arm64@4.40.1':
-    resolution: {integrity: sha512-BdrLJ2mHTrIYdaS2I99mriyJfGGenSaP+UwGi1kB9BLOCu9SR8ZpbkmmalKIALnRw24kM7qCN0IOm6L0S44iWw==}
+  '@rollup/rollup-freebsd-arm64@4.40.2':
+    resolution: {integrity: sha512-8t6aL4MD+rXSHHZUR1z19+9OFJ2rl1wGKvckN47XFRVO+QL/dUSpKA2SLRo4vMg7ELA8pzGpC+W9OEd1Z/ZqoQ==}
     cpu: [arm64]
     os: [freebsd]
 
@@ -2244,8 +2244,8 @@ packages:
     cpu: [x64]
     os: [freebsd]
 
-  '@rollup/rollup-freebsd-x64@4.40.1':
-    resolution: {integrity: sha512-VXeo/puqvCG8JBPNZXZf5Dqq7BzElNJzHRRw3vjBE27WujdzuOPecDPc/+1DcdcTptNBep3861jNq0mYkT8Z6Q==}
+  '@rollup/rollup-freebsd-x64@4.40.2':
+    resolution: {integrity: sha512-C+AyHBzfpsOEYRFjztcYUFsH4S7UsE9cDtHCtma5BK8+ydOZYgMmWg1d/4KBytQspJCld8ZIujFMAdKG1xyr4Q==}
     cpu: [x64]
     os: [freebsd]
 
@@ -2254,8 +2254,8 @@ packages:
     cpu: [arm]
     os: [linux]
 
-  '@rollup/rollup-linux-arm-gnueabihf@4.40.1':
-    resolution: {integrity: sha512-ehSKrewwsESPt1TgSE/na9nIhWCosfGSFqv7vwEtjyAqZcvbGIg4JAcV7ZEh2tfj/IlfBeZjgOXm35iOOjadcg==}
+  '@rollup/rollup-linux-arm-gnueabihf@4.40.2':
+    resolution: {integrity: sha512-de6TFZYIvJwRNjmW3+gaXiZ2DaWL5D5yGmSYzkdzjBDS3W+B9JQ48oZEsmMvemqjtAFzE16DIBLqd6IQQRuG9Q==}
     cpu: [arm]
     os: [linux]
 
@@ -2264,8 +2264,8 @@ packages:
     cpu: [arm]
     os: [linux]
 
-  '@rollup/rollup-linux-arm-musleabihf@4.40.1':
-    resolution: {integrity: sha512-m39iO/aaurh5FVIu/F4/Zsl8xppd76S4qoID8E+dSRQvTyZTOI2gVk3T4oqzfq1PtcvOfAVlwLMK3KRQMaR8lg==}
+  '@rollup/rollup-linux-arm-musleabihf@4.40.2':
+    resolution: {integrity: sha512-urjaEZubdIkacKc930hUDOfQPysezKla/O9qV+O89enqsqUmQm8Xj8O/vh0gHg4LYfv7Y7UsE3QjzLQzDYN1qg==}
     cpu: [arm]
     os: [linux]
 
@@ -2274,8 +2274,8 @@ packages:
     cpu: [arm64]
     os: [linux]
 
-  '@rollup/rollup-linux-arm64-gnu@4.40.1':
-    resolution: {integrity: sha512-Y+GHnGaku4aVLSgrT0uWe2o2Rq8te9hi+MwqGF9r9ORgXhmHK5Q71N757u0F8yU1OIwUIFy6YiJtKjtyktk5hg==}
+  '@rollup/rollup-linux-arm64-gnu@4.40.2':
+    resolution: {integrity: sha512-KlE8IC0HFOC33taNt1zR8qNlBYHj31qGT1UqWqtvR/+NuCVhfufAq9fxO8BMFC22Wu0rxOwGVWxtCMvZVLmhQg==}
     cpu: [arm64]
     os: [linux]
 
@@ -2284,8 +2284,8 @@ packages:
     cpu: [arm64]
     os: [linux]
 
-  '@rollup/rollup-linux-arm64-musl@4.40.1':
-    resolution: {integrity: sha512-jEwjn3jCA+tQGswK3aEWcD09/7M5wGwc6+flhva7dsQNRZZTe30vkalgIzV4tjkopsTS9Jd7Y1Bsj6a4lzz8gQ==}
+  '@rollup/rollup-linux-arm64-musl@4.40.2':
+    resolution: {integrity: sha512-j8CgxvfM0kbnhu4XgjnCWJQyyBOeBI1Zq91Z850aUddUmPeQvuAy6OiMdPS46gNFgy8gN1xkYyLgwLYZG3rBOg==}
     cpu: [arm64]
     os: [linux]
 
@@ -2294,8 +2294,8 @@ packages:
     cpu: [loong64]
     os: [linux]
 
-  '@rollup/rollup-linux-loongarch64-gnu@4.40.1':
-    resolution: {integrity: sha512-ySyWikVhNzv+BV/IDCsrraOAZ3UaC8SZB67FZlqVwXwnFhPihOso9rPOxzZbjp81suB1O2Topw+6Ug3JNegejQ==}
+  '@rollup/rollup-linux-loongarch64-gnu@4.40.2':
+    resolution: {integrity: sha512-Ybc/1qUampKuRF4tQXc7G7QY9YRyeVSykfK36Y5Qc5dmrIxwFhrOzqaVTNoZygqZ1ZieSWTibfFhQ5qK8jpWxw==}
     cpu: [loong64]
     os: [linux]
 
@@ -2304,8 +2304,8 @@ packages:
     cpu: [ppc64]
     os: [linux]
 
-  '@rollup/rollup-linux-powerpc64le-gnu@4.40.1':
-    resolution: {integrity: sha512-BvvA64QxZlh7WZWqDPPdt0GH4bznuL6uOO1pmgPnnv86rpUpc8ZxgZwcEgXvo02GRIZX1hQ0j0pAnhwkhwPqWg==}
+  '@rollup/rollup-linux-powerpc64le-gnu@4.40.2':
+    resolution: {integrity: sha512-3FCIrnrt03CCsZqSYAOW/k9n625pjpuMzVfeI+ZBUSDT3MVIFDSPfSUgIl9FqUftxcUXInvFah79hE1c9abD+Q==}
     cpu: [ppc64]
     os: [linux]
 
@@ -2314,8 +2314,8 @@ packages:
     cpu: [riscv64]
     os: [linux]
 
-  '@rollup/rollup-linux-riscv64-gnu@4.40.1':
-    resolution: {integrity: sha512-EQSP+8+1VuSulm9RKSMKitTav89fKbHymTf25n5+Yr6gAPZxYWpj3DzAsQqoaHAk9YX2lwEyAf9S4W8F4l3VBQ==}
+  '@rollup/rollup-linux-riscv64-gnu@4.40.2':
+    resolution: {integrity: sha512-QNU7BFHEvHMp2ESSY3SozIkBPaPBDTsfVNGx3Xhv+TdvWXFGOSH2NJvhD1zKAT6AyuuErJgbdvaJhYVhVqrWTg==}
     cpu: [riscv64]
     os: [linux]
 
@@ -2324,8 +2324,8 @@ packages:
     cpu: [riscv64]
     os: [linux]
 
-  '@rollup/rollup-linux-riscv64-musl@4.40.1':
-    resolution: {integrity: sha512-n/vQ4xRZXKuIpqukkMXZt9RWdl+2zgGNx7Uda8NtmLJ06NL8jiHxUawbwC+hdSq1rrw/9CghCpEONor+l1e2gA==}
+  '@rollup/rollup-linux-riscv64-musl@4.40.2':
+    resolution: {integrity: sha512-5W6vNYkhgfh7URiXTO1E9a0cy4fSgfE4+Hl5agb/U1sa0kjOLMLC1wObxwKxecE17j0URxuTrYZZME4/VH57Hg==}
     cpu: [riscv64]
     os: [linux]
 
@@ -2334,8 +2334,8 @@ packages:
     cpu: [s390x]
     os: [linux]
 
-  '@rollup/rollup-linux-s390x-gnu@4.40.1':
-    resolution: {integrity: sha512-h8d28xzYb98fMQKUz0w2fMc1XuGzLLjdyxVIbhbil4ELfk5/orZlSTpF/xdI9C8K0I8lCkq+1En2RJsawZekkg==}
+  '@rollup/rollup-linux-s390x-gnu@4.40.2':
+    resolution: {integrity: sha512-B7LKIz+0+p348JoAL4X/YxGx9zOx3sR+o6Hj15Y3aaApNfAshK8+mWZEf759DXfRLeL2vg5LYJBB7DdcleYCoQ==}
     cpu: [s390x]
     os: [linux]
 
@@ -2344,8 +2344,8 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  '@rollup/rollup-linux-x64-gnu@4.40.1':
-    resolution: {integrity: sha512-XiK5z70PEFEFqcNj3/zRSz/qX4bp4QIraTy9QjwJAb/Z8GM7kVUsD0Uk8maIPeTyPCP03ChdI+VVmJriKYbRHQ==}
+  '@rollup/rollup-linux-x64-gnu@4.40.2':
+    resolution: {integrity: sha512-lG7Xa+BmBNwpjmVUbmyKxdQJ3Q6whHjMjzQplOs5Z+Gj7mxPtWakGHqzMqNER68G67kmCX9qX57aRsW5V0VOng==}
     cpu: [x64]
     os: [linux]
 
@@ -2354,8 +2354,8 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  '@rollup/rollup-linux-x64-musl@4.40.1':
-    resolution: {integrity: sha512-2BRORitq5rQ4Da9blVovzNCMaUlyKrzMSvkVR0D4qPuOy/+pMCrh1d7o01RATwVy+6Fa1WBw+da7QPeLWU/1mQ==}
+  '@rollup/rollup-linux-x64-musl@4.40.2':
+    resolution: {integrity: sha512-tD46wKHd+KJvsmije4bUskNuvWKFcTOIM9tZ/RrmIvcXnbi0YK/cKS9FzFtAm7Oxi2EhV5N2OpfFB348vSQRXA==}
     cpu: [x64]
     os: [linux]
 
@@ -2364,8 +2364,8 @@ packages:
     cpu: [arm64]
     os: [win32]
 
-  '@rollup/rollup-win32-arm64-msvc@4.40.1':
-    resolution: {integrity: sha512-b2bcNm9Kbde03H+q+Jjw9tSfhYkzrDUf2d5MAd1bOJuVplXvFhWz7tRtWvD8/ORZi7qSCy0idW6tf2HgxSXQSg==}
+  '@rollup/rollup-win32-arm64-msvc@4.40.2':
+    resolution: {integrity: sha512-Bjv/HG8RRWLNkXwQQemdsWw4Mg+IJ29LK+bJPW2SCzPKOUaMmPEppQlu/Fqk1d7+DX3V7JbFdbkh/NMmurT6Pg==}
     cpu: [arm64]
     os: [win32]
 
@@ -2374,8 +2374,8 @@ packages:
     cpu: [ia32]
     os: [win32]
 
-  '@rollup/rollup-win32-ia32-msvc@4.40.1':
-    resolution: {integrity: sha512-DfcogW8N7Zg7llVEfpqWMZcaErKfsj9VvmfSyRjCyo4BI3wPEfrzTtJkZG6gKP/Z92wFm6rz2aDO7/JfiR/whA==}
+  '@rollup/rollup-win32-ia32-msvc@4.40.2':
+    resolution: {integrity: sha512-dt1llVSGEsGKvzeIO76HToiYPNPYPkmjhMHhP00T9S4rDern8P2ZWvWAQUEJ+R1UdMWJ/42i/QqJ2WV765GZcA==}
     cpu: [ia32]
     os: [win32]
 
@@ -2384,8 +2384,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@rollup/rollup-win32-x64-msvc@4.40.1':
-    resolution: {integrity: sha512-ECyOuDeH3C1I8jH2MK1RtBJW+YPMvSfT0a5NN0nHfQYnDSJ6tUiZH3gzwVP5/Kfh/+Tt7tpWVF9LXNTnhTJ3kA==}
+  '@rollup/rollup-win32-x64-msvc@4.40.2':
+    resolution: {integrity: sha512-bwspbWB04XJpeElvsp+DCylKfF4trJDa2Y9Go8O6A7YLX2LIKGcNK/CYImJN6ZP4DcuOHB4Utl3iCbnR62DudA==}
     cpu: [x64]
     os: [win32]
 
@@ -2431,8 +2431,8 @@ packages:
   '@types/mysql@2.15.26':
     resolution: {integrity: sha512-DSLCOXhkvfS5WNNPbfn2KdICAmk8lLc+/PNvnPnF7gOdMZCxopXduqv0OQ13y/yA/zXTSikZZqVgybUxOEg6YQ==}
 
-  '@types/node@22.15.12':
-    resolution: {integrity: sha512-K0fpC/ZVeb8G9rm7bH7vI0KAec4XHEhBam616nVJCV51bKzJ6oA3luG4WdKoaztxe70QaNjS/xBmcDLmr4PiGw==}
+  '@types/node@22.15.17':
+    resolution: {integrity: sha512-wIX2aSZL5FE+MR0JlvF87BNVrtFWf6AE6rxSE9X7OwnVvoyCQjpzSRJ+M87se/4QCkCiebQAqrJ0y6fwIyi7nw==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -5016,8 +5016,8 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  rollup@4.40.1:
-    resolution: {integrity: sha512-C5VvvgCCyfyotVITIAv+4efVytl5F7wt+/I2i9q9GZcEXW9BP52YYOXC58igUi+LFZVHukErIIqQSWwv/M3WRw==}
+  rollup@4.40.2:
+    resolution: {integrity: sha512-tfUOg6DTP4rhQ3VjOO6B4wyrJnGOX85requAXvqYTHsOgb2TFJdZ3aWpT8W2kPoypSGP7dZUyzxJ9ee4buM5Fg==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
@@ -5809,7 +5809,7 @@ snapshots:
       '@opentelemetry/sdk-logs': 0.57.2(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-metrics': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 1.30.1(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
       tslib: 2.8.1
     transitivePeerDependencies:
       - supports-color
@@ -5842,7 +5842,7 @@ snapshots:
       '@opentelemetry/sdk-node': 0.57.2(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-node': 1.30.1(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
       '@opentelemetry/winston-transport': 0.10.1
       tslib: 2.8.1
     transitivePeerDependencies:
@@ -6425,7 +6425,7 @@ snapshots:
       '@opentelemetry/otlp-transformer': 0.53.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 1.26.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
 
   '@microsoft/applicationinsights-web-snippet@1.2.1': {}
 
@@ -6643,7 +6643,7 @@ snapshots:
   '@opentelemetry/core@2.0.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
 
   '@opentelemetry/exporter-logs-otlp-grpc@0.200.0(@opentelemetry/api@1.9.0)':
     dependencies:
@@ -6862,14 +6862,14 @@ snapshots:
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
 
   '@opentelemetry/instrumentation-amqplib@0.47.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -6877,7 +6877,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
       '@types/aws-lambda': 8.10.147
     transitivePeerDependencies:
       - supports-color
@@ -6888,7 +6888,7 @@ snapshots:
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/propagation-utils': 0.31.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -6914,7 +6914,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -6923,7 +6923,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
       '@types/connect': 3.4.38
     transitivePeerDependencies:
       - supports-color
@@ -6932,7 +6932,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -6955,7 +6955,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -6964,7 +6964,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -6994,7 +6994,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7003,7 +7003,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7012,7 +7012,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
       forwarded-parse: 2.1.2
     transitivePeerDependencies:
       - supports-color
@@ -7033,7 +7033,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/redis-common': 0.37.0
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7041,7 +7041,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7049,7 +7049,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7058,7 +7058,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7073,7 +7073,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
       '@types/memcached': 2.2.10
     transitivePeerDependencies:
       - supports-color
@@ -7082,7 +7082,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7090,7 +7090,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7099,7 +7099,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7107,7 +7107,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
       '@opentelemetry/sql-common': 0.41.0(@opentelemetry/api@1.9.0)
     transitivePeerDependencies:
       - supports-color
@@ -7116,7 +7116,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
       '@types/mysql': 2.15.26
     transitivePeerDependencies:
       - supports-color
@@ -7125,7 +7125,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
       '@types/mysql': 2.15.26
     transitivePeerDependencies:
       - supports-color
@@ -7134,7 +7134,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7142,7 +7142,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7151,7 +7151,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
       '@opentelemetry/sql-common': 0.40.1(@opentelemetry/api@1.9.0)
       '@types/pg': 8.6.1
       '@types/pg-pool': 2.0.6
@@ -7163,7 +7163,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
       '@opentelemetry/sql-common': 0.41.0(@opentelemetry/api@1.9.0)
       '@types/pg': 8.6.1
       '@types/pg-pool': 2.0.6
@@ -7184,7 +7184,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
       '@opentelemetry/redis-common': 0.36.2
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7193,7 +7193,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/redis-common': 0.37.0
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7202,7 +7202,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
       '@opentelemetry/redis-common': 0.36.2
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7211,7 +7211,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/redis-common': 0.37.0
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7220,7 +7220,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7228,7 +7228,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7243,7 +7243,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7251,7 +7251,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
       '@types/tedious': 4.0.14
     transitivePeerDependencies:
       - supports-color
@@ -7415,42 +7415,42 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
 
   '@opentelemetry/resource-detector-aws@2.0.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
 
   '@opentelemetry/resource-detector-azure@0.6.1(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 1.30.1(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
 
   '@opentelemetry/resource-detector-azure@0.7.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
 
   '@opentelemetry/resource-detector-container@0.7.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
 
   '@opentelemetry/resource-detector-gcp@0.34.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
       gcp-metadata: 6.1.0
     transitivePeerDependencies:
       - encoding
@@ -7472,7 +7472,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
 
   '@opentelemetry/sdk-logs@0.200.0(@opentelemetry/api@1.9.0)':
     dependencies:
@@ -7537,7 +7537,7 @@ snapshots:
       '@opentelemetry/sdk-metrics': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-node': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7586,7 +7586,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.33.0
 
   '@opentelemetry/sdk-trace-node@1.30.1(@opentelemetry/api@1.9.0)':
     dependencies:
@@ -7609,7 +7609,7 @@ snapshots:
 
   '@opentelemetry/semantic-conventions@1.28.0': {}
 
-  '@opentelemetry/semantic-conventions@1.32.0': {}
+  '@opentelemetry/semantic-conventions@1.33.0': {}
 
   '@opentelemetry/sql-common@0.40.1(@opentelemetry/api@1.9.0)':
     dependencies:
@@ -7791,9 +7791,9 @@ snapshots:
     optionalDependencies:
       rollup: 4.40.0
 
-  '@rollup/plugin-alias@5.1.1(rollup@4.40.1)':
+  '@rollup/plugin-alias@5.1.1(rollup@4.40.2)':
     optionalDependencies:
-      rollup: 4.40.1
+      rollup: 4.40.2
 
   '@rollup/plugin-commonjs@28.0.3(rollup@4.40.0)':
     dependencies:
@@ -7807,9 +7807,9 @@ snapshots:
     optionalDependencies:
       rollup: 4.40.0
 
-  '@rollup/plugin-commonjs@28.0.3(rollup@4.40.1)':
+  '@rollup/plugin-commonjs@28.0.3(rollup@4.40.2)':
     dependencies:
-      '@rollup/pluginutils': 5.1.4(rollup@4.40.1)
+      '@rollup/pluginutils': 5.1.4(rollup@4.40.2)
       commondir: 1.0.1
       estree-walker: 2.0.2
       fdir: 6.4.3(picomatch@4.0.2)
@@ -7817,7 +7817,7 @@ snapshots:
       magic-string: 0.30.17
       picomatch: 4.0.2
     optionalDependencies:
-      rollup: 4.40.1
+      rollup: 4.40.2
 
   '@rollup/plugin-inject@5.0.5(rollup@4.40.0)':
     dependencies:
@@ -7833,11 +7833,11 @@ snapshots:
     optionalDependencies:
       rollup: 4.40.0
 
-  '@rollup/plugin-json@6.1.0(rollup@4.40.1)':
+  '@rollup/plugin-json@6.1.0(rollup@4.40.2)':
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@4.40.1)
+      '@rollup/pluginutils': 5.1.0(rollup@4.40.2)
     optionalDependencies:
-      rollup: 4.40.1
+      rollup: 4.40.2
 
   '@rollup/plugin-node-resolve@16.0.1(rollup@4.40.0)':
     dependencies:
@@ -7849,15 +7849,15 @@ snapshots:
     optionalDependencies:
       rollup: 4.40.0
 
-  '@rollup/plugin-node-resolve@16.0.1(rollup@4.40.1)':
+  '@rollup/plugin-node-resolve@16.0.1(rollup@4.40.2)':
     dependencies:
-      '@rollup/pluginutils': 5.1.4(rollup@4.40.1)
+      '@rollup/pluginutils': 5.1.4(rollup@4.40.2)
       '@types/resolve': 1.20.2
       deepmerge: 4.3.1
       is-module: 1.0.0
       resolve: 1.22.10
     optionalDependencies:
-      rollup: 4.40.1
+      rollup: 4.40.2
 
   '@rollup/plugin-replace@6.0.2(rollup@4.40.0)':
     dependencies:
@@ -7866,12 +7866,12 @@ snapshots:
     optionalDependencies:
       rollup: 4.40.0
 
-  '@rollup/plugin-replace@6.0.2(rollup@4.40.1)':
+  '@rollup/plugin-replace@6.0.2(rollup@4.40.2)':
     dependencies:
-      '@rollup/pluginutils': 5.1.4(rollup@4.40.1)
+      '@rollup/pluginutils': 5.1.4(rollup@4.40.2)
       magic-string: 0.30.17
     optionalDependencies:
-      rollup: 4.40.1
+      rollup: 4.40.2
 
   '@rollup/plugin-terser@0.4.4(rollup@4.40.0)':
     dependencies:
@@ -7889,13 +7889,13 @@ snapshots:
     optionalDependencies:
       rollup: 4.40.0
 
-  '@rollup/pluginutils@5.1.0(rollup@4.40.1)':
+  '@rollup/pluginutils@5.1.0(rollup@4.40.2)':
     dependencies:
       '@types/estree': 1.0.7
       estree-walker: 2.0.2
       picomatch: 2.3.1
     optionalDependencies:
-      rollup: 4.40.1
+      rollup: 4.40.2
 
   '@rollup/pluginutils@5.1.4(rollup@4.40.0)':
     dependencies:
@@ -7905,132 +7905,132 @@ snapshots:
     optionalDependencies:
       rollup: 4.40.0
 
-  '@rollup/pluginutils@5.1.4(rollup@4.40.1)':
+  '@rollup/pluginutils@5.1.4(rollup@4.40.2)':
     dependencies:
       '@types/estree': 1.0.7
       estree-walker: 2.0.2
       picomatch: 4.0.2
     optionalDependencies:
-      rollup: 4.40.1
+      rollup: 4.40.2
 
   '@rollup/rollup-android-arm-eabi@4.40.0':
     optional: true
 
-  '@rollup/rollup-android-arm-eabi@4.40.1':
+  '@rollup/rollup-android-arm-eabi@4.40.2':
     optional: true
 
   '@rollup/rollup-android-arm64@4.40.0':
     optional: true
 
-  '@rollup/rollup-android-arm64@4.40.1':
+  '@rollup/rollup-android-arm64@4.40.2':
     optional: true
 
   '@rollup/rollup-darwin-arm64@4.40.0':
     optional: true
 
-  '@rollup/rollup-darwin-arm64@4.40.1':
+  '@rollup/rollup-darwin-arm64@4.40.2':
     optional: true
 
   '@rollup/rollup-darwin-x64@4.40.0':
     optional: true
 
-  '@rollup/rollup-darwin-x64@4.40.1':
+  '@rollup/rollup-darwin-x64@4.40.2':
     optional: true
 
   '@rollup/rollup-freebsd-arm64@4.40.0':
     optional: true
 
-  '@rollup/rollup-freebsd-arm64@4.40.1':
+  '@rollup/rollup-freebsd-arm64@4.40.2':
     optional: true
 
   '@rollup/rollup-freebsd-x64@4.40.0':
     optional: true
 
-  '@rollup/rollup-freebsd-x64@4.40.1':
+  '@rollup/rollup-freebsd-x64@4.40.2':
     optional: true
 
   '@rollup/rollup-linux-arm-gnueabihf@4.40.0':
     optional: true
 
-  '@rollup/rollup-linux-arm-gnueabihf@4.40.1':
+  '@rollup/rollup-linux-arm-gnueabihf@4.40.2':
     optional: true
 
   '@rollup/rollup-linux-arm-musleabihf@4.40.0':
     optional: true
 
-  '@rollup/rollup-linux-arm-musleabihf@4.40.1':
+  '@rollup/rollup-linux-arm-musleabihf@4.40.2':
     optional: true
 
   '@rollup/rollup-linux-arm64-gnu@4.40.0':
     optional: true
 
-  '@rollup/rollup-linux-arm64-gnu@4.40.1':
+  '@rollup/rollup-linux-arm64-gnu@4.40.2':
     optional: true
 
   '@rollup/rollup-linux-arm64-musl@4.40.0':
     optional: true
 
-  '@rollup/rollup-linux-arm64-musl@4.40.1':
+  '@rollup/rollup-linux-arm64-musl@4.40.2':
     optional: true
 
   '@rollup/rollup-linux-loongarch64-gnu@4.40.0':
     optional: true
 
-  '@rollup/rollup-linux-loongarch64-gnu@4.40.1':
+  '@rollup/rollup-linux-loongarch64-gnu@4.40.2':
     optional: true
 
   '@rollup/rollup-linux-powerpc64le-gnu@4.40.0':
     optional: true
 
-  '@rollup/rollup-linux-powerpc64le-gnu@4.40.1':
+  '@rollup/rollup-linux-powerpc64le-gnu@4.40.2':
     optional: true
 
   '@rollup/rollup-linux-riscv64-gnu@4.40.0':
     optional: true
 
-  '@rollup/rollup-linux-riscv64-gnu@4.40.1':
+  '@rollup/rollup-linux-riscv64-gnu@4.40.2':
     optional: true
 
   '@rollup/rollup-linux-riscv64-musl@4.40.0':
     optional: true
 
-  '@rollup/rollup-linux-riscv64-musl@4.40.1':
+  '@rollup/rollup-linux-riscv64-musl@4.40.2':
     optional: true
 
   '@rollup/rollup-linux-s390x-gnu@4.40.0':
     optional: true
 
-  '@rollup/rollup-linux-s390x-gnu@4.40.1':
+  '@rollup/rollup-linux-s390x-gnu@4.40.2':
     optional: true
 
   '@rollup/rollup-linux-x64-gnu@4.40.0':
     optional: true
 
-  '@rollup/rollup-linux-x64-gnu@4.40.1':
+  '@rollup/rollup-linux-x64-gnu@4.40.2':
     optional: true
 
   '@rollup/rollup-linux-x64-musl@4.40.0':
     optional: true
 
-  '@rollup/rollup-linux-x64-musl@4.40.1':
+  '@rollup/rollup-linux-x64-musl@4.40.2':
     optional: true
 
   '@rollup/rollup-win32-arm64-msvc@4.40.0':
     optional: true
 
-  '@rollup/rollup-win32-arm64-msvc@4.40.1':
+  '@rollup/rollup-win32-arm64-msvc@4.40.2':
     optional: true
 
   '@rollup/rollup-win32-ia32-msvc@4.40.0':
     optional: true
 
-  '@rollup/rollup-win32-ia32-msvc@4.40.1':
+  '@rollup/rollup-win32-ia32-msvc@4.40.2':
     optional: true
 
   '@rollup/rollup-win32-x64-msvc@4.40.0':
     optional: true
 
-  '@rollup/rollup-win32-x64-msvc@4.40.1':
+  '@rollup/rollup-win32-x64-msvc@4.40.2':
     optional: true
 
   '@sindresorhus/is@7.0.1': {}
@@ -8045,11 +8045,11 @@ snapshots:
 
   '@types/bunyan@1.8.11':
     dependencies:
-      '@types/node': 22.15.12
+      '@types/node': 22.15.17
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 22.15.12
+      '@types/node': 22.15.17
 
   '@types/estree@1.0.6': {}
 
@@ -8063,13 +8063,13 @@ snapshots:
 
   '@types/memcached@2.2.10':
     dependencies:
-      '@types/node': 22.15.12
+      '@types/node': 22.15.17
 
   '@types/mysql@2.15.26':
     dependencies:
-      '@types/node': 22.15.12
+      '@types/node': 22.15.17
 
-  '@types/node@22.15.12':
+  '@types/node@22.15.17':
     dependencies:
       undici-types: 6.21.0
 
@@ -8081,7 +8081,7 @@ snapshots:
 
   '@types/pg@8.6.1':
     dependencies:
-      '@types/node': 22.15.12
+      '@types/node': 22.15.17
       pg-protocol: 1.7.0
       pg-types: 2.2.0
 
@@ -8091,7 +8091,7 @@ snapshots:
 
   '@types/tedious@4.0.14':
     dependencies:
-      '@types/node': 22.15.12
+      '@types/node': 22.15.17
 
   '@types/triple-beam@1.3.5': {}
 
@@ -8099,7 +8099,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 22.15.12
+      '@types/node': 22.15.17
     optional: true
 
   '@typescript-eslint/eslint-plugin@8.27.0(@typescript-eslint/parser@8.27.0(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)':
@@ -8252,7 +8252,7 @@ snapshots:
       std-env: 3.9.0
       test-exclude: 7.0.1
       tinyrainbow: 2.0.0
-      vitest: 3.1.3(@types/node@22.15.12)(@vitest/ui@3.1.3)(terser@5.31.3)
+      vitest: 3.1.3(@types/node@22.15.17)(@vitest/ui@3.1.3)(terser@5.31.3)
     transitivePeerDependencies:
       - supports-color
 
@@ -8263,13 +8263,13 @@ snapshots:
       chai: 5.2.0
       tinyrainbow: 2.0.0
 
-  '@vitest/mocker@3.1.3(vite@5.4.14(@types/node@22.15.12)(terser@5.31.3))':
+  '@vitest/mocker@3.1.3(vite@5.4.14(@types/node@22.15.17)(terser@5.31.3))':
     dependencies:
       '@vitest/spy': 3.1.3
       estree-walker: 3.0.3
       magic-string: 0.30.17
     optionalDependencies:
-      vite: 5.4.14(@types/node@22.15.12)(terser@5.31.3)
+      vite: 5.4.14(@types/node@22.15.17)(terser@5.31.3)
 
   '@vitest/pretty-format@3.1.3':
     dependencies:
@@ -8299,7 +8299,7 @@ snapshots:
       sirv: 3.0.1
       tinyglobby: 0.2.13
       tinyrainbow: 2.0.0
-      vitest: 3.1.3(@types/node@22.15.12)(@vitest/ui@3.1.3)(terser@5.31.3)
+      vitest: 3.1.3(@types/node@22.15.17)(@vitest/ui@3.1.3)(terser@5.31.3)
 
   '@vitest/utils@3.1.3':
     dependencies:
@@ -9495,7 +9495,7 @@ snapshots:
     dependencies:
       magic-string: 0.30.17
       mlly: 1.7.4
-      rollup: 4.40.1
+      rollup: 4.40.2
 
   flat-cache@4.0.1:
     dependencies:
@@ -10240,7 +10240,7 @@ snapshots:
       ofetch: 1.4.1
       pathe: 2.0.3
       ufo: 1.5.4
-      vitest: 3.1.3(@types/node@22.15.12)(@vitest/ui@3.1.3)(terser@5.31.3)
+      vitest: 3.1.3(@types/node@22.15.17)(@vitest/ui@3.1.3)(terser@5.31.3)
 
   nitropack@2.11.11(@netlify/blobs@8.2.0):
     dependencies:
@@ -10835,7 +10835,7 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 22.15.12
+      '@types/node': 22.15.17
       long: 5.2.3
 
   proxy-addr@2.0.7:
@@ -10997,10 +10997,10 @@ snapshots:
     dependencies:
       glob: 10.4.5
 
-  rollup-plugin-dts@6.1.1(rollup@4.40.1)(typescript@5.8.3):
+  rollup-plugin-dts@6.1.1(rollup@4.40.2)(typescript@5.8.3):
     dependencies:
       magic-string: 0.30.17
-      rollup: 4.40.1
+      rollup: 4.40.2
       typescript: 5.8.3
     optionalDependencies:
       '@babel/code-frame': 7.26.2
@@ -11040,30 +11040,30 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.40.0
       fsevents: 2.3.3
 
-  rollup@4.40.1:
+  rollup@4.40.2:
     dependencies:
       '@types/estree': 1.0.7
     optionalDependencies:
-      '@rollup/rollup-android-arm-eabi': 4.40.1
-      '@rollup/rollup-android-arm64': 4.40.1
-      '@rollup/rollup-darwin-arm64': 4.40.1
-      '@rollup/rollup-darwin-x64': 4.40.1
-      '@rollup/rollup-freebsd-arm64': 4.40.1
-      '@rollup/rollup-freebsd-x64': 4.40.1
-      '@rollup/rollup-linux-arm-gnueabihf': 4.40.1
-      '@rollup/rollup-linux-arm-musleabihf': 4.40.1
-      '@rollup/rollup-linux-arm64-gnu': 4.40.1
-      '@rollup/rollup-linux-arm64-musl': 4.40.1
-      '@rollup/rollup-linux-loongarch64-gnu': 4.40.1
-      '@rollup/rollup-linux-powerpc64le-gnu': 4.40.1
-      '@rollup/rollup-linux-riscv64-gnu': 4.40.1
-      '@rollup/rollup-linux-riscv64-musl': 4.40.1
-      '@rollup/rollup-linux-s390x-gnu': 4.40.1
-      '@rollup/rollup-linux-x64-gnu': 4.40.1
-      '@rollup/rollup-linux-x64-musl': 4.40.1
-      '@rollup/rollup-win32-arm64-msvc': 4.40.1
-      '@rollup/rollup-win32-ia32-msvc': 4.40.1
-      '@rollup/rollup-win32-x64-msvc': 4.40.1
+      '@rollup/rollup-android-arm-eabi': 4.40.2
+      '@rollup/rollup-android-arm64': 4.40.2
+      '@rollup/rollup-darwin-arm64': 4.40.2
+      '@rollup/rollup-darwin-x64': 4.40.2
+      '@rollup/rollup-freebsd-arm64': 4.40.2
+      '@rollup/rollup-freebsd-x64': 4.40.2
+      '@rollup/rollup-linux-arm-gnueabihf': 4.40.2
+      '@rollup/rollup-linux-arm-musleabihf': 4.40.2
+      '@rollup/rollup-linux-arm64-gnu': 4.40.2
+      '@rollup/rollup-linux-arm64-musl': 4.40.2
+      '@rollup/rollup-linux-loongarch64-gnu': 4.40.2
+      '@rollup/rollup-linux-powerpc64le-gnu': 4.40.2
+      '@rollup/rollup-linux-riscv64-gnu': 4.40.2
+      '@rollup/rollup-linux-riscv64-musl': 4.40.2
+      '@rollup/rollup-linux-s390x-gnu': 4.40.2
+      '@rollup/rollup-linux-x64-gnu': 4.40.2
+      '@rollup/rollup-linux-x64-musl': 4.40.2
+      '@rollup/rollup-win32-arm64-msvc': 4.40.2
+      '@rollup/rollup-win32-ia32-msvc': 4.40.2
+      '@rollup/rollup-win32-x64-msvc': 4.40.2
       fsevents: 2.3.3
 
   router@2.2.0:
@@ -11440,12 +11440,12 @@ snapshots:
 
   unbuild@3.5.0(typescript@5.8.3):
     dependencies:
-      '@rollup/plugin-alias': 5.1.1(rollup@4.40.1)
-      '@rollup/plugin-commonjs': 28.0.3(rollup@4.40.1)
-      '@rollup/plugin-json': 6.1.0(rollup@4.40.1)
-      '@rollup/plugin-node-resolve': 16.0.1(rollup@4.40.1)
-      '@rollup/plugin-replace': 6.0.2(rollup@4.40.1)
-      '@rollup/pluginutils': 5.1.4(rollup@4.40.1)
+      '@rollup/plugin-alias': 5.1.1(rollup@4.40.2)
+      '@rollup/plugin-commonjs': 28.0.3(rollup@4.40.2)
+      '@rollup/plugin-json': 6.1.0(rollup@4.40.2)
+      '@rollup/plugin-node-resolve': 16.0.1(rollup@4.40.2)
+      '@rollup/plugin-replace': 6.0.2(rollup@4.40.2)
+      '@rollup/pluginutils': 5.1.4(rollup@4.40.2)
       citty: 0.1.6
       consola: 3.4.2
       defu: 6.1.4
@@ -11459,8 +11459,8 @@ snapshots:
       pathe: 2.0.3
       pkg-types: 2.1.0
       pretty-bytes: 6.1.1
-      rollup: 4.40.1
-      rollup-plugin-dts: 6.1.1(rollup@4.40.1)(typescript@5.8.3)
+      rollup: 4.40.2
+      rollup-plugin-dts: 6.1.1(rollup@4.40.2)(typescript@5.8.3)
       scule: 1.3.0
       tinyglobby: 0.2.12
       untyped: 2.0.0
@@ -11611,13 +11611,13 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite-node@3.1.3(@types/node@22.15.12)(terser@5.31.3):
+  vite-node@3.1.3(@types/node@22.15.17)(terser@5.31.3):
     dependencies:
       cac: 6.7.14
       debug: 4.4.0
       es-module-lexer: 1.7.0
       pathe: 2.0.3
-      vite: 5.4.14(@types/node@22.15.12)(terser@5.31.3)
+      vite: 5.4.14(@types/node@22.15.17)(terser@5.31.3)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -11629,20 +11629,20 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.4.14(@types/node@22.15.12)(terser@5.31.3):
+  vite@5.4.14(@types/node@22.15.17)(terser@5.31.3):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.5.3
-      rollup: 4.40.1
+      rollup: 4.40.2
     optionalDependencies:
-      '@types/node': 22.15.12
+      '@types/node': 22.15.17
       fsevents: 2.3.3
       terser: 5.31.3
 
-  vitest@3.1.3(@types/node@22.15.12)(@vitest/ui@3.1.3)(terser@5.31.3):
+  vitest@3.1.3(@types/node@22.15.17)(@vitest/ui@3.1.3)(terser@5.31.3):
     dependencies:
       '@vitest/expect': 3.1.3
-      '@vitest/mocker': 3.1.3(vite@5.4.14(@types/node@22.15.12)(terser@5.31.3))
+      '@vitest/mocker': 3.1.3(vite@5.4.14(@types/node@22.15.17)(terser@5.31.3))
       '@vitest/pretty-format': 3.1.3
       '@vitest/runner': 3.1.3
       '@vitest/snapshot': 3.1.3
@@ -11659,11 +11659,11 @@ snapshots:
       tinyglobby: 0.2.13
       tinypool: 1.0.2
       tinyrainbow: 2.0.0
-      vite: 5.4.14(@types/node@22.15.12)(terser@5.31.3)
-      vite-node: 3.1.3(@types/node@22.15.12)(terser@5.31.3)
+      vite: 5.4.14(@types/node@22.15.17)(terser@5.31.3)
+      vite-node: 3.1.3(@types/node@22.15.17)(terser@5.31.3)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 22.15.12
+      '@types/node': 22.15.17
       '@vitest/ui': 3.1.3(vitest@3.1.3)
     transitivePeerDependencies:
       - less
