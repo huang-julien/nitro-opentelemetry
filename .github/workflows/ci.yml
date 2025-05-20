@@ -31,4 +31,4 @@ jobs:
       - run: pnpm test:types
       - run: pnpm build
       - run: pnpm vitest
-      - uses: codecov/codecov-action@ad3126e916f78f00edff4ed0317cf185271ccc2d
+      - uses: codecov/codecov-action@15559ed290fa727036809b67ab0f646ffa6c5158
