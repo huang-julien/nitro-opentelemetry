@@ -42,10 +42,10 @@
     "test:types": "tsc --noEmit --skipLibCheck"
   },
   "devDependencies": {
-    "@azure/monitor-opentelemetry-exporter": "1.0.0-beta.31",
+    "@azure/monitor-opentelemetry-exporter": "1.0.0-beta.32",
     "@microlabs/otel-cf-workers": "1.0.0-rc.52",
     "@nuxt/schema": "^3.17.5",
-    "@types/node": "^22.15.30",
+    "@types/node": "^22.15.31",
     "@vitest/coverage-v8": "^3.2.3",
     "@vitest/ui": "^3.2.3",
     "automd": "^0.4.0",
@@ -63,12 +63,12 @@
   },
   "packageManager": "pnpm@10.12.1",
   "dependencies": {
-    "@azure/monitor-opentelemetry": "1.11.0",
+    "@azure/monitor-opentelemetry": "1.11.1",
     "@opentelemetry/api": "^1.9.0",
-    "@opentelemetry/auto-instrumentations-node": "0.60.0",
+    "@opentelemetry/auto-instrumentations-node": "0.60.1",
     "@opentelemetry/instrumentation": "0.202.0",
     "@opentelemetry/instrumentation-http": "0.202.0",
-    "@opentelemetry/instrumentation-undici": "0.13.0",
+    "@opentelemetry/instrumentation-undici": "0.13.1",
     "@opentelemetry/resources": "1.30.1",
     "@opentelemetry/sdk-metrics": "1.30.1",
     "@opentelemetry/sdk-node": "0.202.0",
@@ -81,7 +81,7 @@
     "magic-string": "^0.30.17",
     "mlly": "^1.7.4",
     "pathe": "^2.0.3",
-    "rollup": "^4.42.0"
+    "rollup": "^4.43.0"
   },
   "peerDependencies": {
     "@microlabs/otel-cf-workers": "1.0.0-rc.52"
