@@ -1,5 +1,4 @@
-import type { Context } from "@opentelemetry/api";
-import type { Span } from "@opentelemetry/sdk-trace-base";
+import type { Context, Span } from "@opentelemetry/api";
 import type { H3Event } from "h3"
 import { Presets } from "./types";
 
