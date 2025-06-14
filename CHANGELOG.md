@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v0.8.1
+
+[compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.8.0...v0.8.1)
+
+### 🩹 Fixes
+
+- Throw if defineTracedEventHandler does not receive expected arguments ([#54](https://github.com/huang-julien/open-telemetry-nitro/pull/54))
+
+### 🏡 Chore
+
+- **release:** V0.8.0 ([9f462c5](https://github.com/huang-julien/open-telemetry-nitro/commit/9f462c5))
+- ⚠️  Remove baselime integrations ([#49](https://github.com/huang-julien/open-telemetry-nitro/pull/49))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Remove baselime integrations ([#49](https://github.com/huang-julien/open-telemetry-nitro/pull/49))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](https://github.com/huang-julien))
+
 ## v0.8.0
 
 [compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.7.8...v0.8.0)

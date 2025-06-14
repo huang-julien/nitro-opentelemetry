@@ -26,6 +26,7 @@ export function defineTracedEventHandler<
       },
     })
   }
+  throw new Error("Event handler must satisfy either EventHandler or EventHandlerObject from h3")
 }
 
 function isEventHandler<
