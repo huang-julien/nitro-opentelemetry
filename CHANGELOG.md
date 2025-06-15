@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.9.0
+
+[compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.8.1...v0.9.0)
+
+### 🏡 Chore
+
+- **release:** V0.8.1 ([54b50e6](https://github.com/huang-julien/open-telemetry-nitro/commit/54b50e6))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](https://github.com/huang-julien))
+
 ## v0.8.1
 
 [compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.8.0...v0.8.1)
