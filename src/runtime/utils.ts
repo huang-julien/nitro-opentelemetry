@@ -7,7 +7,7 @@ import type {
 import * as api from "@opentelemetry/api"
 import { defineEventHandler } from "h3"
 import { CachedEventHandlerOptions, } from "nitropack/types"
-import { defineCachedEventHandler } from "nitropack/runtime/cache"
+import { cachedEventHandler } from "nitropack/runtime/cache"
 const context = api.context
 
 export function defineTracedEventHandler<
@@ -37,7 +37,7 @@ export function defineTracedCachedEventHander<
   handler: EventHandler<Request, Response>,
   opts: CachedEventHandlerOptions<Response>
 ): EventHandler<Request, Response> {
-  return defineCachedEventHandler((event) => {
+  return cachedEventHandler((event) => {
     return context.with(event.otel.ctx, handler, undefined, event)
   }, opts)
 }
