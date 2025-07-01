@@ -135,7 +135,9 @@ async function module(nitro: Nitro) {
     // inline utils because it uses #imports
     nitro.options.externals = defu(nitro.options.externals, {
         inline: [
-            await resolvePath('nitro-opentelemetry/runtime/utils')
+            await resolvePath('nitro-opentelemetry/runtime/utils', {
+                extensions: ['.mjs', '.ts']
+            })
         ]
     })
 
