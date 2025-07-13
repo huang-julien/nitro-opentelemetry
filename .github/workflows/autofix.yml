@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@09d2acae674a48949e3602304ab46fd20ae0c42f
-      - uses: pnpm/action-setup@77504a59bc222656ff0605f120aea22f630873cb
+      - uses: pnpm/action-setup@f2b2b233b538f500472c7274c7012f57857d8ce0
         name: Install pnpm
         with:
           run_install: false
