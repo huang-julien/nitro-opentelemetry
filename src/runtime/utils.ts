@@ -6,8 +6,7 @@ import type {
 } from "h3"
 import * as api from "@opentelemetry/api"
 import { defineEventHandler } from "h3"
-import { CachedEventHandlerOptions, } from "nitropack/types"
-import { cachedEventHandler } from "#imports"
+
 const context = api.context
 
 export function defineTracedEventHandler<
@@ -28,18 +27,6 @@ export function defineTracedEventHandler<
     })
   }
   throw new Error("Event handler must satisfy either EventHandler or EventHandlerObject from h3")
-}
-
-export function defineTracedCachedEventHander<
-  Request extends EventHandlerRequest = EventHandlerRequest,
-  Response = EventHandlerResponse,
->(
-  handler: EventHandler<Request, Response>,
-  opts: CachedEventHandlerOptions<Response>
-): EventHandler<Request, Response> {
-  return cachedEventHandler((event) => {
-    return context.with(event.otel.ctx, handler, undefined, event)
-  }, opts)
 }
 
 function isEventHandler<
