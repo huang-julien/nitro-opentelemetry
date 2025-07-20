@@ -124,6 +124,9 @@ interface NitroRuntimeHooks {
 - **otel:span:end**
     - Called before ending a `Span`. This can happen in the `afterResponse` hook or in the `error` hook.
 
+- **otel:recordException:before**
+    - Called before recording and exception within the `error` hook of nitro. Can be used to not record an exception if you don't want to use a `SpanProcessor`.
+
 ### Utils
 
 `defineTracedEventHandler`

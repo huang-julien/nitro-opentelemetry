@@ -45,15 +45,22 @@ export default <NitroAppPlugin>((nitro) => {
     })
 
     nitro.hooks.hook('error', async (error, { event }) => {
+        const ctx  = { event, error, shouldRecord: true }
+            await nitro.hooks.callHook('otel:recordException:before', ctx)
         if (event) {
-            event.otel.span.recordException(error)
-            event.otel.span.setAttribute(ATTR_HTTP_RESPONSE_STATUS_CODE, getResponseStatus(event))
+            if(ctx.shouldRecord) {
+                event.otel.span.recordException(error)
+                event.otel.span.setAttribute(ATTR_HTTP_RESPONSE_STATUS_CODE, getResponseStatus(event))
+            }
             await nitro.hooks.callHook('otel:span:end', { event, span: event.otel.span })
             event.otel.span.end()
         } else {
-            const span = trace.getSpan(api.ROOT_CONTEXT)
-            span?.recordException(error)
-            span?.end()
+            await nitro.hooks.callHook('otel:recordException:before', ctx)
+            if(ctx.shouldRecord) {
+                const span = trace.getSpan(api.ROOT_CONTEXT)
+                span?.recordException(error)
+                span?.end()
+            }
         }
     })
 

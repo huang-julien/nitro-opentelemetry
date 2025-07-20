@@ -20,6 +20,7 @@ declare module 'nitropack' {
     interface NitroRuntimeHooks {
         'otel:span:name': (context: { event: H3Event, name: undefined|string}) => void
         'otel:span:end': (context: { event: H3Event, span: Span }) => void
+        'otel:recordException:before': (context: { event?: H3Event, error: Error, shouldRecord: boolean }) => void
     }
 
     interface NitroOptions {
