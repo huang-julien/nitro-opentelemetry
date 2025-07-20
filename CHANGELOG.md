@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.10.0
+
+[compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.9.0...v0.10.0)
+
+### 🚀 Enhancements
+
+- New otel:recordException:before hook ([#86](https://github.com/huang-julien/open-telemetry-nitro/pull/86))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](https://github.com/huang-julien))
+
 ## v0.9.0
 
 [compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.8.1...v0.9.0)
