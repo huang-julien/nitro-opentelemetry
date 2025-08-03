@@ -21,7 +21,7 @@ jobs:
         with:
           run_install: false
       - name: Install Node.js
-        uses: actions/setup-node@7e24a656e1c7a0d6f3eaef8d8e84ae379a5b035b
+        uses: actions/setup-node@5e2628c959b9ade56971c0afcebbe5332d44b398
         with:
           node-version: 22
           cache: 'pnpm'
