@@ -30,13 +30,13 @@ npm install nitro-opentelemetry
 yarn add nitro-opentelemetry
 
 # pnpm
-pnpm install nitro-opentelemetry
+pnpm add nitro-opentelemetry
 
 # bun
 bun install nitro-opentelemetry
 
 # deno
-deno install nitro-opentelemetry
+deno install npm:nitro-opentelemetry
 ```
 
 <!-- /automd -->
