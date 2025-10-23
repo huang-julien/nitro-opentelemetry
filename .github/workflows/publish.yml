@@ -23,6 +23,8 @@ jobs:
       - name: Update pnpm
         run: npm install -g pnpm@latest
       - run: pnpm install
-      - run: pnpm run build
+      - run: pnpm dev:prepare
+      - run: pnpm test:types
+      - run: pnpm build
       - run: pnpm test
       - run: pnpm publish
