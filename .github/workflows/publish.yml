@@ -20,11 +20,12 @@ jobs:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Update pnpm
-        run: npm install -g pnpm@latest
+      - name: Install pnpm
+        uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061
+      - name: Force Set pnpm Registry
+        run: pnpm config set registry https://registry.npmjs.org
       - run: pnpm install
       - run: pnpm dev:prepare
-      - run: pnpm test:types
       - run: pnpm build
       - run: pnpm test
       - run: pnpm publish --access public --no-git-checks
