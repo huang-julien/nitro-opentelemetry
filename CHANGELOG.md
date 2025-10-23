@@ -7,7 +7,6 @@
 
 ### 🏡 Chore
 
-- **release:** V0.10.0 ([6f114ff](https://github.com/huang-julien/open-telemetry-nitro/commit/6f114ff))
 - Dedupe ([a0b2d8e](https://github.com/huang-julien/open-telemetry-nitro/commit/a0b2d8e))
 - 0.10.1 ([0327bd4](https://github.com/huang-julien/open-telemetry-nitro/commit/0327bd4))
 
