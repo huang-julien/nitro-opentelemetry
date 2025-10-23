@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v0.10.1
+
+[compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.10.0...v0.10.1)
+
+### 🏡 Chore
+
+- Dedupe ([a0b2d8e](https://github.com/huang-julien/open-telemetry-nitro/commit/a0b2d8e))
+- 0.10.1 ([0327bd4](https://github.com/huang-julien/open-telemetry-nitro/commit/0327bd4))
+
+### 🤖 CI
+
+- Add publish.yml ([5a9f898](https://github.com/huang-julien/open-telemetry-nitro/commit/5a9f898))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](https://github.com/huang-julien))
+
 ## v0.10.0
 
 [compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.9.0...v0.10.0)
