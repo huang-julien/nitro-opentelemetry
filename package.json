@@ -44,13 +44,13 @@
   "devDependencies": {
     "@azure/monitor-opentelemetry-exporter": "1.0.0-beta.32",
     "@microlabs/otel-cf-workers": "1.0.0-rc.52",
-    "@nuxt/schema": "^4.2.0",
-    "@types/node": "^22.18.13",
-    "@vitest/coverage-v8": "^4.0.6",
-    "@vitest/ui": "^4.0.6",
+    "@nuxt/schema": "^4.2.1",
+    "@types/node": "^22.19.0",
+    "@vitest/coverage-v8": "^4.0.8",
+    "@vitest/ui": "^4.0.8",
     "automd": "^0.4.2",
     "changelogen": "^0.6.2",
-    "eslint": "^9.39.0",
+    "eslint": "^9.39.1",
     "eslint-config-unjs": "^0.5.0",
     "h3": "^1.15.4",
     "jiti": "^2.6.1",
@@ -59,22 +59,22 @@
     "nitropack": "^2.12.9",
     "typescript": "^5.9.3",
     "unbuild": "^3.6.1",
-    "vitest": "^4.0.6"
+    "vitest": "^4.0.8"
   },
   "packageManager": "pnpm@10.20.0",
   "dependencies": {
     "@azure/monitor-opentelemetry": "1.14.0",
     "@opentelemetry/api": "^1.9.0",
-    "@opentelemetry/auto-instrumentations-node": "^0.66.0",
-    "@opentelemetry/instrumentation": "^0.207.0",
-    "@opentelemetry/instrumentation-http": "^0.207.0",
-    "@opentelemetry/instrumentation-undici": "^0.18.0",
+    "@opentelemetry/auto-instrumentations-node": "^0.67.0",
+    "@opentelemetry/instrumentation": "^0.208.0",
+    "@opentelemetry/instrumentation-http": "^0.208.0",
+    "@opentelemetry/instrumentation-undici": "^0.19.0",
     "@opentelemetry/resources": "^2.2.0",
     "@opentelemetry/sdk-metrics": "^2.2.0",
-    "@opentelemetry/sdk-node": "^0.207.0",
+    "@opentelemetry/sdk-node": "^0.208.0",
     "@opentelemetry/sdk-trace-base": "^2.2.0",
     "@opentelemetry/sdk-trace-node": "^2.2.0",
-    "@opentelemetry/semantic-conventions": "^1.37.0",
+    "@opentelemetry/semantic-conventions": "^1.38.0",
     "consola": "^3.4.2",
     "defu": "^6.1.4",
     "estree-walker": "^3.0.3",
@@ -82,7 +82,7 @@
     "magic-string": "^0.30.21",
     "mlly": "^1.8.0",
     "pathe": "^2.0.3",
-    "rollup": "^4.52.5"
+    "rollup": "^4.53.1"
   },
   "peerDependencies": {
     "@microlabs/otel-cf-workers": "1.0.0-rc.52"
