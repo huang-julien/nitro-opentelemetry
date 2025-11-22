@@ -45,9 +45,9 @@
     "@azure/monitor-opentelemetry-exporter": "1.0.0-beta.32",
     "@microlabs/otel-cf-workers": "1.0.0-rc.52",
     "@nuxt/schema": "^4.2.1",
-    "@types/node": "^22.19.0",
-    "@vitest/coverage-v8": "^4.0.8",
-    "@vitest/ui": "^4.0.8",
+    "@types/node": "^22.19.1",
+    "@vitest/coverage-v8": "^4.0.13",
+    "@vitest/ui": "^4.0.13",
     "automd": "^0.4.2",
     "changelogen": "^0.6.2",
     "eslint": "^9.39.1",
@@ -59,11 +59,11 @@
     "nitropack": "^2.12.9",
     "typescript": "^5.9.3",
     "unbuild": "^3.6.1",
-    "vitest": "^4.0.8"
+    "vitest": "^4.0.13"
   },
-  "packageManager": "pnpm@10.20.0",
+  "packageManager": "pnpm@10.23.0",
   "dependencies": {
-    "@azure/monitor-opentelemetry": "1.14.0",
+    "@azure/monitor-opentelemetry": "1.14.2",
     "@opentelemetry/api": "^1.9.0",
     "@opentelemetry/auto-instrumentations-node": "^0.67.0",
     "@opentelemetry/instrumentation": "^0.208.0",
@@ -78,11 +78,11 @@
     "consola": "^3.4.2",
     "defu": "^6.1.4",
     "estree-walker": "^3.0.3",
-    "exsolve": "^1.0.7",
+    "exsolve": "^1.0.8",
     "magic-string": "^0.30.21",
     "mlly": "^1.8.0",
     "pathe": "^2.0.3",
-    "rollup": "^4.53.1"
+    "rollup": "^4.53.3"
   },
   "peerDependencies": {
     "@microlabs/otel-cf-workers": "1.0.0-rc.52"
