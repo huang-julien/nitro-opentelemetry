@@ -79,8 +79,8 @@ importers:
         specifier: ^4.2.1
         version: 4.2.1
       '@types/node':
-        specifier: ^22.19.1
-        version: 22.19.1
+        specifier: ^24.10.1
+        version: 24.10.1
       '@vitest/coverage-v8':
         specifier: ^4.0.13
         version: 4.0.13(vitest@4.0.13)
@@ -122,7 +122,7 @@ importers:
         version: 3.6.1(typescript@5.9.3)
       vitest:
         specifier: ^4.0.13
-        version: 4.0.13(@opentelemetry/api@1.9.0)(@types/node@22.19.1)(@vitest/ui@4.0.13)(jiti@2.6.1)(terser@5.42.0)
+        version: 4.0.13(@opentelemetry/api@1.9.0)(@types/node@24.10.1)(@vitest/ui@4.0.13)(jiti@2.6.1)(terser@5.42.0)
 
   playground:
     devDependencies:
@@ -1791,8 +1791,8 @@ packages:
   '@types/mysql@2.15.27':
     resolution: {integrity: sha512-YfWiV16IY0OeBfBCk8+hXKmdTKrKlwKN1MNKAPBu5JYxLwBEZl7QzeEpGnlZb3VMGJrrGmB84gXiH+ofs/TezA==}
 
-  '@types/node@22.19.1':
-    resolution: {integrity: sha512-LCCV0HdSZZZb34qifBsyWlUmok6W7ouER+oQIGBScS8EsZsQbrtFTUrDX4hOl+CS6p7cnNC4td+qrSVGSCTUfQ==}
+  '@types/node@24.10.1':
+    resolution: {integrity: sha512-GNWcUTRBgIRJD5zj+Tq0fKOJ5XZajIiBroOF0yvj2bSU1WvNdYS/dn9UxwsujGW4JX06dnHyjV2y9rRaybH0iQ==}
 
   '@types/oracledb@6.5.2':
     resolution: {integrity: sha512-kK1eBS/Adeyis+3OlBDMeQQuasIDLUYXsi2T15ccNJ0iyUpQ4xDF7svFu3+bGVrI0CMBUclPciz+lsQR3JX3TQ==}
@@ -4143,8 +4143,8 @@ packages:
   unctx@2.4.1:
     resolution: {integrity: sha512-AbaYw0Nm4mK4qjhns67C+kgxR2YWiwlDBPzxrN8h8C6VtAdCgditAY5Dezu3IJy4XVqAnbrXt9oQJvsn3fyozg==}
 
-  undici-types@6.21.0:
-    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
+  undici-types@7.16.0:
+    resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
 
   unenv@2.0.0-rc.24:
     resolution: {integrity: sha512-i7qRCmY42zmCwnYlh9H2SvLEypEFGye5iRmEMKjcGi7zk9UquigRjFtTLz0TYqr0ZGLZhaMHl/foy1bZR+Cwlw==}
@@ -6169,7 +6169,7 @@ snapshots:
 
   '@types/bunyan@1.8.11':
     dependencies:
-      '@types/node': 22.19.1
+      '@types/node': 24.10.1
 
   '@types/chai@5.2.2':
     dependencies:
@@ -6177,7 +6177,7 @@ snapshots:
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 22.19.1
+      '@types/node': 24.10.1
 
   '@types/deep-eql@4.0.2': {}
 
@@ -6191,19 +6191,19 @@ snapshots:
 
   '@types/memcached@2.2.10':
     dependencies:
-      '@types/node': 22.19.1
+      '@types/node': 24.10.1
 
   '@types/mysql@2.15.27':
     dependencies:
-      '@types/node': 22.19.1
+      '@types/node': 24.10.1
 
-  '@types/node@22.19.1':
+  '@types/node@24.10.1':
     dependencies:
-      undici-types: 6.21.0
+      undici-types: 7.16.0
 
   '@types/oracledb@6.5.2':
     dependencies:
-      '@types/node': 22.19.1
+      '@types/node': 24.10.1
 
   '@types/pg-pool@2.0.6':
     dependencies:
@@ -6211,7 +6211,7 @@ snapshots:
 
   '@types/pg@8.15.6':
     dependencies:
-      '@types/node': 22.19.1
+      '@types/node': 24.10.1
       pg-protocol: 1.10.0
       pg-types: 2.2.0
 
@@ -6221,7 +6221,7 @@ snapshots:
 
   '@types/tedious@4.0.14':
     dependencies:
-      '@types/node': 22.19.1
+      '@types/node': 24.10.1
 
   '@types/triple-beam@1.3.5': {}
 
@@ -6367,7 +6367,7 @@ snapshots:
       magicast: 0.5.1
       std-env: 3.10.0
       tinyrainbow: 3.0.3
-      vitest: 4.0.13(@opentelemetry/api@1.9.0)(@types/node@22.19.1)(@vitest/ui@4.0.13)(jiti@2.6.1)(terser@5.42.0)
+      vitest: 4.0.13(@opentelemetry/api@1.9.0)(@types/node@24.10.1)(@vitest/ui@4.0.13)(jiti@2.6.1)(terser@5.42.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -6380,13 +6380,13 @@ snapshots:
       chai: 6.2.1
       tinyrainbow: 3.0.3
 
-  '@vitest/mocker@4.0.13(vite@6.3.5(@types/node@22.19.1)(jiti@2.6.1)(terser@5.42.0))':
+  '@vitest/mocker@4.0.13(vite@6.3.5(@types/node@24.10.1)(jiti@2.6.1)(terser@5.42.0))':
     dependencies:
       '@vitest/spy': 4.0.13
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 6.3.5(@types/node@22.19.1)(jiti@2.6.1)(terser@5.42.0)
+      vite: 6.3.5(@types/node@24.10.1)(jiti@2.6.1)(terser@5.42.0)
 
   '@vitest/pretty-format@4.0.13':
     dependencies:
@@ -6414,7 +6414,7 @@ snapshots:
       sirv: 3.0.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vitest: 4.0.13(@opentelemetry/api@1.9.0)(@types/node@22.19.1)(@vitest/ui@4.0.13)(jiti@2.6.1)(terser@5.42.0)
+      vitest: 4.0.13(@opentelemetry/api@1.9.0)(@types/node@24.10.1)(@vitest/ui@4.0.13)(jiti@2.6.1)(terser@5.42.0)
 
   '@vitest/utils@4.0.13':
     dependencies:
@@ -7881,7 +7881,7 @@ snapshots:
       ofetch: 1.5.0
       pathe: 2.0.3
       ufo: 1.6.1
-      vitest: 4.0.13(@opentelemetry/api@1.9.0)(@types/node@22.19.1)(@vitest/ui@4.0.13)(jiti@2.6.1)(terser@5.42.0)
+      vitest: 4.0.13(@opentelemetry/api@1.9.0)(@types/node@24.10.1)(@vitest/ui@4.0.13)(jiti@2.6.1)(terser@5.42.0)
 
   nitropack@2.12.9(@netlify/blobs@9.1.2):
     dependencies:
@@ -8395,7 +8395,7 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 22.19.1
+      '@types/node': 24.10.1
       long: 5.3.2
 
   punycode@2.3.1: {}
@@ -8901,7 +8901,7 @@ snapshots:
       magic-string: 0.30.21
       unplugin: 2.3.5
 
-  undici-types@6.21.0: {}
+  undici-types@7.16.0: {}
 
   unenv@2.0.0-rc.24:
     dependencies:
@@ -9011,7 +9011,7 @@ snapshots:
 
   uuid@9.0.1: {}
 
-  vite@6.3.5(@types/node@22.19.1)(jiti@2.6.1)(terser@5.42.0):
+  vite@6.3.5(@types/node@24.10.1)(jiti@2.6.1)(terser@5.42.0):
     dependencies:
       esbuild: 0.25.11
       fdir: 6.5.0(picomatch@4.0.3)
@@ -9020,15 +9020,15 @@ snapshots:
       rollup: 4.53.3
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 22.19.1
+      '@types/node': 24.10.1
       fsevents: 2.3.3
       jiti: 2.6.1
       terser: 5.42.0
 
-  vitest@4.0.13(@opentelemetry/api@1.9.0)(@types/node@22.19.1)(@vitest/ui@4.0.13)(jiti@2.6.1)(terser@5.42.0):
+  vitest@4.0.13(@opentelemetry/api@1.9.0)(@types/node@24.10.1)(@vitest/ui@4.0.13)(jiti@2.6.1)(terser@5.42.0):
     dependencies:
       '@vitest/expect': 4.0.13
-      '@vitest/mocker': 4.0.13(vite@6.3.5(@types/node@22.19.1)(jiti@2.6.1)(terser@5.42.0))
+      '@vitest/mocker': 4.0.13(vite@6.3.5(@types/node@24.10.1)(jiti@2.6.1)(terser@5.42.0))
       '@vitest/pretty-format': 4.0.13
       '@vitest/runner': 4.0.13
       '@vitest/snapshot': 4.0.13
@@ -9045,11 +9045,11 @@ snapshots:
       tinyexec: 0.3.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vite: 6.3.5(@types/node@22.19.1)(jiti@2.6.1)(terser@5.42.0)
+      vite: 6.3.5(@types/node@24.10.1)(jiti@2.6.1)(terser@5.42.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@opentelemetry/api': 1.9.0
-      '@types/node': 22.19.1
+      '@types/node': 24.10.1
       '@vitest/ui': 4.0.13(vitest@4.0.13)
     transitivePeerDependencies:
       - jiti
