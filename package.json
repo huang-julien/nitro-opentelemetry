@@ -46,8 +46,8 @@
     "@microlabs/otel-cf-workers": "1.0.0-rc.52",
     "@nuxt/schema": "^4.2.1",
     "@types/node": "^22.19.1",
-    "@vitest/coverage-v8": "^4.0.14",
-    "@vitest/ui": "^4.0.14",
+    "@vitest/coverage-v8": "^4.0.15",
+    "@vitest/ui": "^4.0.15",
     "automd": "^0.4.2",
     "changelogen": "^0.6.2",
     "eslint": "^9.39.1",
@@ -59,7 +59,7 @@
     "nitropack": "^2.12.9",
     "typescript": "^5.9.3",
     "unbuild": "^3.6.1",
-    "vitest": "^4.0.14"
+    "vitest": "^4.0.15"
   },
   "packageManager": "pnpm@10.24.0",
   "dependencies": {
