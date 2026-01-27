@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.10.1...v0.10.2
+
+[compare changes](https://github.com/huang-julien/nitro-opentelemetry/compare/v0.10.1...chore/0.10.2)
+
+### 🤖 CI
+
+- Add provenance ([5d5506c](https://github.com/huang-julien/nitro-opentelemetry/commit/5d5506c))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](https://github.com/huang-julien))
+
 ## v0.10.1
 
 [compare changes](https://github.com/huang-julien/open-telemetry-nitro/compare/v0.10.0...v0.10.1)
