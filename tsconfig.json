@@ -5,7 +5,10 @@
       "module": "ESNext",
     "target": "ESNext",
     "lib": ["ESNext"],  
-    "moduleResolution": "bundler"
+    "moduleResolution": "bundler",
+    "types": [
+      "@nuxt/nitro-server"
+    ]
   },
   "extends": "./.nitro/types/tsconfig.json"
 }
