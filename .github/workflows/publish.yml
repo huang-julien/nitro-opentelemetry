@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98
 
-      - uses: actions/setup-node@d02c89dce7e1ba9ef629ce0680989b3a1cc72edb
+      - uses: actions/setup-node@774c1d62961e73038a114d59c8847023c003194d
         with:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org'
