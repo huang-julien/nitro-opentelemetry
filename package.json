@@ -47,8 +47,8 @@
     "@nuxt/nitro-server": "^4.4.2",
     "@nuxt/schema": "^4.4.2",
     "@types/node": "^22.19.17",
-    "@vitest/coverage-v8": "^4.1.4",
-    "@vitest/ui": "^4.1.4",
+    "@vitest/coverage-v8": "^4.1.5",
+    "@vitest/ui": "^4.1.5",
     "automd": "^0.4.3",
     "changelogen": "^0.6.2",
     "eslint": "^9.39.4",
@@ -60,9 +60,9 @@
     "nitropack": "^2.13.3",
     "typescript": "^5.9.3",
     "unbuild": "^3.6.1",
-    "vitest": "^4.1.4"
+    "vitest": "^4.1.5"
   },
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@10.33.2",
   "dependencies": {
     "@azure/monitor-opentelemetry": "1.16.0",
     "@opentelemetry/api": "^1.9.1",
@@ -83,7 +83,7 @@
     "magic-string": "^0.30.21",
     "mlly": "^1.8.2",
     "pathe": "^2.0.3",
-    "rollup": "^4.60.1"
+    "rollup": "^4.60.2"
   },
   "peerDependencies": {
     "@microlabs/otel-cf-workers": "1.0.0-rc.52"
