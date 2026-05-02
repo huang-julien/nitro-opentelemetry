@@ -56,7 +56,7 @@
     "h3": "^1.15.11",
     "jiti": "^2.6.1",
     "nitro-opentelemetry": "link:./",
-    "nitro-test-utils": "^0.11.2",
+    "nitro-test-utils": "^3.0.1",
     "nitropack": "^2.13.4",
     "typescript": "^5.9.3",
     "unbuild": "^3.6.1",
