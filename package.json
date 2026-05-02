@@ -46,7 +46,7 @@
     "@microlabs/otel-cf-workers": "1.0.0-rc.52",
     "@nuxt/nitro-server": "^4.4.4",
     "@nuxt/schema": "^4.4.4",
-    "@types/node": "^22.19.17",
+    "@types/node": "^24.12.2",
     "@vitest/coverage-v8": "^4.1.5",
     "@vitest/ui": "^4.1.5",
     "automd": "^0.4.3",
