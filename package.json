@@ -66,7 +66,7 @@
   "dependencies": {
     "@azure/monitor-opentelemetry": "1.16.0",
     "@opentelemetry/api": "^1.9.1",
-    "@opentelemetry/auto-instrumentations-node": "^0.74.0",
+    "@opentelemetry/auto-instrumentations-node": "^0.75.0",
     "@opentelemetry/instrumentation": "^0.216.0",
     "@opentelemetry/instrumentation-http": "^0.216.0",
     "@opentelemetry/instrumentation-undici": "^0.26.0",
