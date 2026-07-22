@@ -107,10 +107,6 @@ async function module(nitro: Nitro) {
                 ;(rollupConfig.plugins as Plugin[]).push({
                     name: 'nitro-otel:inject-error-handlers',
                     async transform(code, id) {
-                        if(id.includes('prod')) {
-                            console.log(id, errorHandlers.includes(normalize(id)), errorHandlers)
-
-                        }
                         if (errorHandlers.includes(normalize(id))) {
                             const s = new MagicString(code)
                             s.prepend(`import { context } from "@opentelemetry/api";\n`)
