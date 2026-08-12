@@ -62,7 +62,7 @@
     "unbuild": "^3.6.1",
     "vitest": "^4.1.5"
   },
-  "packageManager": "pnpm@10.33.2",
+  "packageManager": "pnpm@11.21.0",
   "dependencies": {
     "@azure/monitor-opentelemetry": "1.16.0",
     "@opentelemetry/api": "^1.9.1",
