@@ -60,6 +60,7 @@
     "nitropack": "catalog:",
     "typescript": "catalog:",
     "unbuild": "catalog:",
+    "unimport": "catalog:",
     "vitest": "catalog:"
   },
   "packageManager": "pnpm@11.21.0",
@@ -67,6 +68,7 @@
     "@azure/monitor-opentelemetry": "catalog:",
     "@opentelemetry/api": "catalog:",
     "@opentelemetry/auto-instrumentations-node": "catalog:",
+    "@opentelemetry/context-async-hooks": "catalog:",
     "@opentelemetry/instrumentation": "catalog:",
     "@opentelemetry/instrumentation-http": "catalog:",
     "@opentelemetry/instrumentation-undici": "catalog:",
