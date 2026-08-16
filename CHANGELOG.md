@@ -1,7 +1,21 @@
 # Changelog
 
 
-## v0.10.1...v0.10.2
+## v0.10.3
+
+[compare changes](https://github.com/huang-julien/nitro-opentelemetry/compare/v0.10.2...v0.10.4)
+
+### 🩹 Fixes
+
+- Remove leftover debug log from error handler injection ([#169](https://github.com/huang-julien/nitro-opentelemetry/pull/169))
+- Call toString for magicString soruce map ([#170](https://github.com/huang-julien/nitro-opentelemetry/pull/170))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](https://github.com/huang-julien))
+- Joel Fillmore ([@joelfillmore](https://github.com/joelfillmore))
+
+## v0.10.2
 
 [compare changes](https://github.com/huang-julien/nitro-opentelemetry/compare/v0.10.1...chore/0.10.2)
 
