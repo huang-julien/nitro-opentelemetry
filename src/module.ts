@@ -46,7 +46,7 @@ async function module(nitro: Nitro) {
 
                         return {
                             code: s.toString(),
-                            map: s.generateMap({ hires: true }),
+                            map: s.generateMap({ hires: true }).toString(),
                             moduleSideEffects: true
                         }
                     }
@@ -56,7 +56,7 @@ async function module(nitro: Nitro) {
                         return {
                             moduleSideEffects: true,
                             code: s.toString(),
-                            map: s.generateMap({ hires: true }),
+                            map: s.generateMap({ hires: true }).toString(),
                         }
                     }
                 },
@@ -118,7 +118,7 @@ async function module(nitro: Nitro) {
 
                                 return {
                                     code: s.toString(),
-                                    map: s.generateMap({ hires: true }),
+                                    map: s.generateMap({ hires: true }).toString(),
                                 }
                             }
                         }
