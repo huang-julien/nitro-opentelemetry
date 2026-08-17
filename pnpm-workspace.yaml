@@ -10,7 +10,7 @@ catalog:
   '@azure/monitor-opentelemetry': 1.19.0
   '@azure/monitor-opentelemetry-exporter': 1.0.0-beta.32
   '@microlabs/otel-cf-workers': 1.0.0-rc.52
-  '@nuxt/nitro-server': ^4.4.4
+  '@nuxt/nitro-server': ^4.5.2
   '@nuxt/schema': ^4.5.2
   '@opentelemetry/api': ^1.9.1
   '@opentelemetry/auto-instrumentations-node': ^0.79.0
