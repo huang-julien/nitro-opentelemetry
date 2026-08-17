@@ -16,7 +16,7 @@ catalogs:
       specifier: 1.0.0-rc.52
       version: 1.0.0-rc.52
     '@nuxt/nitro-server':
-      specifier: ^4.4.4
+      specifier: ^4.5.2
       version: 4.5.2
     '@nuxt/schema':
       specifier: ^4.5.2
