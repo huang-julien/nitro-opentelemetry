@@ -63,7 +63,7 @@
     "unimport": "catalog:",
     "vitest": "catalog:"
   },
-  "packageManager": "pnpm@11.21.0",
+  "packageManager": "pnpm@11.22.0",
   "dependencies": {
     "@azure/monitor-opentelemetry": "catalog:",
     "@opentelemetry/api": "catalog:",
