@@ -24,7 +24,7 @@ catalog:
   '@opentelemetry/sdk-trace-base': ^2.10.0
   '@opentelemetry/sdk-trace-node': ^2.10.0
   '@opentelemetry/semantic-conventions': ^1.43.0
-  '@types/node': ^22.20.1
+  '@types/node': ^24.13.3
   '@vitest/coverage-v8': ^4.1.10
   '@vitest/ui': ^4.1.10
   automd: ^0.4.3
