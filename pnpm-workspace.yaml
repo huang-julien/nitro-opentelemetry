@@ -39,7 +39,7 @@ catalog:
   jiti: ^2.7.0
   magic-string: ^1.2.0
   mlly: ^1.8.2
-  nitro-test-utils: ^0.11.2
+  nitro-test-utils: ^3.0.2
   nitropack: ^2.13.4
   pathe: ^2.0.3
   rollup: ^4.62.4
