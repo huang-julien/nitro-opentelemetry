@@ -7,24 +7,24 @@ allowBuilds:
   esbuild: false
   protobufjs: false
 catalog:
-  '@azure/monitor-opentelemetry': 1.20.0
+  '@azure/monitor-opentelemetry': 1.20.1
   '@azure/monitor-opentelemetry-exporter': 1.0.0-beta.32
   '@microlabs/otel-cf-workers': 1.0.0-rc.52
-  '@nuxt/nitro-server': ^4.5.2
-  '@nuxt/schema': ^4.5.2
+  '@nuxt/nitro-server': ^4.6.0
+  '@nuxt/schema': ^4.6.0
   '@opentelemetry/api': ^1.9.1
-  '@opentelemetry/auto-instrumentations-node': ^0.80.0
-  '@opentelemetry/context-async-hooks': ^2.11.0
-  '@opentelemetry/instrumentation': ^0.222.0
-  '@opentelemetry/instrumentation-http': ^0.222.0
-  '@opentelemetry/instrumentation-undici': ^0.32.0
-  '@opentelemetry/resources': ^2.11.0
-  '@opentelemetry/sdk-metrics': ^2.11.0
-  '@opentelemetry/sdk-node': ^0.222.0
-  '@opentelemetry/sdk-trace-base': ^2.11.0
-  '@opentelemetry/sdk-trace-node': ^2.11.0
+  '@opentelemetry/auto-instrumentations-node': ^0.81.0
+  '@opentelemetry/context-async-hooks': ^2.12.0
+  '@opentelemetry/instrumentation': ^0.223.0
+  '@opentelemetry/instrumentation-http': ^0.223.0
+  '@opentelemetry/instrumentation-undici': ^0.33.0
+  '@opentelemetry/resources': ^2.12.0
+  '@opentelemetry/sdk-metrics': ^2.12.0
+  '@opentelemetry/sdk-node': ^0.223.0
+  '@opentelemetry/sdk-trace-base': ^2.12.0
+  '@opentelemetry/sdk-trace-node': ^2.12.0
   '@opentelemetry/semantic-conventions': ^1.43.0
-  '@types/node': ^22.20.2
+  '@types/node': ^22.20.5
   '@vitest/coverage-v8': ^4.1.11
   '@vitest/ui': ^4.1.11
   automd: ^0.4.3
@@ -34,16 +34,16 @@ catalog:
   eslint: ^9.39.5
   eslint-config-unjs: ^0.6.2
   estree-walker: ^3.0.3
-  exsolve: ^1.1.1
+  exsolve: ^1.1.3
   h3: ^1.15.11
   jiti: ^2.7.0
-  magic-string: ^1.3.1
+  magic-string: ^1.4.3
   mlly: ^1.8.2
   nitro-test-utils: ^0.11.2
   nitropack: ^2.13.4
   pathe: ^2.0.3
-  rollup: ^4.63.1
+  rollup: ^4.64.2
   typescript: ^5.9.3
   unbuild: ^3.6.1
   unimport: ^6.5.0
-  vitest: ^4.1.10
+  vitest: ^4.1.11
