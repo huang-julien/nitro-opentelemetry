@@ -45,5 +45,5 @@ catalog:
   rollup: ^4.63.1
   typescript: ^5.9.3
   unbuild: ^3.6.1
-  unimport: ^6.5.0
+  unimport: ^7.0.2
   vitest: ^4.1.10
